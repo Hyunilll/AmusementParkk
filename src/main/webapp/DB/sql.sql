@@ -40,7 +40,7 @@ CREATE SEQUENCE notice_nseq INCREMENT BY 1 START WITH 1;
 
 /* Create Tables */
 
-CREATE TABLE address // 전에 사용 하던 자리면 이미 있습니다 아마도?
+CREATE TABLE address /*전에 사용 하던 자리면 이미 있습니다 아마도?*/
 (
 	zip_num varchar2(7) NOT NULL,
 	sido varchar2(30) NOT NULL,
