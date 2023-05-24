@@ -59,7 +59,7 @@ border-radius: 10px; box-shadow: 3px 3px 2px #ccc; font-size:150%;}
 #att_search{position:absolute; width:1100px; height:85px; background-color:#5c10e6; color:white; font-weight:normal; text-align:center;
    font-size:30px; top:64%; left:50%; transform:translate(-50%, -50%); line-height:85px;}
 #at_arg_A {position:relative; width:100%; height:80px;}
-#att_back{position:relative; width:1130px; height:1800px; margin:0 auto;}
+#att_back{position:relative; width:1130px; height:1600px; margin:0 auto;}
 #att_list{position:relative; width:250px; float:left; margin:15px; text-align:center; border:1px solid lightgray;}
 #att_list img {width:250px; height:250px;}
 #at_arg{position:relative; width:100%; height:20px;}
