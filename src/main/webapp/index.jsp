@@ -9,6 +9,8 @@
 <body>
 
 <% response.sendRedirect("world.do?command=index"); %>
-aaaa
+test
+test
+test
 </body>
 </html>
