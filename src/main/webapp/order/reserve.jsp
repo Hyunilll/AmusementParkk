@@ -35,7 +35,7 @@
 					</div>
 					 <div id="reserve_buttons">
 					<input type="button" value="티켓구매" class="reserve" 
-						onclick="location.href='world.do?command=passTicket'">
+						onclick="location.href='world.do?command=fastTicket'">
 					</div>
 				</div>
 		</div>

@@ -7,7 +7,7 @@
 		
 			<div class="top">	<br>	
 		
-				<a href="">테스트월드 소개</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="">월드 소개</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				
 				<a href="">이용약관</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				
@@ -21,11 +21,11 @@
 		</div>
 	
 	</div>
-	<hr>
+	<hr><br>
 	<div id="f_logo">
 		<img src="images/footer_logo.png" width="70" height="60" style="margin-left: 90px; margin-top:10px">
 	</div>
-	<div id="copy">
+	<div id="copy" >
 	서울특별시 서대문구 신촌로 141 위고인빌딩 1층  롯데월드 | 대표자 : 이젠
 	<br>사업자등록번호 : 219-85-00014 | 통신판매업신고번호 : 송파 제5513호 | 전화 : 1661-2000
 	<br><br>COPYRIGHT 2023 LOTTEWORLD. ALL RIGHTS RESERVED.
@@ -40,8 +40,7 @@
 		<a href="">
 			<img src="images/youtube.png"></a>
 			<br><br>
-		<a href="">
-			<img src="images/img_hotel.jpg"></a>
+		<img src="images/img_hotel.jpg"></a>
 	</div>
 	
 	

@@ -17,6 +17,9 @@
                         <input id="search" type="search" name="" placeholder="검색어를 입력해주세요." value="">
                         <button type="submit" class="btn btn-dark">검색</button>
                     </div>
+                    <div>
+                    	<button type="submit" class="btn btn-dark">수정</button>
+                    </div>
                 </form>
             </div>
         </div>

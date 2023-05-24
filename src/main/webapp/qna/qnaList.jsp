@@ -4,6 +4,8 @@
 <style>
    
 #buttons{text-align:center;}
+
+
 .submit{position:relative; font-size: 20px;padding-bottom:10px; width:200px; height:55px;color: #fff; background:rgb(111, 35, 249);;font-weight:bold;border-radius: 28px;border:1px solid #6317ed;}
 .cancel{position:relative; font-size: 20px;padding-bottom:10px; width:200px; height:55px;color:#6317ed; background:white;font-weight:bold;border-radius: 28px;border:1px solid #6317ed;}
 </style>
@@ -41,6 +43,7 @@
                 
                 </thead>
                
+
 		<c:forEach items="${qnaList}"  var="qnaVO">
 			<tr ><td> ${qnaVO.lqseq}</td>    
 	    		<td><a href="world.do?command=qnaView&lqseq=${qnaVO.lqseq}">${qnaVO.title}</a></td>      
@@ -51,25 +54,29 @@
 				</c:choose></td>    
 	   		</tr>
 	  	</c:forEach>
+
             </table>
         </div>
     </div>
 
 </section>
     
+
 	<jsp:include page="../paging/page.jsp">
 		<jsp:param name="command" value="world.do?command=notice" />
 	</jsp:include>
+
 
 <div  class="clear"></div><br>
 
 
 <div id="buttons">
-	<input type="button"  value="등록하기"  class="submit" 
-		onClick="location.href='world.do?command=qnaWriteForm'"> 
-	<input type="button"   value="취소"  class="cancel" 	
-		onclick="location.href='world.do?command=index'">  
+   <input type="button"  value="등록하기"  class="submit" 
+      onClick="location.href='world.do?command=qnaWriteForm'"> 
+   <input type="button"   value="취소"  class="cancel"    
+      onclick="location.href='world.do?command=index'">  
 </div>
 <div  class="clear"></div><br>
+
 
 <%@ include file="../footer.jsp" %>

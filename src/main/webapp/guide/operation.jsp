@@ -2,7 +2,6 @@
     pageEncoding="UTF-8"%>
 
 <%@ include file="../header.jsp" %>
-<%@ include file="../sub_image_menu.jsp" %>
 
 
 	<div class="operation_box">
@@ -39,7 +38,7 @@
 		<div class="operation_box_footer">
 			<div class="operation_box_footer_images"><img src="images/operate_imgs1.jfif" width="100" height="100"></div>
 			<div class="operation_box_footer_text">
-				<ul><br>
+				<ul><br><br>
 					<li>기상상태에 따라 (0℃ 이하 또는 30℃ 이상, 7~14㎧ 이상의 풍속, 0.2㎜ 이상의 비가 내리는 경우)
 						매직아일랜드 일부 어트랙션 운행이 중단될 수 있습니다.</li>
 						</br></br>

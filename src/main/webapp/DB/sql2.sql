@@ -50,6 +50,29 @@ insert into attraction(aseq, pnum, atname, acontent, act1, act2, image, limitkey
 (attraction_aseq.nextval, 24,'점핑피쉬' ,'거대한 조개를 지나 다양한 물고기 친구들과 로티 로리와 함께 떠나는 신나는 해저여행. 무지막지한 상어를 피해 점핑 점핑!!! ','익사이팅','어린이',
 'lotty_fish.jpg','110cm ~ 140cm 탑승가능', '65세 이하 탑승 가능', 'Y');
 
+
+
+-------- 어트랙션 추가 ------
+insert into attraction(aseq, pnum, atname, acontent, act1, act2, image, limitkey, limitage) values
+(attraction_aseq.nextval, 12,'와일드 윙' ,'강렬한 바람을 가르며 비행하는 와일드 윙 ','윙','어린이',
+'wildwing.jpg','110cm 이상 탑승 가능', '65세 이하 탑승 가능');
+
+insert into attraction(aseq, pnum, atname, acontent, act1, act2, image, limitkey, limitage) values
+(attraction_aseq.nextval, 12,'와일드 밸리' ,'세찬 물살을 가르며 펼쳐지는 스릴만점 추격전 와일드 밸리 ','밸리','어린이',
+'wildbelly.jpg','110cm 이상 탑승 가능', '65세 이하 탑승 가능');
+
+insert into attraction(aseq, pnum, atname, acontent, act1, act2, image, limitkey, limitage) values
+(attraction_aseq.nextval, 2,'드림보트' ,'2인승 보트 타고 요정의 세계로 떠나는 패밀리 후룸라이드 ','드림보트','어린이',
+'dreamboat.jpg','120cm 이상 ~ 140cm 탑승 가능', '90cm 이상 ~ 120cm미만 보호자 동반 탑승 시 이용가능');
+
+insert into attraction(aseq, pnum, atname, acontent, act1, act2, image, limitkey, limitage, bestat) values
+(attraction_aseq.nextval, 28,'후렌치 레볼루션' ,'대표 롤러코스터! 짜릿한 하강과 정신이 아득해지는 원형 트랙에서 저세상
+스릴을 느껴보세요! ','롤러코스터','스릴',
+'rollercoaster.jpg','120cm 이상 탑승 가능', '65세 이하 탑승 가능', 'Y');
+
+
+
+
 select*from attraction;
 
 
