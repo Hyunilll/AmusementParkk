@@ -10,7 +10,7 @@
         </div>
     </div>
 
-    <div id="board-search">
+    <div class="board-search">
         <div class="container">
             <div class="search-window">
                 <form action="">
@@ -24,7 +24,7 @@
         </div>
     </div>
    
-    <div id="board-list">
+    <div class="board-list">
         <div class="container">
             <table class="board-table">
                 <thead>
