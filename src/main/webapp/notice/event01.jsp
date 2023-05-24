@@ -1,14 +1,22 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ include file="../header.jsp" %>
 
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<link href="css/world.css" rel="stylesheet">
+<script src="notice/event02.js"></script>
+</head>
+<body>
 <div class="mini">
-<h2 style="font-size:30px;font-weight:bold;text-align: center;border-top:100px;">이달의 혜택</h2>
+<h2 style="font-size:70px;font-weight:bold;text-align: center;border-top:100px; margin:100px 0 0 0;">이달의 혜택</h2>
 </div>
 
 <div class="ccontainer">
    
   <div class="slide" style="background-image:url('images/card.png');" onclick="slidesPlugin();">
-    <h3 style="color:white; font-size:15px; font-family:'vernada';">◎행사기간 : 2023년 5월1일~5월31일<br>
+    <h3 style="color:rgb(224, 224, 224); font-size:15px; font-family:'vernada';">◎행사기간 : 2023년 5월1일~5월31일<br>
  행사기간 동안 월드카드 1회 이상 이용 및 2023.6.15(월)까지 국내외 가맹점에서 일시불 및 할부 합산 10만원 이상 이용 시 8만원 캐시백,<br>
  종합 자유이용권-어른: 40000원 청소년: 30000원 어린이: 28000원 </h3>
   </div>
@@ -53,11 +61,12 @@
       구매 시 신분증 확인 필요.</h3>
   </div>
    <div class="slide" style="background-image:url('images/76419_59366_5741.jpg');">
-    <h3 style="color:white; font-size:15px; font-family:'맑은 고딕';">◎행사기간: ~ 2023년 11월31일
+    <h3 style="color:rgb(224, 224, 224); font-size:15px; font-family:'맑은 고딕';">◎행사기간: ~ 2023년 11월31일
       교복 착용하면 즉시 할인
       총 2인 종합이용권 가격 : 50000원.
       구매 시 신분증 / 학생증 필요. </h3>
   </div>
  </div>
 
-<%@ include file="../footer.jsp" %>
+</body>
+</html>

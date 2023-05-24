@@ -9,7 +9,7 @@
 <script type="text/javascript">
     $(document).ready(function () {
             $.datepicker.setDefaults($.datepicker.regional['ko']); 
-            /*
+            
             $( "#startDate" ).datepicker({
                  changeMonth: true, 
                  changeYear: true,
@@ -28,7 +28,7 @@
                  }    
  
             });
-            */
+            
             $( "#endDate" ).datepicker({
                  changeMonth: true, 
                  changeYear: true,

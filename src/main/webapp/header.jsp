@@ -53,6 +53,7 @@
 					<li><a href="world.do?command=guide">이용가이드</a></li>
 					<li><a href="world.do?command=notice">공지사항</a></li>
 					<li><a href="world.do?command=qna">Q&amp;A</a></li>
+					<li><a href="world.do?command=event01">이달의 혜택</a></li>
 				</ul>		
 			</div>
 		</div>

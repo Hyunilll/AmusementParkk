@@ -34,7 +34,7 @@
 		</div>
 	</div>
 	<p id="att_Info_text2">탑승제한</p>
-	<div id="att_Info_bottom">
+	<div id="att_Info_bottom"><br>
 		<div id="att_Info_bottom_tool">	
 			<div id="att_Info_icon_tool">
 				<div id="att_Info_icon2"><img src="images/icons/rideInfo_rest_icon1.png"></div>
@@ -54,7 +54,7 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div><br>
 <p id="att_Info_text2">운휴일정</p>
 <div class="closeInfo">
 	<div class="att_holiday_tool">

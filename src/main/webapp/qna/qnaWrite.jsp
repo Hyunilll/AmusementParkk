@@ -6,7 +6,7 @@
 #buttons{text-align:center;}
 </style>  
 
-<article><br><br><br>
+<article>
 <h2 style="font-family: 'NotoSans-Bold', '맑은 고딕', 'Malgun Gothic', sans-serif;font-size: 55px;color: #000;text-align: center; padding-top: 50px;">이용문의</h2><br>
 <div style="position: relative; text-align: center;">
   <img src="images/qna_image.jpg" style="opacity: 0.3;width:950px;">
