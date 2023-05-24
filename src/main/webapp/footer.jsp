@@ -7,7 +7,7 @@
 		
 			<div class="top">	<br>	
 		
-				<a href="">월드 소개</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				<a href="">테스트 11월드 소개</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				
 				<a href="">이용약관</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				
