@@ -21,7 +21,7 @@
 		</div>
 	
 	</div>
-	<hr>
+	<hr><br>
 	<div id="f_logo">
 		<img src="images/footer_logo.png" width="70" height="60" style="margin-left: 90px; margin-top:10px">
 	</div>
