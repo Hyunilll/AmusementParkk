@@ -2,7 +2,6 @@
     pageEncoding="UTF-8"%>
 
 <%@ include file="../header.jsp" %>
-<%@ include file="../sub_image_menu.jsp" %>
 
 
 	<div class="operation_box">

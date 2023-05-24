@@ -14,6 +14,7 @@
 <script src="notice/event02.js"></script>
 <link href="css/world.css" rel="stylesheet">  
 <script src="member/member.js"></script>
+<script src="order/order.js"></script>
 </head>
 <body>
 <div id="wrap">

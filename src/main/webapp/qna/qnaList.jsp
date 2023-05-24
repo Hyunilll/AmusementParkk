@@ -8,6 +8,8 @@ table#qnaList {border-collapse: collapse;		border-bottom: 1px solid #333;
 		width: 100%; margin-bottom: 20px; }
 table#qnaList th, td {	border-bottom: 1px dotted #333;	text-align: center; font-size:20px;}	
 #buttons{text-align:center;}
+
+
 .submit{position:relative; font-size: 20px;padding-bottom:10px; width:200px; height:55px;color: #fff; background:rgb(111, 35, 249);;font-weight:bold;border-radius: 28px;border:1px solid #6317ed;}
 .cancel{position:relative; font-size: 20px;padding-bottom:10px; width:200px; height:55px;color:#6317ed; background:white;font-weight:bold;border-radius: 28px;border:1px solid #6317ed;}
 </style>      
