@@ -17,7 +17,7 @@ border-radius: 10px; box-shadow: 3px 3px 2px #ccc; font-size:150%; float:left; b
    <h1>관리자로 로그인 되었습니다</h1>
    <hr>
    </div>
-   <h1>하실일을 선택하세요</h1>
+   <h1>하실 일을 선택하세요</h1>
    <div id=main2>
 <form method="post" name="frm">
 
