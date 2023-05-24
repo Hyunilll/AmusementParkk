@@ -27,11 +27,11 @@ form .cancel {background : #81d4fa;}
 			<c:if test ="${result==1 }">
 				<script type ="text/javascript">opener.document.joinForm.id.value="";</script>
 				${id}는 이미 사용중입니다
-				</c:if>
-		<c:if test="${result == -1}">
-			${id}는 사용 가능한 ID입니다.    
-			<input type="button" value="사용" class="cancel" onclick="idok('${id}');">
-		</c:if>	
+			</c:if>
+			<c:if test="${result == -1}">
+				${id}는 사용 가능한 ID입니다.    
+				<input type="button" value="사용" class="cancel" onclick="idok('${id}');">
+			</c:if>	
 		</div>
 	</form>
 </body>

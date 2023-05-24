@@ -11,8 +11,8 @@
 	<div id="att_search">조건검색</div>
 	<div id="at_arg_A"></div>
 	<div id="att_back">
-	<c:forEach var="AttractionVO" items="${aseqList}">
-			<div id="att_list">
+		<c:forEach var="AttractionVO" items="${aseqList}">
+			<div class="att_list">
 				<a href="world.do?command=attractionDetailForm&aseq=${AttractionVO.aseq}">
 					<img src="images/attraction_images/${AttractionVO.image}"/>
 					<h3>${AttractionVO.atname}</h3>

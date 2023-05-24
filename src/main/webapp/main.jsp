@@ -107,7 +107,8 @@
 		</div>
      </div>
 </div>
-				<!--  절취선  -->
+
+<!--  main3  -->
 
 <div id="mainback">
 	<div id="maintitle">재미있고 즐거운&nbsp;<span style="font-weight:bold;">다양한 어트랙션!</span></div>
@@ -118,30 +119,26 @@
 			<li>실내에서 쾌적하게</li>
 		</ul>
 	</div>
-	<h1>Best Attraction</h1>
+	<h2 style="font-size:30px; text-align:center; line-height:80px;">인기 어트랙션</h2>
 	<div id="mainimg">
-			<c:forEach items="${bestList}" var = "AttractionVO">
-				<div class="img">
-				<a href="">			
-						<img src="images/attraction_images/${AttractionVO.image}"/>
-						<h2>${AttractionVO.atname }</h2>
+		<c:forEach var="AttractionVO" items="${bestList}">
+			<div class="att_list">
+				<a href="world.do?command=attractionDetailForm&aseq=${AttractionVO.aseq}">
+					<img src="images/attraction_images/${AttractionVO.image}"/>
+					<h3>${AttractionVO.atname}</h3>
 				</a>
-				</div>
-			</c:forEach>
-	</div>
-
+			</div>
+		</c:forEach>
 	</div>
 	<div class="tag">
-		<ul>
-			<li><a href='world.do?command=attractionForm'>더 많은 어트렉션 보기</a></li>
-			<li><a href='world.do?command=guide'>운휴 정보 보러 가기</a></li>
-		</ul>
-	</div>
+	<ul>
+		<li><a href='world.do?command=attractionForm'>더 많은 어트렉션 보기</a></li>
+		<li><a href='world.do?command=guide'>운휴 정보 보러 가기</a></li>
+	</ul>
+</div>
 </div>
 
-
-
-				<!--  절취선  -->
+<!--  절취선  -->
 
 <h1 style=" text-align: center; font-size: 300%;">-------What's New-------</h1>  
 <h3 style=" text-align: center;">꿈과 환상의 나라로 어서오세요</h3>

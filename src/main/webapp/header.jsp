@@ -18,12 +18,12 @@
 <body>
 <div id="wrap">
 	<header>
-		<nav id ="top_menu">
-			<ul><br>
+		<div id ="top_menu">
+			<ul>
 				<c:choose>
 					<c:when test ="${empty loginUser}">
 						<li><a href="world.do?command=loginForm">login</a></li>
-						<li><a href="world.do?command=contract">JOIN</a></li>
+						<li><a href="world.do?command=contract">회원가입</a></li>
 						<li><a href="world.do?command=admin">관리자</a></li>
 					</c:when>
 					<c:otherwise>
@@ -36,7 +36,7 @@
 					</c:otherwise>
 				</c:choose>
 			</ul>
-		</nav>
+		</div>
 		
 		<div id="sub_menu">
 			<div class="logo">
