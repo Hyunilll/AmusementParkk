@@ -18,8 +18,8 @@ public class GuideAction implements Action {
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
 		AttractionDao adao= AttractionDao.getInstance();
-		ArrayList<AttractionVO> restList =  adao.getrestattraction();
-		request.setAttribute("restList", restList);
+		ArrayList<AttractionVO> aseqList =  adao.getrestattraction();
+		request.setAttribute("aseqList", aseqList);
 		
 		
 		String url = "guide/operation.jsp";  

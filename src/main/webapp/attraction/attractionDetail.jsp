@@ -68,7 +68,7 @@
 		※ 기상 변화 및 파크 상황에 따라 운휴 일정이 변경될 수 있습니다.
 	</p>
 	<p class="link">
-		<a href="">이번 달 운휴 달력 보러가기</a>
+		<a href="world.do?command=guide">이번 달 운휴 달력 보러가기</a>
 	</p>
 	<div class="btnArea">
 		<a href="world.do?command=attractionForm" class="purpleBtn">목록</a>
