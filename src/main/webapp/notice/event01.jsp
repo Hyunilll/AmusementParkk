@@ -1,14 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <%@ include file="../header.jsp" %>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-<link href="css/world.css" rel="stylesheet">
-<script src="script/event02.js"></script>
-</head>
-<body>
+
 <div class="mini">
 <h2 style="font-size:30px;font-weight:bold;text-align: center;border-top:100px;">이달의 혜택</h2>
 </div>
@@ -68,6 +60,4 @@
   </div>
  </div>
 
-</body>
-</html>
 <%@ include file="../footer.jsp" %>
