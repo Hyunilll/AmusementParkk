@@ -37,7 +37,7 @@
 </div>
 
 					<!--  절취선  -->	
-
+<br>
 <div class="mainbox">                                         <!-- 제일 큰 상자 -->
 	<div class="mainCon mainCon1"><!-- 나에게 꼭 맞는 혜택 -->     <!-- 첫번째 상자  -->
 		<p class="mainTit"><span>자신에게 맞는 혜택을</span> 알아볼까요?</p><br>

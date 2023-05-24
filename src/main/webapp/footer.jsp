@@ -7,11 +7,7 @@
 		
 			<div class="top">	<br>	
 		
-
 				<a href="">월드 소개</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
-				<a href="">월드 소개</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-
 				
 				<a href="">이용약관</a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 				
@@ -44,8 +40,7 @@
 		<a href="">
 			<img src="images/youtube.png"></a>
 			<br><br>
-		<a href="">
-			<img src="images/img_hotel.jpg"></a>
+		<img src="images/img_hotel.jpg"></a>
 	</div>
 	
 	

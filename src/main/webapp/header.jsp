@@ -19,7 +19,7 @@
 <div id="wrap">
 	<header>
 		<nav id ="top_menu">
-			<ul>
+			<ul><br>
 				<c:choose>
 					<c:when test ="${empty loginUser}">
 						<li><a href="world.do?command=loginForm">login</a></li>
