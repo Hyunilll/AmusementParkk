@@ -98,7 +98,7 @@ footer {margin: 10px 0 0 0;   height: 70px; background-repeat: no-repeat;
 footer .top { margin: 5px 0 50px 350px; width: 1200px; font-size:100%; font-weight:bold; text-align: center;   }
 footer #copy { padding-left:60px;margin: 5px 0 0 350px; width: 1200px; font-size:100%; text-align: left;    }
 
-#footlogo {float:right; width:400px;height:50px;position: relative; top: -100px;}
+#footlogo {float:right; width:400px;height:50px;position: relative; top: -120px; left:70px;}
 #f_logo {float:left;  width: 200px; height: 85px; margin: 0 0 0 200px;}
 
 

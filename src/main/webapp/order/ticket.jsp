@@ -14,7 +14,7 @@
 				<h2>방문일자/인원 선택</h2>
 			</div>
 			<div class="order_box_date_date">
-				<h2>날짜</h2>
+				<h2>날짜 : <%=new java.util.Date() %></h2>
 			</div>
 		</div>
 	</div>
