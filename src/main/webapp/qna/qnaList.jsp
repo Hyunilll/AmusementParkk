@@ -43,25 +43,29 @@
                 
                 </thead>
                
-      <c:forEach items="${qnaList}"  var="qnaVO">
-         <tr ><td> ${qnaVO.lqseq}</td>    
-             <td><a href="world.do?command=qnaView&lqseq=${qnaVO.lqseq}">${qnaVO.title}</a></td>      
-                <td><fmt:formatDate value="${qnaVO.indate}" type="date"/></td>
-                <td><c:choose>
-               <c:when test="${qnaVO.rep=='N'}"> no </c:when>
-               <c:when test="${qnaVO.rep=='Y'}"> yes </c:when>
-            </c:choose></td>    
-            </tr>
-        </c:forEach>
+
+		<c:forEach items="${qnaList}"  var="qnaVO">
+			<tr ><td> ${qnaVO.lqseq}</td>    
+	    		<td><a href="world.do?command=qnaView&lqseq=${qnaVO.lqseq}">${qnaVO.title}</a></td>      
+	       		<td><fmt:formatDate value="${qnaVO.indate}" type="date"/></td>
+	       		<td><c:choose>
+					<c:when test="${qnaVO.rep=='N'}"> no </c:when>
+					<c:when test="${qnaVO.rep=='Y'}"> yes </c:when>
+				</c:choose></td>    
+	   		</tr>
+	  	</c:forEach>
+
             </table>
         </div>
     </div>
 
 </section>
     
-   <jsp:include page="../paging/page.jsp">
-      <jsp:param name="command" value="world.do?command=notice" />
-   </jsp:include>
+
+	<jsp:include page="../paging/page.jsp">
+		<jsp:param name="command" value="world.do?command=notice" />
+	</jsp:include>
+
 
 <div  class="clear"></div><br>
 
@@ -73,10 +77,6 @@
       onclick="location.href='world.do?command=index'">  
 </div>
 <div  class="clear"></div><br>
-
-
-
- 
 
 
 <%@ include file="../footer.jsp" %>
