@@ -24,6 +24,7 @@ import com.ezen.world.controller.action.member.LogoutAction;
 import com.ezen.world.controller.action.member.loginAction;
 import com.ezen.world.controller.action.notice.NoticeAction;
 import com.ezen.world.controller.action.notice.NoticeDetailAction;
+import com.ezen.world.controller.action.order.FastTicketAction;
 import com.ezen.world.controller.action.order.PassTicketAction;
 import com.ezen.world.controller.action.order.ReserveAction;
 import com.ezen.world.controller.action.parade.ParadeAction;
@@ -68,8 +69,9 @@ public class ActionFactory {
 
 		//예매창
 		else if( command.equals("reserve") ) ac= new ReserveAction(); // 예매창 이동
-		else if( command.equals("passTicket") ) ac= new PassTicketAction(); // 예매창 이동
-
+		else if( command.equals("passTicket") ) ac= new PassTicketAction(); // 자유이용권예매창 이동
+		else if( command.equals("fastTicket") ) ac= new FastTicketAction();
+		
 		
 		//이용가이드
 		else if( command.equals("guide") ) ac= new GuideAction(); // 이용가이드 이동 
