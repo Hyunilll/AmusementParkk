@@ -124,10 +124,6 @@ border-radius: 10px; box-shadow: 3px 3px 2px #ccc; font-size:150%;}
 
 
 
-
-
-
-
 /* guide */
 
 .operation_box{ width:1350px; height: 100%; background: white; margin: 60px  auto 0; min-height: 780px; 
@@ -278,9 +274,6 @@ fieldset {text-align:left; }
 .btnArea {text-align: center; margin-top: 60px;}
 .purpleBtn {display: inline-block; padding: 0 70px; height: 56px; line-height: 54px; font-size: 18px; 
 	color: #fff; text-align: center; border-radius: 28px; background: rgb(111, 35, 249);}
-
-
-
 
 
 

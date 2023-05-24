@@ -10,6 +10,8 @@
 
 <script src="script/jquery-3.6.4.js"></script>
 <script src="script/script.js"></script>
+
+<script src="notice/event02.js"></script>
 <link href="css/world.css" rel="stylesheet">  
 <script src="member/member.js"></script>
 </head>
