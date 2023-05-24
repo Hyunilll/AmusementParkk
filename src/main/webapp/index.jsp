@@ -10,5 +10,7 @@
 
 <% response.sendRedirect("world.do?command=index"); %>
 test
+test
+test
 </body>
 </html>
