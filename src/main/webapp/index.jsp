@@ -10,5 +10,6 @@
 
 <% response.sendRedirect("world.do?command=index"); %>
 aaaa
+bbbb
 </body>
 </html>
