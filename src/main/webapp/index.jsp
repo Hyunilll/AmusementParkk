@@ -9,6 +9,6 @@
 <body>
 
 <% response.sendRedirect("world.do?command=index"); %>
-test
+
 </body>
 </html>
