@@ -9,6 +9,12 @@
 <body>
 
 <% response.sendRedirect("world.do?command=index"); %>
+<<<<<<< HEAD
 
+=======
+test
+test
+test
+>>>>>>> branch 'develop' of https://github.com/Hyunilll/AmusementParkk.git
 </body>
 </html>
