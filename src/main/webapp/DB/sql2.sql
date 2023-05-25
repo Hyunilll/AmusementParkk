@@ -113,7 +113,7 @@ create or replace view best_at_view
 as
 select * from
 (select rownum, aseq, atname, image from attraction  where bestat='Y'  ) 
-where  rownum <=4;
+where  rownum <=3;
 
 drop view best_at_view;
 select * from best_at_view;
