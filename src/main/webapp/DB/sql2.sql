@@ -1,3 +1,4 @@
+
 -- 관리자 입력
 insert into Lworker values('admin','1234', '관리자', '010-7777-7777');
 insert into Lworker values('scott','1234', '홍길동', '010-6400-6080');
@@ -52,7 +53,7 @@ insert into attraction(aseq, pnum, atname, acontent, act1, act2, image, limitkey
 
 
 
--------- 어트랙션 추가 ------
+-------- 어트랙션 추가 -----
 insert into attraction(aseq, pnum, atname, acontent, act1, act2, image, limitkey, limitage) values
 (attraction_aseq.nextval, 12,'와일드 윙' ,'강렬한 바람을 가르며 비행하는 와일드 윙 ','윙','어린이',
 'wildwing.jpg','110cm 이상 탑승 가능', '65세 이하 탑승 가능');
@@ -139,5 +140,6 @@ create or replace view rest_at_view
 as
 select aseq, atname, image from attraction where aresult='Y';
 select * from rest_at_view;
+
 
 
