@@ -19,27 +19,42 @@
 ⊙ 불건전한 내용(개인정보보안, 귀책사유에 대한 개인 음해성 비방의 글 등) 또는<br>
 광고성 게시글은 사전 통보없이 삭제될 수 있습니다</h4>
  </div>
+ </div>
 </article>
 <hr>
-</div>
-<article>
-<div id = qna_write>
-<form name="qna" method="post">
-	<input type="hidden" name="command" value="qnaWrite">
-	<table class="qna-table" style="font-size: 13px;width: 100%;border-top: 1px solid #ccc;border-bottom: 1px solid #ccc;">
-		<label >이름</label><input type="text" name="name" size="50"><br>
-		<label >이메일</label><input type="text" name="email" size="50"><br>
-	    <label >제목</label><input type="text" name="subject"  size="50" ><br>
-		<label >내용</label><textarea rows="8" cols="52" name="content"></textarea>
-	</table>
-	<div class="clear"></div><br><br>
-	<div id="buttons">
-		<input type="submit"  value="등록"     class="submit" onclick="location.href='world.do?command=qnaList'"> 
-		<input type="reset"   value="취소"     class="cancel"  onclick="location.href='world.do?command=qnaList'">
+<article class="fix01">
+
+		<h2> 1:1 고객 게시판 </h2><h3 style="text-align:center; padding-top:20px;padding-bottom:20px;font-color: #e7e7e7;"> 고객님의 질문에 대해서 운영자가 1:1 답변을 드립니다.</h3>
+		 <form class="fix02">
+	       <table class="fix03">
+			<tr>
+				<th>제목</th>
+				
+				<td width="500" style="text-align:left;">
+				
+				</td>
+				
+			</tr>
+			
+			<tr>
+				<th>내용</th>
+				<td align="left" style="text-align:left;font-size:115%;">
+				<input type="text" name="title" size="50">
+				<pre></pre>
+				</td>
+			</tr>
+			
+		</table>
+	<div class="clearr"></div><br><br>
+	<div id="buttonss">
+		<input type="submit" value="등록"  class="submit" onclick="location.href='world.do?command=qnaList'"> 
+		<input type="reset"  value="취소"  class="cancel"  onclick="location.href='world.do?command=qnaList'">
 	</div>
-</div>
+
 </form>
-</article><br><br>
+</article>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br>
 
 
 <%@ include file="../footer.jsp" %>

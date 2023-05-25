@@ -397,7 +397,7 @@ section.notice {padding:  0;}
 #qna_wirte{position: relative; width:1180px; height:600px; margin: 0px auto;}
 #qna_write form {   margin: 10px 0 0 0;   width: 1160px;text-align:center;margin: 0px auto;}
 #qna_write input[type="text"],
- #qna_write textarea {font-size: 18px;text-align: left;}
+#qna_write textarea {font-size: 18px;text-align: left;}
 #qna_write form fieldset { padding: 10px 0 20px 5px;   border: none;width:1150px;text-align:center;margin: 0px auto;}
 #qna_write form label {  width: 200px;    float: left;    margin: 5px 0;  font-weight:bold;}
 #qna_write form input { margin: 5px 0;    border: 1px solid #999;   }
@@ -405,6 +405,23 @@ section.notice {padding:  0;}
 #qna_write form  .cancel {position:relative; font-size: 20px;padding-bottom:10px; width:200px; height:56px;color:#6317ed; background:white;font-weight:bold;border-radius: 28px;border:1px solid #6317ed}
 #qna_table{font-size: 13px;width: 100%;border-top: 1px solid #ccc;border-bottom: 1px solid #ccc;}
 
+
+/*qnaView*/
+.fix01 h2 {font-family: Verdana; font-size: 30px; text-align:center; color: #373737; padding-top: 15px;padding-bottom: 15px;	
+					border-bottom: 1px dashed gray; }
+.fix01 {float:left;width: 680px;padding-right: 10px;font-family: Verdana; font-size: 1em;	
+		line-height: 1.5em; border:1px dashed #ccc;margin:100px 0 280px 600px; }
+.fix02 {margin: 10px 0 0 36px;width: 680px;}
+.fix02 #buttonss {margin: 30px 80px 30px 120px; }
+.fix02 .submit, .fix02 .cancel {height: 30px;width: 150px;border:1px solid #6317ed; font-weight:bold;
+		position:relative; padding-bottom:10px; background:rgb(111, 35, 249);border-radius: 28px; box-shadow: 3px 3px 2px #ccc; font-size: 20px; background-repeat: repeat-x; 
+		background-position: center center;	color:#fff;margin: 0 0 0 20px;  }
+.fix03 th, td{  padding: 20px;border: 1px dashed #ccc;}
+.fix03 tr{border: 1px dashed gray;}
+.fix03 label { width: 140px; float: left; margin: 5px 0; }
+.clearr {clear: both; }
+.qnaimg{position:relative; width:1200px;  height:333px; display: inline-block;text-align: center;
+		margin: 100px 0 0 380px;}
 
 
 

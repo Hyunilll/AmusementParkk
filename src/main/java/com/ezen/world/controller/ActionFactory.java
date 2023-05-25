@@ -11,6 +11,7 @@ import com.ezen.world.controller.action.admin.AdminmemberAction;
 import com.ezen.world.controller.action.admin.AdminnoticeAction;
 import com.ezen.world.controller.action.attraction.AttractionDetailFormAction;
 import com.ezen.world.controller.action.attraction.AttractionFormAction;
+import com.ezen.world.controller.action.event.Event01Action;
 import com.ezen.world.controller.action.guide.GuideAction;
 import com.ezen.world.controller.action.member.ContractAction;
 import com.ezen.world.controller.action.member.EditAction;
@@ -87,6 +88,7 @@ public class ActionFactory {
 		else if( command.equals("qnaWriteForm") ) ac = new QnaWriteFormAction();
 		else if( command.equals("qnaWrite") ) ac = new QnaWriteAction();
 		
+		
 		//admin 
 		else if( command.equals("admin") ) ac= new AdminAction();//관리자 로그인 페이지
 		else if( command.equals("adminlogin") ) ac= new AdminloginAction();//관리자 로그인 동작
@@ -94,9 +96,8 @@ public class ActionFactory {
 		else if( command.equals("adminattractionForm") ) ac= new AdminattractionFormAction();//어트렉션 관리페이지 이동
 		else if( command.equals("adminmember") ) ac= new AdminmemberAction();// 맴버 관리로 이동
 		else if( command.equals("adminnotice") ) ac= new AdminnoticeAction();
-		
-		
-		
+		//이달의 혜택
+		else if( command.equals("event01") ) ac= new Event01Action();
 		
 		
 		
