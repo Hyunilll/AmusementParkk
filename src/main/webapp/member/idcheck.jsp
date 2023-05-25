@@ -7,30 +7,42 @@
 <meta charset="UTF-8">
 <title>idcheck.jsp</title>
 <style type="text/css">
-body{overflow-x:hidden; }
-#popup{padding: 0 10px; font-family:Verdana;}
-form input { margin: 5px 0;    border: 1px solid #999;    background-color: #FCFDEA; }
-form  .submit, form  .cancel {   height: 30px;   width: 150px;  border: 1px solid #666; 
-      border-radius: 10px; box-shadow: 3px 3px 2px #ccc; font-size: 14px;  margin: 0 0 0 20px;
-      background-color: #6317ed; color:white;  }
-form .cancel {background : #81d4fa;} 
+body{overflow-x:hidden;}
+body h2{font-size:30px; border-bottom: 2px solid #e1e1e1; padding:0 0 20px 0;}
+
+#middle {position:relative; width:100%; height:50px;}
+#bottom {position:relative; width:100%; height:50px;}
+#bottom1 {position:relative; width:100%; height:25px;}
+#bottom2 {position:relative; width:100%; height:25px; padding:20px 0; text-align:center;}
+form input {width:150px; height:20px; border:1px solid lightgray; background-color:#f7f7f7;
+	border-radius:5px; font-size:16px;}
+form .text {text-indent:10px;}
+form .submit, form .cancel {width:80px; height:25px; background-color:#6f23f9; 
+      border-radius:5px; font-size:16px; color:white;}
+form .cancel {background:#6f23f9;} 
 </style>
 <script src="member/member.js"></script>
 </head>
 <body>
-	<h1>ID 중복 확인 </h1>
+	<h2>아이디 중복 확인</h2>
 	<form method="post" name="idCheckForm" action="world.do">
-		<input type="hidden" name="command" value="idCheckForm" />
-		User ID :  <input type="text" name="id" value="${id}" >
-		<input type="submit" value="검색" class="submit"><br><br><br>
-		<div>
+		<div id="middle">
+		<input type="hidden" name="command" value="idCheckForm"/>
+		아이디 : <input type="text" name="id" class="text" value="${id}"/>
+		<input type="submit" value="검색" class="submit">
+		</div>
+		<div id="bottom">
 			<c:if test ="${result==1 }">
 				<script type ="text/javascript">opener.document.joinForm.id.value="";</script>
 				${id}는 이미 사용중입니다
 			</c:if>
 			<c:if test="${result == -1}">
-				${id}는 사용 가능한 ID입니다.    
-				<input type="button" value="사용" class="cancel" onclick="idok('${id}');">
+				<div id="bottom1">
+					${id}는 사용 가능한 ID입니다.<br>
+				</div>
+				<div id="bottom2">    
+					<input type="button" value="사용" class="cancel" onclick="idok('${id}');">
+				</div>
 			</c:if>	
 		</div>
 	</form>

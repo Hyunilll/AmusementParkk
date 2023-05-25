@@ -1,26 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="../header.jsp" %>
-<style>
-#join{position: relative; width:1180px; height:600px; margin: 0px auto; 
-  display: grid; min-height: 10vh;}
-#join2 h1{font-weight:bold; color:#6f0c78; text-align: left; }
-#join2{position: absolute; width:100%; height:550px;  bottom:0px;}
-.submit{background : #6317ed;color:white;font-size: 150%; border-radius: 10px; 
-width:150px; height:50px; box-shadow: 3px 3px 2px #ccc;}
-</style>
-
-
-<div id="join">
-	<div id="join2">
-	<h1>회원가입 약관</h1>
-	<hr>
+<article>
+<div class="join2">
 	<form  method="post" name="contractFrm">
-		언제나 새로운 즐거움이 가득한 라떼 월드의 회원가입 페이지 입니다.<br>	
-		라떼 월드의 회원가입은 무료이며, 회원님의 개인신상에 관한 정보는<br>	 ‘정보통신망이용촉진 
-		및 정보보호등에	관한 법률’에 의해 회원님의 동의없이 제 3자에게 제공되지 않으며, <br>철저히 
-		보호되고 있사오니 안심하고 이용하시기	바랍니다.<br><br>	
-	<textarea rows="15" cols="165">제 1 장 총 칙
+
+		<div class="join_title">회원가입 약관</div>
+		<div class="box">
+			<div class="text1">
+				언제나 새로운 즐거움이 가득한 라떼 월드의 회원가입 페이지 입니다.<br>
+				라떼 월드의 회원가입은 무료이며, 회원님의 개인신상에 관한 정보는 ‘정보통신망이용촉진 및 정보보호등에	관한 법률’에 의해<br>
+				회원님의 동의없이 제 3자에게 제공되지 않으며, 철저히 보호되고 있사오니 안심하고 이용하시기	바랍니다.
+			</div>
+			<div class="text2">
+				<textarea cols="152" rows="13">제 1 장 총 칙
+
 
 제 1 조 (목적)
 
@@ -335,19 +329,19 @@ width:150px; height:50px; box-shadow: 3px 3px 2px #ccc;}
 
 (2) 회사의 정액 서비스 회원 및 기타 유료 서비스 이용 회원의 경우 회사가 별도로 정한 약관 및 정책에 따릅니다.
 
-(3) 서비스 이용으로 발생한 분쟁에 대해 소송이 제기되는 경우 회사의 본사 소재지를 관할하는 법원을 관할 법원으로 합니다.</textarea>
-	<br><br>	
-	<div style="text-align:center;">
-		<input type="radio" name="okon">동의함&nbsp;&nbsp;&nbsp;
-		<input type="radio" name="okon" checked>동의안함
-	</div>
-	
-		<input type="button" value="다음" class="submit" onClick="go_next();" style="float: right;" >
+(3) 서비스 이용으로 발생한 분쟁에 대해 소송이 제기되는 경우 회사의 본사 소재지를 관할하는 법원을 관할 법원으로 합니다.
+</textarea>
+			</div>
+			<div class="text3">
+				<input type="radio" name="okon">동의함&nbsp;&nbsp;&nbsp;
+				<input type="radio" name="okon" checked>동의안함
+			</div>
+		</div>
+		<div class="bottom">
+			<input type="button" value="다음" class="submit" onClick="go_next();">
+		</div>
 	</form>
 </div>
-</div>
-
-	
-	
+</article>	
 <%@ include file="../footer.jsp" %>
 
