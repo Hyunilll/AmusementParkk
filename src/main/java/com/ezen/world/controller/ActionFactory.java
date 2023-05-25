@@ -9,6 +9,16 @@ import com.ezen.world.controller.action.admin.AdminattractionFormAction;
 import com.ezen.world.controller.action.admin.AdminloginAction;
 import com.ezen.world.controller.action.admin.AdminmemberAction;
 import com.ezen.world.controller.action.admin.AdminnoticeAction;
+import com.ezen.world.controller.action.admin.AdminqnaAction;
+import com.ezen.world.controller.action.admin.attraction.AdminattractionDetailAction;
+import com.ezen.world.controller.action.admin.attraction.InsertAttractionFormAction;
+import com.ezen.world.controller.action.admin.attraction.InsertattractionAction;
+import com.ezen.world.controller.action.admin.notice.AdminUpdateNoticeFormAction;
+import com.ezen.world.controller.action.admin.notice.AdminnoticeDetailAction;
+import com.ezen.world.controller.action.admin.notice.InsertnoticeFormAction;
+import com.ezen.world.controller.action.admin.notice.NoticeDeleteAction;
+import com.ezen.world.controller.action.admin.notice.NoticeUpdateAction;
+import com.ezen.world.controller.action.admin.notice.insertnoticeAction;
 import com.ezen.world.controller.action.attraction.AttractionDetailFormAction;
 import com.ezen.world.controller.action.attraction.AttractionFormAction;
 import com.ezen.world.controller.action.guide.GuideAction;
@@ -22,10 +32,13 @@ import com.ezen.world.controller.action.member.JoinFormAction;
 import com.ezen.world.controller.action.member.LoginFormAction;
 import com.ezen.world.controller.action.member.LogoutAction;
 import com.ezen.world.controller.action.member.loginAction;
+import com.ezen.world.controller.action.mypage.CartListAction;
+import com.ezen.world.controller.action.mypage.MypageAction;
 import com.ezen.world.controller.action.notice.NoticeAction;
 import com.ezen.world.controller.action.notice.NoticeDetailAction;
 import com.ezen.world.controller.action.order.FastTicketAction;
 import com.ezen.world.controller.action.order.PassTicketAction;
+import com.ezen.world.controller.action.order.PassTicketInsertAction;
 import com.ezen.world.controller.action.order.ReserveAction;
 import com.ezen.world.controller.action.parade.ParadeAction;
 import com.ezen.world.controller.action.qna.QnaAction;
@@ -53,6 +66,7 @@ public class ActionFactory {
 		else if( command.equals("idCheckForm") ) ac = new IdCheckFormAction();
 		else if( command.equals("findZipNum") ) ac = new FindZipNumAction();
 		else if( command.equals("join") ) ac = new JoinAction();
+		else if( command.equals("mypage") ) ac = new MypageAction(); //마이페이지 
 		
 		// 정보 수정 
 		else if( command.equals("editForm") ) ac = new EditFormAction(); // 수정창 이동
@@ -69,8 +83,13 @@ public class ActionFactory {
 
 		//예매창
 		else if( command.equals("reserve") ) ac= new ReserveAction(); // 예매창 이동
-		else if( command.equals("passTicket") ) ac= new PassTicketAction(); // 자유이용권예매창 이동
-		else if( command.equals("fastTicket") ) ac= new FastTicketAction();
+		else if( command.equals("passTicket") ) ac= new PassTicketAction(); // 자유이용권 예매창 이동
+		else if( command.equals("fastTicket") ) ac= new FastTicketAction(); // 패스트패스 예매창 이동
+		else if( command.equals("passTicketInsert") ) ac= new PassTicketInsertAction(); // 자유이용권 장바구니에 정보 저장
+		
+		// 장바구니
+		else if( command.equals("cartList") ) ac= new CartListAction(); // 자유이용권 장바구니에 정보 저장
+		
 		
 		
 		//이용가이드
@@ -87,13 +106,27 @@ public class ActionFactory {
 		else if( command.equals("qnaWriteForm") ) ac = new QnaWriteFormAction();
 		else if( command.equals("qnaWrite") ) ac = new QnaWriteAction();
 		
-		//admin 
+		//admin 카테고리
 		else if( command.equals("admin") ) ac= new AdminAction();//관리자 로그인 페이지
 		else if( command.equals("adminlogin") ) ac= new AdminloginAction();//관리자 로그인 동작
 		else if( command.equals("adminMain") ) ac= new AdminMainAction();// 관리자로 로그인한 메인페이지
 		else if( command.equals("adminattractionForm") ) ac= new AdminattractionFormAction();//어트렉션 관리페이지 이동
 		else if( command.equals("adminmember") ) ac= new AdminmemberAction();// 맴버 관리로 이동
-		else if( command.equals("adminnotice") ) ac= new AdminnoticeAction();
+		else if( command.equals("adminnotice") ) ac= new AdminnoticeAction();//공지사항 관리로 이동
+		else if( command.equals("adminqna") ) ac= new AdminqnaAction();
+				
+		//admin notice 
+		else if( command.equals("adminnoticeDetail") ) ac= new AdminnoticeDetailAction();
+		else if( command.equals("insertnoticeForm") ) ac= new InsertnoticeFormAction();
+		else if( command.equals("insertnotice") ) ac= new insertnoticeAction();
+		else if( command.equals("adminUpdateNoticeForm") ) ac= new AdminUpdateNoticeFormAction();
+		else if( command.equals("noticeUpdate") ) ac= new NoticeUpdateAction();
+		else if( command.equals("noticeDelete") ) ac= new NoticeDeleteAction();
+				
+		//admin attraction  insertattraction
+		else if( command.equals("insertAttractionForm") ) ac= new InsertAttractionFormAction();
+		else if( command.equals("insertattraction") ) ac= new InsertattractionAction();
+		else if( command.equals("adminattractionDetail") ) ac= new AdminattractionDetailAction();
 		
 		
 		

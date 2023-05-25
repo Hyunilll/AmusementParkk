@@ -2,6 +2,8 @@
     pageEncoding="UTF-8"%>
 <%@ include file="../header.jsp" %>
 
+<link href="order/order.css" rel="stylesheet">  
+<script src="order/order.js"></script>
 
 <div class="bigBox">
 	<p class="bigBox1">

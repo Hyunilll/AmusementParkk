@@ -1,3 +1,5 @@
+
+
 -- 관리자 입력
 insert into Lworker values('admin','1234', '관리자', '010-7777-7777');
 insert into Lworker values('scott','1234', '홍길동', '010-6400-6080');
@@ -52,7 +54,7 @@ insert into attraction(aseq, pnum, atname, acontent, act1, act2, image, limitkey
 
 
 
--------- 어트랙션 추가 ------
+-------- 어트랙션 추가 -----
 insert into attraction(aseq, pnum, atname, acontent, act1, act2, image, limitkey, limitage) values
 (attraction_aseq.nextval, 12,'와일드 윙' ,'강렬한 바람을 가르며 비행하는 와일드 윙 ','윙','어린이',
 'wildwing.jpg','110cm 이상 탑승 가능', '65세 이하 탑승 가능');
@@ -78,22 +80,22 @@ select*from attraction;
 
 ------공지사항 리스트!! ---- 
 insert into notice(nseq, title, ncontent , id) values
-(notice_nseq.nextval, '구)교환권(사용불가) 안내', '01.jpg' , 'scott');
+(notice_nseq.nextval, '1. 구)교환권(사용불가) 안내', '01.jpg' , 'scott');
 
 insert into notice(nseq, title, ncontent , id) values
-(notice_nseq.nextval, '주차시스템 개선 안내', '02.jpg' , 'scott');
+(notice_nseq.nextval, '2. 주차시스템 개선 안내', '02.jpg' , 'scott');
 
 insert into notice(nseq, title, ncontent , id) values
-(notice_nseq.nextval, '채팅상담 이용 안내', '03.jpg' , 'scott');
+(notice_nseq.nextval, '3. 채팅상담 이용 안내', '03.jpg' , 'scott');
 
 insert into notice(nseq, title, ncontent , id) values
-(notice_nseq.nextval, '장애인 탑승예약제 시행 안내', '04.jpg' , 'scott');
+(notice_nseq.nextval, '4. 장애인 탑승예약제 시행 안내', '04.jpg' , 'scott');
 
 insert into notice(nseq, title, ncontent , id) values
-(notice_nseq.nextval, '츄러스 받고 내 카드 제휴 할인 조회', '05.jpg' , 'scott');
+(notice_nseq.nextval, '5. 츄러스 받고 내 카드 제휴 할인 조회', '05.jpg' , 'scott');
 
 insert into notice(nseq, title, ncontent , id) values
-(notice_nseq.nextval, '패스트패스 프리미엄 예매 변경 안내 ', '06.jpg' , 'scott');
+(notice_nseq.nextval, '6. 패스트패스 프리미엄 예매 변경 안내 ', '06.jpg' , 'scott');
 
 insert into notice(nseq, title, ncontent , id) values
 (notice_nseq.nextval, '7. 신규 어트랙션 OPEN 안내', '07.jpg' , 'scott');
@@ -121,13 +123,30 @@ insert into lqna(lqseq, title, content, id ) values
 insert into lqna(lqseq, title, content, id ) values
 (Lqna_lqseq.nextval, '놀이기구 무서워요', '??', 'one');
 
+
+
+-----passsticket 리스트 ------
+insert into passticket( ptseq, visitdate, aquantity, cquantity ) values
+(passticket_ptseq.nextval, '2023-05-30', '3', '1');
+
 	
+select*from passticket;
+
+-- lcart view ---
+create or replace view lcart_view
+as
+select lc.lcseq, lc.id, lc.ptseq, pt.visitdate, pt.cquantity, pt.aquantity, pt.aprice, pt.cprice,  pt.indate
+from Lcart lc, passticket pt, Lmember lm
+where lc.ptseq = pt.ptseq and lc.id = lm.id ;
+
+select * from lcart_view;
+
 -----베스트 놀이기구
 create or replace view best_at_view
 as
 select * from
 (select rownum, aseq, atname, image from attraction  where bestat='Y'  ) 
-where  rownum <=4;
+where  rownum <=3;
 
 drop view best_at_view;
 select * from best_at_view;
@@ -138,5 +157,7 @@ create or replace view rest_at_view
 as
 select aseq, atname, image from attraction where aresult='Y';
 select * from rest_at_view;
+
+
 
 

@@ -15,8 +15,8 @@ th, td{  padding: 8px 5px; }
 	<table style="float: right;">
 		<tr>
 			<td>회원 이름<input type="text" name="key" value="${key}">
-				<input class="btn" type="button" value="검색" onClick="go_search('adminMemberList');">
-				<input class="btn" type="button" value="전체보기" onClick="go_total('adminMemberList');">
+				<input class="btn" type="button" value="검색" onClick="go_search('adminmember');">
+				<input class="btn" type="button" value="전체보기" onClick="go_total('adminmember');">
 			</td>
 		</tr>		
 	</table>

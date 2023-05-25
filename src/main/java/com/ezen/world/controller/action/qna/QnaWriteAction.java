@@ -20,13 +20,14 @@ public class QnaWriteAction implements Action {
 		String url = "world.do?command=qnaList"; 
 		HttpSession session = request.getSession();
 	    MemberVo mvo = (MemberVo) session.getAttribute("loginUser");    
-	    if (mvo == null) {
+	    if ( mvo == null) {
 	    	url = "world.do?command=loginForm";
 	    }else{
 	    	QnaVO qvo = new QnaVO();
 	    	qvo.setTitle(request.getParameter("title"));
 	    	qvo.setContent(request.getParameter("content"));
-	    	qvo.setId(request.getParameter("id"));
+	    	qvo.setId( mvo.getId() );
+	    	
 	    	QnaDao qdao = QnaDao.getInstance();
 	    	qdao.insertQna(qvo);
 	    }
