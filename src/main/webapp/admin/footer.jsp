@@ -21,6 +21,7 @@
 		</div>
 	
 	</div>
+	<br>
 	<hr>
 	<div id="f_logo">
 		<img src="images/footer_logo.png" width="70" height="60" style="margin-left: 90px; margin-top:10px">
@@ -40,7 +41,7 @@
 		<a href="">
 			<img src="images/youtube.png"></a>
 			<br><br>
-		<img src="images/img_hotel.jpg"></a>
+		<img src="images/img_hotel.jpg" width="200" height="80"></a>
 	</div>
 	
 	

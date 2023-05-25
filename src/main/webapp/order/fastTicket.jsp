@@ -2,6 +2,8 @@
     pageEncoding="UTF-8"%>
 <%@ include file="../header.jsp" %>
 
+<link href="order/order.css" rel="stylesheet">  
+<script src="order/order.js"></script>
 
 
 
@@ -20,18 +22,20 @@
 			</div>
 			<div class="order_box_date">
 				<div class="order_box_date_text" style="margin-top:10px;">
-					<h2>인원 선택/방문일자</h2>
+					<div id="selectedDate" class="selected-date"></div>
 				</div>
 				<div class="order_box_date_date" style="margin-top:10px;">
-					<c:set var="now" value="<%=new java.util.Date() %>"></c:set>
-					<h2 style="text-align:center;">
-					<fmt:formatDate value="${now }"></fmt:formatDate>
-					</h2>
+					<div class="calendarImage" onclick="showCalendar()">
+						<img src="images/ticket_images/calendar.png" style="width:40px; height:40px;">
+					</div>
+					<div id="calendar" class="calendar"></div>	
 				</div>
 			</div>
 			
-			
-			
+		<!--  어트랙션 선택 -->
+		<div>
+		
+		</div>
 			
 			
 			
@@ -77,7 +81,7 @@
 	    <!--  버튼 -->
 	    
 	       	<div id="reserve_buttons" style = "padding-top:40px;">
-	       		<input type="button" value="구매하기" onClick="">
+	       		<input type="button" value="구매하기" onClick="go_cart();">
 	       	</div>
 	                	
 		</div>
