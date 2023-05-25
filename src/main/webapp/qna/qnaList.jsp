@@ -1,3 +1,4 @@
+
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="../header.jsp" %>
@@ -63,7 +64,7 @@
     
 
 	<jsp:include page="../paging/page.jsp">
-		<jsp:param name="command" value="world.do?command=notice" />
+		<jsp:param name="command" value="world.do?command=qnaList" />
 	</jsp:include>
 
 
@@ -77,6 +78,7 @@
       onclick="location.href='world.do?command=index'">  
 </div>
 <div  class="clear"></div><br>
+
 
 
 <%@ include file="../footer.jsp" %>

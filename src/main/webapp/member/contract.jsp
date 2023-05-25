@@ -4,6 +4,7 @@
 <article>
 <div class="join2">
 	<form  method="post" name="contractFrm">
+
 		<div class="join_title">회원가입 약관</div>
 		<div class="box">
 			<div class="text1">
@@ -13,6 +14,7 @@
 			</div>
 			<div class="text2">
 				<textarea cols="152" rows="13">제 1 장 총 칙
+
 
 제 1 조 (목적)
 

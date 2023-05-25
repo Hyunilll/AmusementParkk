@@ -41,7 +41,7 @@ function toggleAnswer(answerId) {
  <div id="board-search">
         <div class="container">
             <div class="search-window"> 
- 				<div class="search-wrap">
+ 				<div class="search-wrap" style="height:50px">
 					<label for="search" class="blind">공지사항 내용 검색</label>
 					<input id="search" type="search" name="" placeholder="검색어를 입력해주세요." value="">
 					<button type="submit" class="btn btn-dark">검색</button>

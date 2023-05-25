@@ -2,12 +2,15 @@
     pageEncoding="UTF-8"%>
 <%@ include file="../header.jsp" %>
 
+<link href="order/order.css" rel="stylesheet">  
+<script src="order/order.js"></script>
+
 <style>
 	.container {position:relative; width:900px;} 
 </style>
  
- <form name="formm" method="post"	action="world.do">
-	<input type="hidden" name="command" value="ticket">   
+ <form name="formm" method="post">
+	
 <div id =" wrap" style=" width:100%; height:100%; background: lightgray;">
 	<div id = "order_box">
 		<div class="order_box_select2">
@@ -22,9 +25,9 @@
 				</div>
 				<div class="order_box_date_date" style="margin-top:10px;">
 					<div class="calendarImage" onclick="showCalendar()">
-						<img src="images/ticket_images/calendar.png" style="width:25px; height:25px;">
+						<img src="images/ticket_images/calendar.png" style="width:40px; height:40px;">
 					</div>
-					<div id="calendar" class="calendar"></div>	
+					<div id="calendar"  class="calendar"></div>	
 				</div>
 			</div>
 			
@@ -41,7 +44,10 @@
 				</div>
 				<div class="order_quantity_box">
 					<input type='button' style="width:30px;" onclick='count("plus")'value='+'/>
-					<div id='result' name="aquantity">0</div>
+					<div id='result' >
+						<input type="text" name="aquantity" style="text-align:center;"size='1' value='0'>
+					</div>
+					 <!-- $('#result').attr('value','Hello');-->
 					<input type='button' style="width:30px;" onclick='count("minus")'value='-'/>
 				</div>	 
 				<div class="order_quantity_text">
@@ -50,7 +56,7 @@
 				</div>
 				<div class="order_quantity_box">
 					<input type='button' style="width:30px;" onclick='count2("plus")'value='+'/>
-					<div id='result2' name="cquantity">0</div>
+					<div id='result2' >0</div>
 					<input type='button' style="width:30px;" onclick='count2("minus")'value='-'/>
 				 </div>
 					
@@ -97,7 +103,8 @@
 		       </div>
 	       </div>
 	       	<div id="reserve_buttons" style = "padding-top:40px;">
-	       		<input type="button" value="구매하기" onClick="">
+	       		<input type="button" value="구매하기" onClick="location.href='world.do?command=cartList'">
+	       <!-- <input type="button" value="장바구니에 담기" class="submit" onclick="go_cart();"> -->
 	       	</div>
 	                	
 		</div>
