@@ -56,5 +56,11 @@
 function go_(){
 	location.href = "shop.do?command=adminProductList";
 }
+
+
+
+
+
+
                 
             

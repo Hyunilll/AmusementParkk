@@ -7,9 +7,9 @@
 	</div>
 	<div id = "parade_box">
 		<div class="title">
-			<h1>카니발 판타지 퍼레이드</h1><br>
+			<h1 style="text-align:center">카니발 판타지 퍼레이드</h1><br>
 			<hr><br>
-			<h3>브라질의 삼바, 베니스의 가면, 카리브 축제가 한자리에 모였다!<br>
+			<h3 style="text-align:center">브라질의 삼바, 베니스의 가면, 카리브 축제가 한자리에 모였다!<br>
 			세계 유명 축제를 한 번에 즐길 수 있는 기회를 놓치지 마세요!<br><br>
 			장소 : 퍼레이드 길, 카니발 광장 (가이드맵 167)<br>
 			기간 : 3.17(금) ~ 6.18(일)<br><br>
@@ -24,9 +24,9 @@
 	</div>
 	<div id = "parade_box">
 		<div class="title">
-			<h1>레니의 대모험~<br>드래곤 성을 찾아서~</h1><br>
+			<h1 style="text-align:center">레니의 대모험~<br>드래곤 성을 찾아서~</h1><br>
 			<hr><br>
-			<h3>평화롭던 이솝빌리지에 찾아온 어둠의 기운...<br>
+			<h3 style="text-align:center">평화롭던 이솝빌리지에 찾아온 어둠의 기운...<br>
 				레니와 라라는 이솝빌리지를 위험에서 구하기 위해<br>
 				드래곤 성을 찾아 떠나는데…!<br><br>
 			
@@ -45,9 +45,9 @@
 	</div>
 	<div id = "parade_box">
 	<div class="title">
-		<h1>문라이트 퍼레이드</h1><br>
+		<h1 style="text-align:center">문라이트 퍼레이드</h1><br>
 		<hr><br>
-			<h3>밤을 화려하게 장식해 줄 빛의 축제!<br>
+			<h3 style="text-align:center">밤을 화려하게 장식해 줄 빛의 축제!<br>
 				반짝이는 빛과 신나는 음악이 만드는 환상의 퍼레이드!<br><br>
 				장소 : 퍼레이드 길, 카니발 광장 (가이드맵 167)<br>
 				기간 : 3.17(금) ~<br><br>
@@ -61,9 +61,9 @@
 	</div>
 	<div id = "parade_box">
 		<div class="title">
-			<h1>타임 오디세이</h1><br>
+			<h1 style="text-align:center">타임 오디세이</h1><br>
 			<hr><br>
-			<h3>어디에서도 경험해 보지 못한 황홀한 빛의 세계!<br>
+			<h3 style="text-align:center">어디에서도 경험해 보지 못한 황홀한 빛의 세계!<br>
 				감동적 스토리와 환상적인 음악,<br>
 				그리고 밤하늘을 장식할 화려한 불꽃쇼로<br>
 				여러분을 초대합니다!<br><br>

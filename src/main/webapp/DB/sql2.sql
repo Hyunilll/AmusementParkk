@@ -78,22 +78,22 @@ select*from attraction;
 
 ------공지사항 리스트!! ---- 
 insert into notice(nseq, title, ncontent , id) values
-(notice_nseq.nextval, '1. 구)교환권(사용불가) 안내', '01.jpg' , 'scott');
+(notice_nseq.nextval, '구)교환권(사용불가) 안내', '01.jpg' , 'scott');
 
 insert into notice(nseq, title, ncontent , id) values
-(notice_nseq.nextval, '2. 주차시스템 개선 안내', '02.jpg' , 'scott');
+(notice_nseq.nextval, '주차시스템 개선 안내', '02.jpg' , 'scott');
 
 insert into notice(nseq, title, ncontent , id) values
-(notice_nseq.nextval, '3. 채팅상담 이용 안내', '03.jpg' , 'scott');
+(notice_nseq.nextval, '채팅상담 이용 안내', '03.jpg' , 'scott');
 
 insert into notice(nseq, title, ncontent , id) values
-(notice_nseq.nextval, '4. 장애인 탑승예약제 시행 안내', '04.jpg' , 'scott');
+(notice_nseq.nextval, '장애인 탑승예약제 시행 안내', '04.jpg' , 'scott');
 
 insert into notice(nseq, title, ncontent , id) values
-(notice_nseq.nextval, '5. 츄러스 받고 내 카드 제휴 할인 조회', '05.jpg' , 'scott');
+(notice_nseq.nextval, '츄러스 받고 내 카드 제휴 할인 조회', '05.jpg' , 'scott');
 
 insert into notice(nseq, title, ncontent , id) values
-(notice_nseq.nextval, '6. 패스트패스 프리미엄 예매 변경 안내 ', '06.jpg' , 'scott');
+(notice_nseq.nextval, '패스트패스 프리미엄 예매 변경 안내 ', '06.jpg' , 'scott');
 
 insert into notice(nseq, title, ncontent , id) values
 (notice_nseq.nextval, '7. 신규 어트랙션 OPEN 안내', '07.jpg' , 'scott');
@@ -106,6 +106,20 @@ insert into lqna(lqseq, title, content, id ) values
 (Lqna_lqseq.nextval, '결제가 안되네요..', 'ㅜㅜ', 'one');
 insert into lqna(lqseq, title, content, id ) values
 (Lqna_lqseq.nextval, '티켓 교환은 어떻게 하나요?', '??', 'one');
+insert into lqna(lqseq, title, content, id ) values
+(Lqna_lqseq.nextval, 'css 어려워요', '??', 'one');
+insert into lqna(lqseq, title, content, id ) values
+(Lqna_lqseq.nextval, '삶이 힘드네요', '??', 'one');
+insert into lqna(lqseq, title, content, id ) values
+(Lqna_lqseq.nextval, '쉬고 싶어요', '??', 'one');
+insert into lqna(lqseq, title, content, id ) values
+(Lqna_lqseq.nextval, '배고파요', '??', 'one');
+insert into lqna(lqseq, title, content, id ) values
+(Lqna_lqseq.nextval, '신촌 맛집 어딘가요?', '??', 'one');
+insert into lqna(lqseq, title, content, id ) values
+(Lqna_lqseq.nextval, '취업 할 수 있을까요?', '??', 'one');
+insert into lqna(lqseq, title, content, id ) values
+(Lqna_lqseq.nextval, '놀이기구 무서워요', '??', 'one');
 
 	
 -----베스트 놀이기구
