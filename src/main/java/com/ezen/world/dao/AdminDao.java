@@ -7,7 +7,9 @@ import java.sql.SQLException;
 import java.util.ArrayList;
 
 import com.ezen.world.dto.AdminVo;
+import com.ezen.world.dto.AttractionVO;
 import com.ezen.world.dto.MemberVo;
+import com.ezen.world.dto.NoticeVO;
 import com.ezen.world.util.Dbman;
 import com.ezen.world.util.Paging;
 
@@ -23,7 +25,7 @@ public class AdminDao {
 	PreparedStatement pstmt = null;
 	ResultSet rs = null;
 	
-	
+// 관리자 정보 조회
 	public AdminVo getAdminMember(String id) {
 		
 		AdminVo avo =null;
@@ -65,7 +67,7 @@ public class AdminDao {
 		return count;
 	}
 
-
+// 멤버 조회
 	public ArrayList<MemberVo> admiMemberList(Paging paging, String key) {
 		ArrayList<MemberVo>list= new ArrayList<MemberVo>();
 		con = Dbman.getConnection();
@@ -101,6 +103,79 @@ public class AdminDao {
 	 
 		
 		return list;
+	}
+
+// 공지 추가	
+	public void insertNotice(NoticeVO nvo) {
+		con = Dbman.getConnection();
+		String sql = "insert into notice(nseq, title, ncontent , id)"
+				+ " values(notice_nseq.nextval, ?, ?, ?) ";
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, nvo.getTitle());
+			pstmt.setString(2,nvo.getNcontent());
+			pstmt.setString(3, nvo.getId());
+			pstmt.executeUpdate();
+		
+		} catch (SQLException e) { e.printStackTrace();
+		} finally { Dbman.close(con, pstmt, rs);
+		}
+		
+	}
+
+// 공지 수정
+	public void updateNotice(NoticeVO nvo) {
+		con = Dbman.getConnection();
+		String sql = "update notice set title=?, ncontent=?, id=?  where nseq=?";
+		try {		
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, nvo.getTitle());
+			pstmt.setString(2,nvo.getNcontent());
+			pstmt.setString(3, nvo.getId());
+			pstmt.setInt(4, nvo.getNseq());
+			pstmt.executeUpdate();
+		} catch (SQLException e) {e.printStackTrace();
+		} finally { Dbman.close(con, pstmt, rs);  }
+		
+	}
+
+// 공지 삭제
+	public void DeleteNotice(int nseq) {
+		con = Dbman.getConnection();
+		String sql = "Delete from notice where nseq=?";
+		try {		
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, nseq);
+			pstmt.executeUpdate();
+		} catch (SQLException e) {e.printStackTrace();
+		} finally { Dbman.close(con, pstmt, rs);  }
+		
+	}
+
+
+// 놀이기구 추가
+	public void insertAttraction(AttractionVO atvo) {
+		con = Dbman.getConnection();
+		String sql = "insert into attraction(aseq, atname, acontent , act1, act2, image,"
+				+ " pnum, limitkey, limitage, bestat, aresult )"
+				+ " values(attraction_aseq.nextval, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) ";
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, atvo.getAtname());
+			pstmt.setString(2, atvo.getAcontent());
+			pstmt.setString(3, atvo.getAct1());
+			pstmt.setString(4, atvo.getAct2());
+			pstmt.setString(5, atvo.getImage());
+			pstmt.setInt(6, atvo.getPnum());
+			pstmt.setString(7, atvo.getLimitkey());
+			pstmt.setString(8, atvo.getLimitage());
+			pstmt.setString(9, atvo.getBestat());
+			pstmt.setString(10, atvo.getAresult());
+			pstmt.executeUpdate();
+		
+		} catch (SQLException e) { e.printStackTrace();
+		} finally { Dbman.close(con, pstmt, rs);
+		}
 	}
 	
 }

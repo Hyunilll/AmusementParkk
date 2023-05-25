@@ -107,7 +107,22 @@ insert into lqna(lqseq, title, content, id ) values
 insert into lqna(lqseq, title, content, id ) values
 (Lqna_lqseq.nextval, '티켓 교환은 어떻게 하나요?', '??', 'one');
 
+-----passsticket 리스트 ------
+insert into passticket( ptseq, visitdate, aquantity, cquantity ) values
+(passticket_ptseq.nextval, '2023-05-30', '3', '1');
+
 	
+select*from passticket;
+
+-- lcart view ---
+create or replace view lcart_view
+as
+select lc.lcseq, lc.id, lc.ptseq, pt.visitdate, pt.cquantity, pt.aquantity, pt.aprice, pt.cprice,  pt.indate
+from Lcart lc, passticket pt, Lmember lm
+where lc.ptseq = pt.ptseq and lc.id = lm.id ;
+
+select * from lcart_view;
+
 -----베스트 놀이기구
 create or replace view best_at_view
 as

@@ -2,6 +2,9 @@
     pageEncoding="UTF-8"%>
 <%@ include file="../header.jsp" %>
 
+<link href="order/order.css" rel="stylesheet">  
+<script src="order/order.js"></script>
+
 <div id = "order_box">
 	<div class="order_box_select">
 		<div class="order_box_title">

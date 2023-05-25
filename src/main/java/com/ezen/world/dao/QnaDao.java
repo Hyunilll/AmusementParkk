@@ -23,7 +23,7 @@ public class QnaDao {
 	
 	public int getAllCount() {
 		int count= 0;
-		String sql = "select count(*) as cnt from lqna";
+		String sql = "select count(*) as cnt from Lqna";
 		con = Dbman.getConnection();
 		try {
 			pstmt = con.prepareStatement(sql);
@@ -70,8 +70,8 @@ public class QnaDao {
 
 
 	public void insertQna(QnaVO qvo) {
-		String sql = "insert into lqna (lqseq, title, content) "
-				+ " values(lqna_lqseq.nextval , ? , ?  )";
+		String sql = "insert into Lqna (lqseq, title, content, id) "
+				+ " values(Lqna_lqseq.nextval , ? , ? , ? )";
 		con = Dbman.getConnection();
 		try {
 			pstmt = con.prepareStatement(sql);

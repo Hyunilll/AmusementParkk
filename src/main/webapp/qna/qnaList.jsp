@@ -63,7 +63,7 @@
     
 
 	<jsp:include page="../paging/page.jsp">
-		<jsp:param name="command" value="world.do?command=notice" />
+		<jsp:param name="command" value="world.do?command=qnaList" />
 	</jsp:include>
 
 

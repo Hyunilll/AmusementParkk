@@ -9,12 +9,14 @@
     	<h1 id="att_title_text">어트랙션 관리</h1>
     	<h1 id="att_title_exp"> 어트랙션 관리하는 페이지 입니다.</h1>
 	</div>
-	<div id="att_search">조건검색</div>
+	<div id="att_search">
+	<a href="world.do?command=insertAttractionForm">놀이기구 추가</a>
+	</div>
 	<div id="at_arg_A"></div>
 	<div id="att_back">
 		<c:forEach var="AttractionVO" items="${aseqList}">
 			<div id="att_list">
-				<a href="world.do?command=attractionDetail&aseq=${AttractionVO.aseq}">
+				<a href="world.do?command=adminattractionDetail&aseq=${AttractionVO.aseq}">
 					<img src="images/attraction_images/${AttractionVO.image}"/>
 					<h3>${AttractionVO.atname}</h3>
 				</a>

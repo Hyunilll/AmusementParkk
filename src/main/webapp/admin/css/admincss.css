@@ -19,15 +19,13 @@ nav#top_menu ul li a:hover {color: blue; font-weight: bold;}
 .category_top_menu li:hover { color: blue; font-weight: bold;} 
 
 /* admin footer */
-
 footer {margin: 10px 0 0 0;   height: 70px; background-repeat: no-repeat; 
    background-position: 60px center; margin: 0 auto;  width :1350px;}   
-#f_logo {float:left;  width: 200px; height: 85px; margin: 0 0 0 50px;}
-    
+#f_logo {float:left;  width: 200px; height: 85px; margin: 0 0 0 50px;}  
 footer .top { margin: 0 auto; width: 1350px; font-size:100%; font-weight:bold; text-align: center;   }
 footer #copy {margin: 0 auto; width: 1200px; font-size:100%; text-align: left;    }
-#copy img {margin : 0 auto; margin : 0 0 0 30px;}
-#footlogo {float:right; width:200px;height:50px;position: relative; padding:0 150px 0 0; top:-100px;}
+#copy img {margin : 0 auto; margin : 0 0 0 5px;}
+#footlogo {float:right; width:200px;height:50px;position: relative; padding:0 50px 0 0; top:-100px;}
 
 
 
@@ -59,7 +57,7 @@ border-radius: 10px; box-shadow: 3px 3px 2px #ccc; font-size:150%;}
 #att_search{position:absolute; width:1100px; height:85px; background-color:#5c10e6; color:white; font-weight:normal; text-align:center;
    font-size:30px; top:64%; left:50%; transform:translate(-50%, -50%); line-height:85px;}
 #at_arg_A {position:relative; width:100%; height:80px;}
-#att_back{position:relative; width:1130px; height:1600px; margin:0 auto;}
+#att_back{position:relative; width:1130px; height:1800px; margin:0 auto;}
 #att_list{position:relative; width:250px; float:left; margin:15px; text-align:center; border:1px solid lightgray;}
 #att_list img {width:250px; height:250px;}
 #at_arg{position:relative; width:100%; height:20px;}
@@ -69,8 +67,8 @@ border-radius: 10px; box-shadow: 3px 3px 2px #ccc; font-size:150%;}
 table {border-collapse: collapse;border-spacing: 0;}
 section.notice {padding:  0;}
 .page-title { margin-top:100px; margin-bottom: 60px;}
-#board-search .search-window {padding: 15px 0;background-color: #f9f7f9;}
-#board-search .search-window .search-wrap {position: relative;margin: 0 auto;width: 80%;max-width: 564px;}
+#board-search .search-window {position: relative; padding: 15px 0;background-color: #f9f7f9;}
+#board-search .search-window .search-wrap {position: relative;margin: 0 auto;width:  600px; }
 #board-search .search-window .search-wrap input { height: 40px;width: 100%;font-size: 14px;padding: 7px 14px;border: 1px solid #ccc;}
 #board-search .search-window .search-wrap input:focus {border-color: #333;outline: 0;border-width: 1px;}
 #board-search .search-window .search-wrap .btn {position: absolute;right: 0;top: 0;bottom: 0;width: 108px;padding: 0;font-size: 16px;}
@@ -99,5 +97,19 @@ section.notice {padding:  0;}
 .clearfix:after {content: '';display: block;clear: both;}
 .container {  width: 1100px;margin: 0 auto;}
 .blind { position: absolute;overflow: hidden;clip: rect(0 0 0 0);margin: -1px;width: 1px;height: 1px;}
+.plusebtn{float:left;}
 
-
+/*어드민 공지 디테일*/
+.event_arg{position:relative; border-top: 1px solid black; width:1300px; margin:0 auto;}
+.event01{position:relative;  width:1300px; height:5200px; background: white;  display: inline-block; text-align: center; margin:0 auto;}
+.event02{position:relative; font-size:250%; width:100%; padding-right:40px;padding-top:80px;font-weight:bold;height:200px; background-color:white; display: inline-block; margin:0 auto; text-align: center;}
+.event03{position:relative; width:100%; padding-top:40px;font-weight:bold;height:200px; background-color:white; text-align: center; float:left;}
+.event04{position:relative; padding-bottom:100px;padding-right:70px;font-size:120%;width:150px; height:60px; padding-top:20px;font-weight:bold; background-color:white; display: inline-block;text-align: center; }
+.event05{position:relative; padding-bottom:100px;font-size:120%;width:700px; height:60px; padding-top:20px;font-weight:bold; background-color:white; display: inline-block;text-align: left; }
+.event06{position:relative; padding-bottom:100px;font-size:120%;width:200px; height:60px; padding-top:20px;font-weight:bold; background-color:white; display: inline-block;text-align: right; }
+.event_argg{position:relative; border-top: 1px solid #e1e1e1; width:100%; }
+.event08{position:relative; width:100%; height:100%; margin:0 auto;}
+.event09{position:relative; padding-bottom:50px;width:100%; height:100px;background-color:white; display: inline-block; margin:0 auto; text-align: center;}
+.event10{position:relative; padding-top:20px; width:300px; height:100px; display: inline-block; margin:0 auto; text-align: center; }
+.submit{float:left; position:relative; font-size: 20px;padding-bottom:10px; width:200px; height:56px;color: #fff; background:rgb(111, 35, 249);;font-weight:bold;border-radius: 28px;}
+.btn3{float:left;}
