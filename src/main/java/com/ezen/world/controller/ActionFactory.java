@@ -1,3 +1,4 @@
+
 package com.ezen.world.controller;
 
 
@@ -128,6 +129,8 @@ public class ActionFactory {
 		else if( command.equals("insertattraction") ) ac= new InsertattractionAction();
 		else if( command.equals("adminattractionDetail") ) ac= new AdminattractionDetailAction();
 		
+		//이달의 혜택
+		else if( command.equals("event01") ) ac= new Event01Action();
 		
 		
 		

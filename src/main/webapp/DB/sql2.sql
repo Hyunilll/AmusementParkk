@@ -1,5 +1,6 @@
 
 
+
 -- 관리자 입력
 insert into Lworker values('admin','1234', '관리자', '010-7777-7777');
 insert into Lworker values('scott','1234', '홍길동', '010-6400-6080');
@@ -157,7 +158,4 @@ create or replace view rest_at_view
 as
 select aseq, atname, image from attraction where aresult='Y';
 select * from rest_at_view;
-
-
-
 
