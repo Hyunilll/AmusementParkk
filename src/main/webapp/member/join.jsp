@@ -3,32 +3,34 @@
 <%@ include file="../header.jsp" %>
 
 <article>
-<div id="join3">
+<div class="join3">
+	<div class="join_title">회원가입</div>
 	<form method="post" name="joinForm" >
-	<input type="hidden" name="command"  value="join">
-		<fieldset><legend>Basic Info</legend>
-			<label>User ID</label><input type="text" name="id" size="12"><input type="hidden" name="reid">
-		    <input type="button" value="중복 체크" class="dup" onclick="idcheck()"><br>
-		    <label>Password</label><input type="password" name="pwd"><br> 
-		    <label>Retype Password</label><input type="password" name="pwdCheck"><br> <br>
-		    <label>Name</label><input type="text"  name="name"><br><br>
-		    <label id=last>Phone Number</label><input type="text" name="phone"><br>
-		</fieldset>
-		
-		<fieldset><legend>Optional</legend>
-		    <label>Zip Code</label><input type="text" name="zip_num"   size="10" >      
-		    <input type="button" value="주소 찾기" class="dup" onclick="post_zip()"><br>
-			<label>Address</label><input type="text" name="address1"   size="50"><br>
-			<label>Address Detail</label><input type="text" name="address2" style="text-align:center"  size="25"> <br>
-			<label>E-Mail</label><input type="text"  name="email"><br>
-		</fieldset>
-	
-	<div id="buttons">
-		    <input type="button" value="회원가입" class="submit" onclick="go_save()"> 
-		    <input type="reset" value="취소" class="cancel">
-		</div> <!-- go_save에서 액션과 벨리데이션 함께 진행 -->
-		</form>
+		<input type="hidden" name="command" value="join">
+		<div class="basic_box">
+			<div class="basic_box_text">
+				<label>아이디</label><br>
+				<input type="text" name="id" class="dup" style="width:430px;"><input type="hidden" name="reid">
+			    <input type="button" value="중복 체크" onclick="idcheck()" style="width:100px; float:right;"><br>
+			    <label>비밀번호</label><br><input type="password" name="pwd" class="dup"><br>
+			    <label>비밀번호 확인</label><br><input type="password" name="pwdCheck" class="dup"><br>
+			    <label>이름</label><br><input type="text" name="name" class="dup"><br>
+			    <label id=last>휴대폰 번호</label><br><input type="text" name="phone" class="dup"><br>
+			    <label>우편번호</label><br><input type="text" name="zip_num" class="dup" style="width:430px;">      
+			    <input type="button" value="주소 찾기" onclick="post_zip()" style="width:100px; float:right;"><br>
+				<label>주소</label><br><input type="text" name="address1" class="dup"><br>
+				<label>상세주소</label><br><input type="text" name="address2" class="dup"><br>
+				<label>이메일</label><br><input type="text" name="email" class="dup"><br>
+			</div>
 		</div>
-		</article>
+		<div class="join_buttons">
+			<div class="join_buttons_text">
+		    	<input type="button" value="회원가입" class="join_submit" onclick="go_save()"> 
+		    	<input type="reset" value="취소" class="join_cancel">
+		    </div>
+		</div> <!-- go_save에서 액션과 벨리데이션 함께 진행 -->
+	</form>
+</div>
+</article>
 
 <%@ include file="../footer.jsp" %>

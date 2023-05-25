@@ -122,17 +122,17 @@
 	<h2 style="font-size:30px; text-align:center; line-height:80px;">인기 어트랙션</h2>
 	<div id="mainimg">
 		<c:forEach var="AttractionVO" items="${bestList}">
-			<div class="att_list">
-				<a href="world.do?command=attractionDetailForm&aseq=${AttractionVO.aseq}">
+			<a href="world.do?command=attractionDetailForm&aseq=${AttractionVO.aseq}">
+				<div class="att_list">
 					<img src="images/attraction_images/${AttractionVO.image}"/>
 					<h3>${AttractionVO.atname}</h3>
-				</a>
-			</div>
+				</div>
+			</a>
 		</c:forEach>
 	</div>
 	<div class="tag">
 	<ul>
-		<li><a href='world.do?command=attractionForm'>더 많은 어트렉션 보기</a></li>
+		<li><a href='world.do?command=attractionForm'>더 많은 어트랙션 보기</a></li>
 		<li><a href='world.do?command=guide'>운휴 정보 보러 가기</a></li>
 	</ul>
 </div>

@@ -25,24 +25,21 @@
 		<h2 style="font-size:30px; text-align:center; line-height:100px;">오늘의 운휴시설</h2> 
 		<div id="rest_box">
 			<c:forEach var="AttractionVO" items="${aseqList}">
-				<div class="att_list">
-					<a href="world.do?command=attractionDetailForm&aseq=${AttractionVO.aseq}">
+				<a href="world.do?command=attractionDetailForm&aseq=${AttractionVO.aseq}">
+					<div class="att_list">
 						<img src="images/attraction_images/${AttractionVO.image}"/>
 						<h3>${AttractionVO.atname}</h3>
-					</a>
-				</div>
+					</div>
+				</a>
 			</c:forEach>
 		</div>
 	
-		<div class="operation_box_footer">
-
-			<img src="images/icons/holidayArea_icon.png"/>
-			<p>
-				기상상태에 따라 (0℃ 이하 또는 30℃ 이상, 7~14㎧ 이상의 풍속, 0.2㎜ 이상의 비가 내리는 경우)<br>
+		<div class="holidayBox">
+			<p>기상상태에 따라 (0℃ 이하 또는 30℃ 이상, 7~14㎧ 이상의 풍속, 0.2㎜ 이상의 비가 내리는 경우)<br>
 				매직아일랜드 일부 어트랙션 운행이 중단될 수 있습니다.</p>
 			<p>기상상태와 별개로 현장 상황에 따라 예고 없이 운휴하거나 중간 점검을 할 수 있습니다</p>
-
 		</div>
+		<br><br>
 	</div>
 
 
