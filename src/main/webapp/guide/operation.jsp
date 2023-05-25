@@ -36,7 +36,7 @@
 	
 		<div class="operation_box_footer">
 
-			<img src="images/icons/holidayArea_icon.png"/>
+			<img src="images/icons/holidayArea_icon.png" />
 			<p>
 				기상상태에 따라 (0℃ 이하 또는 30℃ 이상, 7~14㎧ 이상의 풍속, 0.2㎜ 이상의 비가 내리는 경우)<br>
 				매직아일랜드 일부 어트랙션 운행이 중단될 수 있습니다.</p>

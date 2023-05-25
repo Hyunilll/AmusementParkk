@@ -1,4 +1,5 @@
 
+
 -- 관리자 입력
 insert into Lworker values('admin','1234', '관리자', '010-7777-7777');
 insert into Lworker values('scott','1234', '홍길동', '010-6400-6080');
@@ -107,6 +108,22 @@ insert into lqna(lqseq, title, content, id ) values
 (Lqna_lqseq.nextval, '결제가 안되네요..', 'ㅜㅜ', 'one');
 insert into lqna(lqseq, title, content, id ) values
 (Lqna_lqseq.nextval, '티켓 교환은 어떻게 하나요?', '??', 'one');
+insert into lqna(lqseq, title, content, id ) values
+(Lqna_lqseq.nextval, 'css 어려워요', '??', 'one');
+insert into lqna(lqseq, title, content, id ) values
+(Lqna_lqseq.nextval, '삶이 힘드네요', '??', 'one');
+insert into lqna(lqseq, title, content, id ) values
+(Lqna_lqseq.nextval, '쉬고 싶어요', '??', 'one');
+insert into lqna(lqseq, title, content, id ) values
+(Lqna_lqseq.nextval, '배고파요', '??', 'one');
+insert into lqna(lqseq, title, content, id ) values
+(Lqna_lqseq.nextval, '신촌 맛집 어딘가요?', '??', 'one');
+insert into lqna(lqseq, title, content, id ) values
+(Lqna_lqseq.nextval, '취업 할 수 있을까요?', '??', 'one');
+insert into lqna(lqseq, title, content, id ) values
+(Lqna_lqseq.nextval, '놀이기구 무서워요', '??', 'one');
+
+
 
 -----passsticket 리스트 ------
 insert into passticket( ptseq, visitdate, aquantity, cquantity ) values
@@ -140,6 +157,7 @@ create or replace view rest_at_view
 as
 select aseq, atname, image from attraction where aresult='Y';
 select * from rest_at_view;
+
 
 
 

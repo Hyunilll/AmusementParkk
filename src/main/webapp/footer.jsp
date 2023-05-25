@@ -16,8 +16,8 @@
 			</div>
 		</div>
 		<div class="bottom">
-			<div class="lotteon-banner">
-				<a href=""><img src="images/img_hotel.jpg"/></a>
+			<div class="lotteon-banner" style="top:55px">
+				<a href=""><img src="images/img_hotel.jpg" /></a>
 			</div>
 			<div class="left">
 				<p class="flogo"><img src="images/footer_logo.png"/></p>
@@ -30,13 +30,13 @@
 			<div class="isms">
 				<img src="images/footer_footer.png"/>
 			</div>
-			<div class="sns">
+			<div class="sns" style="top:5px">
 				<a href=""><img src="images/facebook.png"/></a>
 				<a href=""><img src="images/instar.png"/></a>
 				<a href=""><img src="images/youtube.png"/></a>
 			</div>
 		</div>
-
+		<br><br><br>
 	</div>
 </div>
 </footer>
