@@ -123,6 +123,51 @@ border-radius: 10px; box-shadow: 3px 3px 2px #ccc; font-size:150%;}
 	color: #fff; text-align: center; border-radius: 28px; background: rgb(111, 35, 249);}
 
 
+/*admin attraction detail*/
+.att_Detail_title {position:relative; width:100%; height:380px; display:inline-box; text-align:center; margin:0 auto;}
+#att_Detail_text {position:relative; text-align:center; font-weight:bold; font-size:60px; padding: 100px 0 0 0;}
+#att_Detail_exp{position:relative; text-align:center; font-weight:normal; font-size:20px; padding: 20px 0;}
+
+#att_Detail_tag{position:relative; width:100%; height:80px; display:flex; justify-content:center; align-items:center;}
+#att_Detail_tag ul{width:720px; height:54px; margin:0 auto; list-style:none; display:flex; justify-content:center; align-items:center; text-align:center;}
+#att_Detail_tag ul li{width:110px; height:40px; border-radius:40px 40px 40px 40px; border:1px solid lightgray; float:left;
+	margin-right:40px; font-size:16px; line-height:40px;}
+
+#att_Detail_img_tool {width:100%; height:700px; margin:0 auto;}
+#att_Detail_img {width:100%; height:100%; object-fit:cover;}
+
+#att_Info_back {width:100%; height:794px; text-align:center; background-image: url("../images/att_Info_bg.jpg");}
+#att_Info_box_tool {position:relative; margin:0 auto; width:620px; height:470px;}
+.att_Info_box {position:relative; width:270px; height:360px; margin:60px 20px 20px 20px; text-align:center; background-color:white; box-shadow:5px 5px 5px gray; float:left;}
+.att_Info_icon {padding:40px 0 0 0;}
+.att_Info_text {padding:15px 0 0 0; font-size:20px;}
+#att_Info_pnum {padding:40px 0 0 0; font-size:50px; font-weight:bold;}
+#att_Info_limit {padding:50px 0 0 0; font-size:20px;}
+#att_Info_text2 {position:relative; width:100%; text-align:center; font-weight:bold; font-size:40px;}
+#att_Info_bottom {position:relative; width:100%; height:130px;}
+#att_Info_bottom_tool {width:600px; height:130px; margin:0 auto;}
+#att_Info_icon_tool {width:150px; height:130px; float:left;}
+#att_Info_icon2 {position:relative; margin:0 auto; width:125px; height:100px;}
+#att_Info_icon_text2 {position:relative; margin:0 auto; width:125px; height:30px; font-size:16px;}
+
+.closeInfo {width: 1170px; padding-bottom: 100px; border-bottom: 1px solid #e1e1e1; text-align: center; margin: 40px auto 0;}
+.att_holiday_tool{border: 1px solid #e1e1e1; background: #f8f8f8; padding: 80px 0; margin-top: 40px; text-align: center;}
+.att_holiday_tool .txt {display: inline-block; font-size: 18px; color: #777; margin: 0;}
+.att_holiday_tool .txt span{display: inline-block; background:url(images/icons/holidayDiv_txtBg.png) no-repeat 0; padding-left:110px; line-height:100px;}
+
+.closeInfo .txt {font-size:16px; color:#555; line-height: 28px; margin-top: 30px;}
+.closeInfo .link {margin-top: 20px;}
+.closeInfo .link a {display: inline-block; border: 1px solid #e1e1e1; padding: 0 40px; height: 48px; 
+	line-height: 46px; font-size: 16px; color: #000; text-align: center; background: #f6f6f6; border-radius: 25px;}
+
+.btnArea {text-align: center; margin-top: 60px;}
+.purpleBtn {display: inline-block; padding: 0 70px; height: 56px; line-height: 54px; font-size: 18px; 
+	color: #fff; text-align: center; border-radius: 28px; background: rgb(111, 35, 249);}
+	
+
+
+
+
 /* 공지사항*/
 table {border-collapse: collapse;border-spacing: 0;}
 section.notice {padding:  0;}
@@ -159,6 +204,7 @@ section.notice {padding:  0;}
 .blind { position: absolute;overflow: hidden;clip: rect(0 0 0 0);margin: -1px;width: 1px;height: 1px;}
 .plusebtn{float:left;}
 
+
 /* adminnoticeDetail */
 .event01{position:relative; width:1150px; height:100%; margin:0 auto;}
 .event02{position:relative; width:100%; height:200px; font-size:50px; font-weight:bold; text-align:center; 
@@ -186,3 +232,80 @@ section.notice {padding:  0;}
 .update_buttons {position:relative; width:100%; height:100px; padding:20px 410px;}
 .update_buttons input {width:140px; height:56px; border-radius:40px; background-color:#6f23f9;
 	font-size:20px; color:white; margin:0 10px; border:none;}
+
+
+
+
+/*어드민공지사항123*/
+table {border-collapse: collapse;border-spacing: 0;}
+section.notice {padding:  0;}
+.page-titlee { margin-top:50px; margin-bottom: 80px;}
+.board-searchh .search-window {padding: 15px 0;background-color: #f9f7f9;}
+.board-searchh .search-window .search-wrap {position: relative;margin: 0 auto;width: 90%;max-width: 700px;}
+.board-searchh .search-window .search-wrap input { margin-left:50px;height: 40px;width: 400px;font-size: 14px;padding: 7px 14px;border: 1px solid #ccc; }
+.board-searchh .search-window .search-wrap input:focus {border-color: #333;outline: 0;border-width: 1px;}
+.board-searchh .search-window .search-wrap .btn {position: relative;right: 0;top: 0;bottom: 0;width: 100px;height: 40px;padding: 0;font-size: 16px;}
+
+.board-tablee {font-size: 13px;width: 100%;border-top: 1px solid #ccc;border-bottom: 1px solid #ccc;}
+.board-tablee a {color: #333;display: inline-block;line-height: 1.4;word-break: break-all;vertical-align: middle;}
+.board-tablee a:hover {text-decoration: underline;}
+.board-tablee th {text-align: center;}
+.board-tablee .th-num {width: 100px;text-align: center;}
+.board-tablee .th-date {width: 200px;}
+.board-tablee th, .board-tablee td {padding: 14px 0;}
+.board-tablee tbody td {border-top: 1px solid #e7e7e7;text-align: center;}
+.board-tablee tbody th {padding-left: 28px;padding-right: 14px;border-top: 1px solid #e7e7e7;text-align: left;}
+.board-tablee tbody th p{display: none;}
+.btn {display: inline-block;padding: 0 30px;font-size: 15px; font-weight: 400;background: transparent;text-align: center;
+  white-space: nowrap;vertical-align: middle;-ms-touch-action: manipulation;touch-action: manipulation;cursor: pointer;
+  -webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;border: 1px solid transparent;
+  text-transform: uppercase;-webkit-border-radius: 0;-moz-border-radius: 0;border-radius: 0;
+  -webkit-transition: all 0.3s;-moz-transition: all 0.3s;-ms-transition: all 0.3s; -o-transition: all 0.3s;
+  transition: all 0.3s; }
+.btn-darkk { background: #555;color: #fff;}
+.btn-darkk:hover, .btn-darkk:focus {background: #373737;border-color: #373737;color: #fff;}
+.btn-dark {background: #555; color: #fff;}
+.btn-dark:hover, .btn-dark:focus {background: #373737; border-color: #373737; color: #fff;}
+
+* {list-style: none;text-decoration: none;padding: 0;margin: 0;box-sizing: border-box;}
+.clearfix:after {content: '';display: block;clear: both;}
+.containerr {  width: 1100px;margin: 0 auto;}
+.blind { position: absolute;overflow: hidden;clip: rect(0 0 0 0);margin: -1px;width: 1px;height: 1px;}
+
+/*qnaView*/
+.fix01 h2 {font-family: Verdana; font-size: 30px; text-align:center; color: #373737; padding-top: 15px;padding-bottom: 15px;	
+					border-bottom: 1px dashed gray; }
+.fix01 {float:left;width: 680px;padding-right: 10px;font-family: Verdana; font-size: 1em;	
+		line-height: 1.5em; border:1px dashed #ccc;margin:100px 0 280px 600px; }
+.fix02 {margin: 10px 0 0 36px;width: 680px;}
+.fix02 #buttonss {margin: 30px 50px 30px 120px; }
+.fix02 .submit, .fix02 .cancel {height: 30px;width: 150px;border:1px solid #6317ed; font-weight:bold;
+		position:relative; padding-bottom:10px; background:rgb(111, 35, 249);border-radius: 28px; box-shadow: 3px 3px 2px #ccc; font-size: 20px; background-repeat: repeat-x; 
+		background-position: center center;	color:#fff;margin: 0 0 0 70px;  }
+.fix03 th, td{  padding: 20px;border: 1px dashed #ccc;}
+.fix03 tr{border: 1px dashed gray;}
+.fix03 label { width: 140px; float: left; margin: 5px 0; }
+.clearr {clear: both; }
+.qnaimg{position:relative; width:1200px;  height:333px; display: inline-block;text-align: center;
+		margin: 100px 0 0 380px;}
+
+.btn4{margin:0 auto; font-size: 15px; }
+
+
+
+/* 서브메뉴 */
+nav#sub_menu { float: left; margin-right: 10px;}
+nav#sub_menu ul li { list-style-type: none; margin-top: 10px; }
+nav#sub_menu a { text-decoration: none; color: #666; border-bottom: 1px dotted #999;
+ display: block; width: 100px; height: 25px; padding: 5px; }
+nav#sub_menu a:hover { border-bottom: 1px solid black; }
+
+
+nav#sub_menu h1 { padding: 5px; border-bottom: double;}
+nav#sub_menu ul { margin-left: -20px;}
+
+
+
+
+
+

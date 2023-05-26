@@ -17,7 +17,7 @@ public class AdminattractionDetailAction implements Action {
 		int aseq = Integer.parseInt(request.getParameter("aseq"));
 		
 		AttractionDao adao = AttractionDao.getInstance();
-		AttractionVO avo = adao.getProduct(aseq);
+		AttractionVO avo = adao.getAttraction(aseq);
 		request.setAttribute("AttractionVO", avo);
 		
 		String url = "admin/adminattraction/adminattractionDetail.jsp";

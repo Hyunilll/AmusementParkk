@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="../header.jsp" %>
+
 <div style="clear: both;"></div>
 <article>
 <form method="post" name="formm">
@@ -67,9 +68,11 @@
 		<br>
 		※ 기상 변화 및 파크 상황에 따라 운휴 일정이 변경될 수 있습니다.
 	</p>
+
 	<div class="btnArea">
 		<a href="world.do?command=adminattractionForm" class="purpleBtn">목록</a>
 		<a href="world.do?command=adminUpdateNoticeForm" class="purpleBtn">수정</a>
+
 	</div>
 </div>
 </form>

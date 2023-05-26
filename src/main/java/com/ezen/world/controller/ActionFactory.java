@@ -11,15 +11,20 @@ import com.ezen.world.controller.action.admin.AdminloginAction;
 import com.ezen.world.controller.action.admin.AdminmemberAction;
 import com.ezen.world.controller.action.admin.AdminnoticeAction;
 import com.ezen.world.controller.action.admin.AdminqnaAction;
+import com.ezen.world.controller.action.admin.attraction.AdminUpdateAttractionFormAction;
 import com.ezen.world.controller.action.admin.attraction.AdminattractionDetailAction;
+import com.ezen.world.controller.action.admin.attraction.AttractionDeleteAction;
 import com.ezen.world.controller.action.admin.attraction.InsertAttractionFormAction;
 import com.ezen.world.controller.action.admin.attraction.InsertattractionAction;
+import com.ezen.world.controller.action.admin.attraction.UpdateAttractionAction;
 import com.ezen.world.controller.action.admin.notice.AdminUpdateNoticeFormAction;
 import com.ezen.world.controller.action.admin.notice.AdminnoticeDetailAction;
 import com.ezen.world.controller.action.admin.notice.InsertnoticeFormAction;
 import com.ezen.world.controller.action.admin.notice.NoticeDeleteAction;
 import com.ezen.world.controller.action.admin.notice.NoticeUpdateAction;
 import com.ezen.world.controller.action.admin.notice.insertnoticeAction;
+import com.ezen.world.controller.action.admin.qna.AdminQnaRepSaveAction;
+import com.ezen.world.controller.action.admin.qna.AdminqnaViewAction;
 import com.ezen.world.controller.action.attraction.AttractionDetailFormAction;
 import com.ezen.world.controller.action.attraction.AttractionFormAction;
 import com.ezen.world.controller.action.event.Event01Action;
@@ -129,6 +134,14 @@ public class ActionFactory {
 		else if( command.equals("insertAttractionForm") ) ac= new InsertAttractionFormAction();
 		else if( command.equals("insertattraction") ) ac= new InsertattractionAction();
 		else if( command.equals("adminattractionDetail") ) ac= new AdminattractionDetailAction();
+		else if( command.equals("adminUpdateAttractionForm") ) ac= new AdminUpdateAttractionFormAction();
+	     else if( command.equals("updateAttraction") ) ac= new UpdateAttractionAction();
+	     else if( command.equals("attractionDelete") ) ac= new AttractionDeleteAction();
+		
+		
+		// admin qna 
+		else if( command.equals("adminqnaView") ) ac= new AdminqnaViewAction(); // 디테일 이동
+		else if( command.equals("adminQnaRepSave") ) ac= new AdminQnaRepSaveAction(); // 댓글 추가
 		
 		//이달의 혜택
 		else if( command.equals("event01") ) ac= new Event01Action();
