@@ -29,6 +29,7 @@ import com.ezen.world.controller.action.attraction.AttractionDetailFormAction;
 import com.ezen.world.controller.action.attraction.AttractionFormAction;
 import com.ezen.world.controller.action.event.Event01Action;
 import com.ezen.world.controller.action.guide.GuideAction;
+import com.ezen.world.controller.action.guide.HowComeAction;
 import com.ezen.world.controller.action.member.ContractAction;
 import com.ezen.world.controller.action.member.EditAction;
 import com.ezen.world.controller.action.member.EditFormAction;
@@ -101,6 +102,8 @@ public class ActionFactory {
 		
 		//이용가이드
 		else if( command.equals("guide") ) ac= new GuideAction(); // 이용가이드 이동 
+		else if( command.equals("howCome") ) ac= new HowComeAction(); // 오시는 길 이동
+		
 		 		
 		//공지사항
 		else if( command.equals("notice") ) ac= new NoticeAction(); // 공지사항 이동
