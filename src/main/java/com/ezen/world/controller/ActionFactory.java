@@ -1,3 +1,4 @@
+
 package com.ezen.world.controller;
 
 
@@ -21,6 +22,7 @@ import com.ezen.world.controller.action.admin.notice.NoticeUpdateAction;
 import com.ezen.world.controller.action.admin.notice.insertnoticeAction;
 import com.ezen.world.controller.action.attraction.AttractionDetailFormAction;
 import com.ezen.world.controller.action.attraction.AttractionFormAction;
+import com.ezen.world.controller.action.event.Event01Action;
 import com.ezen.world.controller.action.guide.GuideAction;
 import com.ezen.world.controller.action.member.ContractAction;
 import com.ezen.world.controller.action.member.EditAction;
@@ -128,6 +130,8 @@ public class ActionFactory {
 		else if( command.equals("insertattraction") ) ac= new InsertattractionAction();
 		else if( command.equals("adminattractionDetail") ) ac= new AdminattractionDetailAction();
 		
+		//이달의 혜택
+		else if( command.equals("event01") ) ac= new Event01Action();
 		
 		
 		
