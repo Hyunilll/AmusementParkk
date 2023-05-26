@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="../header.jsp" %>
+
 <div style="clear: both;"></div>
 <article>
 <form method="post" name="formm">
@@ -71,11 +72,14 @@
 		<a href="">이번 달 운휴 달력 보러가기</a>
 	</p>
 	<div class="btnArea">
-		<a href="world.do?command=attractionForm" class="purpleBtn">목록</a>
+		<a href="world.do?command=adminattractionForm" class="purpleBtn">목록</a>
 	</div>
 	
 	<div class="btnArea">
-		<a href="world.do?command=attractionForm" class="purpleBtn">수정</a>
+		<input type="button" class="purpleBtn" value="수 정" onClick ="go_modat('${AttractionVO.aseq}')">
+	</div>
+	<div class="btnArea">
+		<input type="button" class="purpleBtn" value="삭 제" onclick="go_deleteat('${AttractionVO.aseq}')">
 	</div>
 	
 </div>

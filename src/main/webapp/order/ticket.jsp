@@ -27,7 +27,9 @@
 					<div class="calendarImage" onclick="showCalendar()">
 						<img src="images/ticket_images/calendar.png" style="width:40px; height:40px;">
 					</div>
-					<div id="calendar"  class="calendar"></div>	
+					<div id="calendar"  class="calendar">
+						<input type="hidden" id="calendar" name="visitdate">
+					</div>	
 				</div>
 			</div>
 			
@@ -44,8 +46,8 @@
 				</div>
 				<div class="order_quantity_box">
 					<input type='button' style="width:30px;" onclick='count("plus")'value='+'/>
-					<div id='result' >
-						<input type="text" id="aaa" name="aquantity" style="text-align:center;"size='1' value='0'>
+					<div id='result' >0
+						<input type="hidden" id="result" name="aquantity">
 					</div>
 					 <!-- $('#result').attr('value','Hello');-->
 					<input type='button' style="width:30px;" onclick='count("minus")'value='-'/>
@@ -57,8 +59,9 @@
 				<div class="order_quantity_box">
 					<input type='button' style="width:30px;" onclick='count2("plus")'value='+'/>
 					
-					<div id='result2' >0</div>
-					
+					<div id='result2' >0
+						<input type="hidden" id ="result2" name="cquantity">
+					</div>
 					<input type='button' style="width:30px;" onclick='count2("minus")'value='-'/>
 				 </div>
 					
@@ -105,8 +108,8 @@
 		       </div>
 	       </div>
 	       	<div id="reserve_buttons" style = "padding-top:40px;">
-	       		<input type="button" value="구매하기" onClick="location.href='world.do?command=cartList'">
-	       <!-- <input type="button" value="장바구니에 담기" class="submit" onclick="go_cart();"> -->
+	       	<!-- 	<input type="button" value="구매하기" onClick="location.href='world.do?command=cartList'">  -->
+	        	<input type="button" value="결제하기" class="submit" onclick="go_cart();"> 
 	       	</div>
 	                	
 		</div>
