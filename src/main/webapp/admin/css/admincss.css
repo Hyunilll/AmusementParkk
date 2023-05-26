@@ -113,3 +113,41 @@ section.notice {padding:  0;}
 .event10{position:relative; padding-top:20px; width:300px; height:100px; display: inline-block; margin:0 auto; text-align: center; }
 .submit{float:left; position:relative; font-size: 20px;padding-bottom:10px; width:200px; height:56px;color: #fff; background:rgb(111, 35, 249);;font-weight:bold;border-radius: 28px;}
 .btn3{float:left;}
+
+
+/*어드민공지사항123*/
+table {border-collapse: collapse;border-spacing: 0;}
+section.notice {padding:  0;}
+.page-titlee { margin-top:50px; margin-bottom: 80px;}
+.board-searchh .search-window {padding: 15px 0;background-color: #f9f7f9;}
+.board-searchh .search-window .search-wrap {position: relative;margin: 0 auto;width: 90%;max-width: 700px;}
+.board-searchh .search-window .search-wrap input { margin-left:50px;height: 40px;width: 400px;font-size: 14px;padding: 7px 14px;border: 1px solid #ccc; }
+.board-searchh .search-window .search-wrap input:focus {border-color: #333;outline: 0;border-width: 1px;}
+.board-searchh .search-window .search-wrap .btn {position: relative;right: 0;top: 0;bottom: 0;width: 100px;height: 40px;padding: 0;font-size: 16px;}
+
+.board-tablee {font-size: 13px;width: 100%;border-top: 1px solid #ccc;border-bottom: 1px solid #ccc;}
+.board-tablee a {color: #333;display: inline-block;line-height: 1.4;word-break: break-all;vertical-align: middle;}
+.board-tablee a:hover {text-decoration: underline;}
+.board-tablee th {text-align: center;}
+.board-tablee .th-num {width: 100px;text-align: center;}
+.board-tablee .th-date {width: 200px;}
+.board-tablee th, .board-tablee td {padding: 14px 0;}
+.board-tablee tbody td {border-top: 1px solid #e7e7e7;text-align: center;}
+.board-tablee tbody th {padding-left: 28px;padding-right: 14px;border-top: 1px solid #e7e7e7;text-align: left;}
+.board-tablee tbody th p{display: none;}
+.btn {display: inline-block;padding: 0 30px;font-size: 15px; font-weight: 400;background: transparent;text-align: center;
+  white-space: nowrap;vertical-align: middle;-ms-touch-action: manipulation;touch-action: manipulation;cursor: pointer;
+  -webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;border: 1px solid transparent;
+  text-transform: uppercase;-webkit-border-radius: 0;-moz-border-radius: 0;border-radius: 0;
+  -webkit-transition: all 0.3s;-moz-transition: all 0.3s;-ms-transition: all 0.3s; -o-transition: all 0.3s;
+  transition: all 0.3s; }
+.btn-darkk { background: #555;color: #fff;}
+.btn-darkk:hover, .btn-darkk:focus {background: #373737;border-color: #373737;color: #fff;}
+.btn-dark {background: #555; color: #fff;}
+.btn-dark:hover, .btn-dark:focus {background: #373737; border-color: #373737; color: #fff;}
+
+* {list-style: none;text-decoration: none;padding: 0;margin: 0;box-sizing: border-box;}
+.clearfix:after {content: '';display: block;clear: both;}
+.containerr {  width: 1100px;margin: 0 auto;}
+.blind { position: absolute;overflow: hidden;clip: rect(0 0 0 0);margin: -1px;width: 1px;height: 1px;}
+
