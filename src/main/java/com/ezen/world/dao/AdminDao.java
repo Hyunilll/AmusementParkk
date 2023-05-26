@@ -10,6 +10,7 @@ import com.ezen.world.dto.AdminVo;
 import com.ezen.world.dto.AttractionVO;
 import com.ezen.world.dto.MemberVo;
 import com.ezen.world.dto.NoticeVO;
+import com.ezen.world.dto.QnaVO;
 import com.ezen.world.util.Dbman;
 import com.ezen.world.util.Paging;
 
@@ -177,5 +178,113 @@ public class AdminDao {
 		} finally { Dbman.close(con, pstmt, rs);
 		}
 	}
+
+
+	public void updateAttraction(AttractionVO atvo) {
+		con = Dbman.getConnection();
+		String sql = "update attraction set atname=?, acontent=?, act1=?, act2=?, image=? ,pnum=?,"
+				+ " limitkey=?, limitage=?, bestat=?, aresult=? where aseq=?";
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, atvo.getAtname());
+			pstmt.setString(2, atvo.getAcontent());
+			pstmt.setString(3, atvo.getAct1());
+			pstmt.setString(4, atvo.getAct2());
+			pstmt.setString(5, atvo.getImage());
+			pstmt.setInt(6, atvo.getPnum());
+			pstmt.setString(7, atvo.getLimitkey());
+			pstmt.setString(8, atvo.getLimitage());
+			pstmt.setString(9, atvo.getBestat());
+			pstmt.setString(10, atvo.getAresult());
+			pstmt.setInt(11, atvo.getAseq());
+			pstmt.executeUpdate();
+		
+		} catch (SQLException e) { e.printStackTrace();
+		} finally { Dbman.close(con, pstmt, rs);
+		}
+		
+	}
+
+
+	public void DeleteAttraction(int aseq) {
+		con = Dbman.getConnection();
+		String sql = "Delete from attraction where aseq=?";
+		try {		
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, aseq);
+			pstmt.executeUpdate();
+		} catch (SQLException e) {e.printStackTrace();
+		} finally { Dbman.close(con, pstmt, rs);  }
+		
+	}
+	
+
+	public int getAllCountQna(String key) {
+		int count=0;
+		String sql = "select count(*) as cnt from lqna "
+				+ " where title like '%'||?||'%'  or content like  '%'||?||'%' ";
+		con = Dbman.getConnection();
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1,  key);
+			pstmt.setString(2,  key);
+			rs = pstmt.executeQuery();
+			if(rs.next()) count = rs.getInt("cnt");
+			
+		}catch (SQLException e) { e.printStackTrace();
+		} finally { Dbman.close(con, pstmt, rs);  }
+		return count;
+	}
+
+
+	public ArrayList<QnaVO> adminQnaList(Paging paging, String key) {
+		ArrayList<QnaVO> list = new ArrayList<QnaVO>();
+		con = Dbman.getConnection();
+		String sql = " select * from ( "
+				+ " select * from ( "
+				+ " select rownum as rn, lq.* from "
+				+ " ((select * from lqna "
+				+ "	where title like '%'||?||'%' or content like '%'||?||'%' order by lqseq desc) lq) "
+				+ " ) where rn>=? "
+				+ " ) where rn<=? ";
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1,  key);								
+			pstmt.setString(2,  key);
+			pstmt.setInt(3,  paging.getStartNum()) ;		
+			pstmt.setInt(4,  paging.getEndNum() );
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				QnaVO qvo = new QnaVO();
+				qvo.setLqseq(rs.getInt("lqseq"));				
+				qvo.setTitle(rs.getString("title"));
+				qvo.setContent(rs.getString("content"));		
+				qvo.setId(rs.getString("id"));
+				qvo.setIndate(rs.getTimestamp("indate"));		
+				qvo.setReply(rs.getString("reply"));
+				qvo.setRep(rs.getString("rep"));
+				list.add(qvo);
+			}
+		} catch (SQLException e) { e.printStackTrace();
+		} finally {  Dbman.close(con, pstmt, rs);   }
+		return list;
+	}
+
+
+	public void updateQna(QnaVO qvo) {
+		String sql = "update lqna set reply=?, rep='Y' where lqseq=?";
+		con = Dbman.getConnection();
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, qvo.getReply() );
+			pstmt.setInt(2,  qvo.getLqseq() );
+			pstmt.executeUpdate();
+		} catch (SQLException e) {e.printStackTrace(); 
+		} finally { Dbman.close(con, pstmt, rs);  }
+	
+		
+	}
+	
 	
 }

@@ -44,7 +44,7 @@
                 <c:forEach items="${noticeList}"  var="noticeVO">
 	                <tr>
 	                    <td>${noticeVO.nseq}</td>
-	                    <th><a href="world.do?command=adminnoticeDetail&nseq=${noticeVO.nseq}">${noticeVO.title}</a></th>
+	                    <td><a href="world.do?command=adminnoticeDetail&nseq=${noticeVO.nseq}">${noticeVO.title}</a></td>
 	                    <td><fmt:formatDate value="${noticeVO.indate}" type="date"/></td>
 	                </tr>
 	          	</c:forEach>
