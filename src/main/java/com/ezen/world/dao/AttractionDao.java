@@ -92,7 +92,7 @@ public class AttractionDao {
 	}
 
 
-	public AttractionVO getProduct(int aseq) {
+	public AttractionVO getAttraction(int aseq) {
 		AttractionVO avo = null;
 		String sql = "select * from attraction where aseq=?";
 		con = Dbman.getConnection();
