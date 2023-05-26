@@ -34,7 +34,7 @@
 		</div>
 	</div>
 	<p id="att_Info_text2">탑승제한</p>
-	<div id="att_Info_bottom">
+	<div id="att_Info_bottom"><br>
 		<div id="att_Info_bottom_tool">	
 			<div id="att_Info_icon_tool">
 				<div id="att_Info_icon2"><img src="images/icons/rideInfo_rest_icon1.png"></div>
@@ -54,7 +54,7 @@
 			</div>
 		</div>
 	</div>
-</div>
+</div><br>
 <p id="att_Info_text2">운휴일정</p>
 <div class="closeInfo">
 	<div class="att_holiday_tool">
@@ -67,17 +67,10 @@
 		<br>
 		※ 기상 변화 및 파크 상황에 따라 운휴 일정이 변경될 수 있습니다.
 	</p>
-	<p class="link">
-		<a href="">이번 달 운휴 달력 보러가기</a>
-	</p>
 	<div class="btnArea">
-		<a href="world.do?command=attractionForm" class="purpleBtn">목록</a>
+		<a href="world.do?command=adminattractionForm" class="purpleBtn">목록</a>
+		<a href="world.do?command=adminUpdateNoticeForm" class="purpleBtn">수정</a>
 	</div>
-	
-	<div class="btnArea">
-		<a href="world.do?command=attractionForm" class="purpleBtn">수정</a>
-	</div>
-	
 </div>
 </form>
 </article>
