@@ -34,7 +34,7 @@ function toggleAnswer(answerId) {
   <div style="position: absolute; top: 35%; left: 50%; transform: translate(-50%, -50%);">
     <p style="font-size: 24px; color: white;"><h3 style="font-family: 'NotoSans-Bold', '맑은 고딕', 'Malgun Gothic', sans-serif;font-size: 30px;color: #000;text-align: center; padding-top: 50px;"> 더 궁금하신 사항이 있으면 <br>이용문의를 이용하시기 바랍니다.
 <div id="buttons" style="float:center">
-<input type="button" value="이용문의" class="submit" onclick="location.href='world.do?command=qnaWrite'" style="display: inline-block; font-size: 18px;font-weight:bold; background: #CCFF99;color: black; border: 2px solid #fff; border-radius: 30px; padding: 14px 58px; margin-top: 40px;">
+<input type="button" value="이용문의" class="submit" onclick="location.href='world.do?command=qnaList'" style="display: inline-block; font-size: 18px;font-weight:bold; background: #CCFF99;color: black; border: 2px solid #fff; border-radius: 30px; padding: 14px 58px; margin-top: 40px;">
 </h3></p>
   </div>
  <br><br><br>

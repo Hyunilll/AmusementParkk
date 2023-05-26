@@ -17,7 +17,7 @@
    <form method="post" name="loginFrm">
    <!-- <input type="hidden" name="command" value="login">  action="world.do"-->
    <div id=input>
-      <input name="id" placeholder="&nbsp;아이디" size="40" type="text" style="width:550px"><br>
+      <input name="id" placeholder="&nbsp;아이디" size="40" type="text" style="width:550px ;background:white;"><br>
    </div>
    <div id=input>
       <input name="pwd" placeholder="&nbsp;비밀번호" size="40" type="password" style="width:550px"><br>

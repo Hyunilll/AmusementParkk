@@ -416,7 +416,8 @@ section.notice {padding:  0;}
 .fix02 .submit, .fix02 .cancel {height: 30px;width: 150px;border:1px solid #6317ed; font-weight:bold;
 		position:relative; padding-bottom:10px; background:rgb(111, 35, 249);border-radius: 28px; box-shadow: 3px 3px 2px #ccc; font-size: 20px; background-repeat: repeat-x; 
 		background-position: center center;	color:#fff;margin: 0 0 0 20px;  }
-.fix03 th, td{  padding: 20px;border: 1px dashed #ccc;}
+.fix03 th{  padding: 20px;border: 1px dashed #ccc;}
+.fix03 td{  padding: 20px;border: 1px dashed #ccc;}
 .fix03 tr{border: 1px dashed gray;}
 .fix03 label { width: 140px; float: left; margin: 5px 0; }
 .clearr {clear: both; }

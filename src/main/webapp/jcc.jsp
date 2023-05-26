@@ -4,64 +4,70 @@
 <head>
 <meta charset="UTF-8">
 <title>Document</title>
-<style type="text/css">
-#tabs{position:relative; margin: 100px auto; width:1080px; height:40px; text-align:center; margin-bottom:0px;}
-ul{list-style:none; padding:0; margin:0; display:inline-block;}
-ul li{width:178px; height:40px; float:left; border-radius: 5px 5px 0 0; line-height:40px; text-align: center; font-size: 120%; cursor:default; /*border:1px dashed black;*/}
+<style>
+.dropdown{position : relative;display : inline-block;margin:0 auto;}
+.dropbtn{border : 1px solid white;border-radius : 4px;background-color: white;font-weight: bold;color : rgb(37, 37, 37);padding : 12px;width :200px;text-align: center;cursor : pointer;font-size : 140%;}
+.dropbtn:hover{color: blue; font-weight: bold;}
+.dropdown-content{display : none;position : absolute;z-index : 1; font-weight: 400;background-color: white;min-width : 200px;}
+.dropdown-content a{ display : block;text-decoration : none;color : rgb(37, 37, 37); font-size: 140%;padding : 12px 20px;font-weight:bold;}
+.dropdown-content a:hover{color: purple; font-weight: bold;}
+.dropdown:hover .dropdown-content {display: block;}
 
-#content{position:relative; margin:0 auto; width:1080px; height:440px;}
-.contents{position:absolute; width:1080px; height:440px; left:0px; top:0px;  text-align:center; font-size:120%;}
-
-#content1{background:#ebaa55;display:none;}
-#content2{background:#55ebd1; display:none;}
-#content3{background:#4fbde3; display:none;}
-#content4{background:#6ebe6d; display:none;}
-#content5{background:#95a096; display:none;}
-#content6{background:#ed8d2a; display:none;}
-
+.category { position:relatiove; width: 1300px; height:85px; margin:0 auto; }
+.category_top_menu li{  display:block;  height:10px;float:left; font-family: '맑은 고딕';
+	 font-size:140%; margin: 20px 0 10px 80px; font-weight:bold;}
+.category_top_menu li:hover { color: blue; font-weight: bold;} 
 </style>
-<script src="script/jquery-3.6.4.js"></script>
-<script type="text/javascript">
-    // 제이쿼리 명령을 이용하여 ul li 들을 각 배경색을 해당 샊으로 맞춰주세요
-    // 텝메뉴(ul li) 중 하나를 클릭하면 해당 content를 보이게 (show())하고 나머지를 감춰주세요(hide())
-    $(function(){
-        $('li:eq(0)').css('background','#ebaa55');
-        $('li:eq(1)').css('background','#55ebd1');
-        $('li:eq(2)').css('background','#4fbde3');
-        $('li:eq(3)').css('background','#6ebe6d');
-        $('li:eq(4)').css('background','#95a096');
-        $('li:eq(5)').css('background','#ed8d2a');
 
-        $('li').click(function(){
-            var idx = $(this).index();
-            var seletContent = '#content' + (idx+1);
-            $('.contents').hide();
-            $(seletContent).show();
-        });
-         
-    });
-
-
-</script>
 </head>
 <body>
-    <div id="tabs">
-        <ul>
-            <li>즐길거리</li>
-            <li>Menu B</li>
-            <li>Menu C</li>
-            <li>Menu D</li>
-            <li>Menu E</li>
-            <li>Menu F</li>
-        </ul>
+ <!-- <div class="category">
+				<ul class="category_top_menu">	
+					<li><a href="world.do?command=attractionForm">어트렉션</a></li>
+					<li><a href="world.do?command=parade">퍼레이드</a></li>
+					<li><a href="world.do?command=reserve">예매하기</a></li>
+					<li><a href="world.do?command=guide">이용가이드</a></li>
+					<li><a href="world.do?command=notice">공지사항</a></li>
+					<li><a href="world.do?command=qna">Q&amp;A</a></li>
+					<li><a href="world.do?command=event01">이달의 혜택</a></li>
+				</ul>		
+			</div>  -->
+			
+    <div class="dropdown">
+      <button class="dropbtn"> 
+        <span>즐길거리</span>
+      </button>
+      <div class="dropdown-content">
+        <a href="world.do?command=attractionForm">어트렉션</a>
+        <a href="world.do?command=parade">퍼레이드</a>
+      </div>
     </div>
-    <div id="content">
-        <div class="contents" id="content1"><a href="" >어트렉션</a><br><br>퍼레이드</div>
-        <div class="contents" id="content2">Content B</div>
-        <div class="contents" id="content3">Content C</div>
-        <div class="contents" id="content4">Content D</div>
-        <div class="contents" id="content5">Content E</div>
-        <div class="contents" id="content6">Content F</div>
+    <div class="dropdown">
+      <button class="dropbtn"> 
+        <span >예매하기</span>
+      </button>
+      <div class="dropdown-content">
+        <a href="world.do?command=reserve">예매</a>
+        <a href="world.do?command=event01">이달의 혜택</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn"> 
+        <span >이용가이드</span>
+      </button>
+      <div class="dropdown-content">
+        <a href="world.do?command=guide">운영/운휴</a>
+        <a href="#">오시는 길</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn"> 
+        <span >소통서비스</span>
+      </button>
+      <div class="dropdown-content">
+        <a href="world.do?command=notice">공지사항</a>
+        <a href="world.do?command=qna">Q&amp;A</a>
+      </div>
     </div>
 </body>
 </html>
