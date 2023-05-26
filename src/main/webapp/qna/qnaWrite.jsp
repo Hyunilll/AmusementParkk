@@ -9,7 +9,7 @@
 <article>
 <h2 style="font-family: 'NotoSans-Bold', '맑은 고딕', 'Malgun Gothic', sans-serif;font-size: 55px;color: #000;text-align: center; padding-top: 50px;">이용문의</h2><br>
 <div style="position: relative; text-align: center;">
-  <img src="images/qna_image.jpg" style="opacity: 0.3;width:950px;">
+  <img src="images/qna_image.jpg" style="opacity: 0.3;width:1200px;">
   <div style="position: absolute; top: 50%; left: 42%; transform: translate(-50%, -50%);text-align: left;">
     <h3 style="font-size: 27px;font-family: 'NotoSans-Bold', '맑은 고딕', 'Malgun Gothic', sans-serif;line-height: 36px;margin-bottom: 27px;text-align:left;">롯데월드를 이용하기 전<br>
 궁금한 사항에 대한 문의를 남겨주세요.</h3><br><h4 style="font-size: 17px; font-weight:bold;" >
@@ -21,7 +21,7 @@
  </div>
  </div>
 </article>
-<hr>
+
 <article class="fix01">
 
 		<h2> 1:1 고객 게시판 </h2><h3 style="text-align:center; padding-top:20px;padding-bottom:20px;font-color: #e7e7e7;"> 고객님의 질문에 대해서 운영자가 1:1 답변을 드립니다.</h3>
@@ -31,7 +31,7 @@
 				<th>제목</th>
 				
 				<td width="500" style="text-align:left;">
-				
+				<input type="text" name="title" size="50">
 				</td>
 				
 			</tr>
@@ -39,7 +39,7 @@
 			<tr>
 				<th>내용</th>
 				<td align="left" style="text-align:left;font-size:115%;">
-				<input type="text" name="title" size="50">
+				<textarea rows="8" cols="52" name="content"></textarea>
 				<pre></pre>
 				</td>
 			</tr>
@@ -54,7 +54,7 @@
 </form>
 </article>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-<br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 
 
 <%@ include file="../footer.jsp" %>
