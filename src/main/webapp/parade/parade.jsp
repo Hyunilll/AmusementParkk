@@ -1,15 +1,31 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="../header.jsp" %>
+<style>
+    @keyframes fadeInUp {
+        0% {opacity: 0;transform: translate3d(0, 100%, 0);}
+        to {opacity: 1;transform: translateZ(0);}
+    }
+ 	
+    #parade_img{ position: relative; animation: fadeInUp 2s;}
+   .momo{ position: relative; animation: fadeInUp 5s;}
+   .mimi{ position: relative; animation: fadeInUp 6s;}
+   .momo01{ position: relative; animation: fadeInUp 7s;}
+   .mimi01{ position: relative; animation: fadeInUp 8s;}
+   .momo03{ position: relative; animation: fadeInUp 9s;}
+   .mimi03{ position: relative; animation: fadeInUp 10s;}
+   .momo04{ position: relative; animation: fadeInUp 11s;}
+   .mimi04{ position: relative; animation: fadeInUp 12s;}
+</style>
 
 	<div id="parade_img">
 		<img src="images/paradeDetail1.jpg" width="100%" height="600" >
 	</div>
 	<div id = "parade_box">
 		<div class="title">
-			<h1 style="text-align:center">카니발 판타지 퍼레이드</h1><br>
+			<h1 class="momo" style="text-align:center">카니발 판타지 퍼레이드</h1><br>
 			<hr><br>
-			<h3 style="text-align:center">브라질의 삼바, 베니스의 가면, 카리브 축제가 한자리에 모였다!<br>
+			<h3 class="mimi" style="text-align:center">브라질의 삼바, 베니스의 가면, 카리브 축제가 한자리에 모였다!<br>
 			세계 유명 축제를 한 번에 즐길 수 있는 기회를 놓치지 마세요!<br><br>
 			장소 : 퍼레이드 길, 카니발 광장 (가이드맵 167)<br>
 			기간 : 3.17(금) ~ 6.18(일)<br><br>
@@ -24,9 +40,9 @@
 	</div>
 	<div id = "parade_box">
 		<div class="title">
-			<h1 style="text-align:center">레니의 대모험~<br>드래곤 성을 찾아서~</h1><br>
+			<h1 class="momo01" style="text-align:center">레니의 대모험~<br>드래곤 성을 찾아서~</h1><br>
 			<hr><br>
-			<h3 style="text-align:center">평화롭던 이솝빌리지에 찾아온 어둠의 기운...<br>
+			<h3 class="mimi01" style="text-align:center">평화롭던 이솝빌리지에 찾아온 어둠의 기운...<br>
 				레니와 라라는 이솝빌리지를 위험에서 구하기 위해<br>
 				드래곤 성을 찾아 떠나는데…!<br><br>
 			
@@ -43,11 +59,11 @@
 	<div id="parade_img">
 		<img src="images/paradeDetail3.jpg" width="100%" height="600" >
 	</div>
-	<div id = "parade_box">
+	<div id ="parade_box">
 	<div class="title">
-		<h1 style="text-align:center">문라이트 퍼레이드</h1><br>
+		<h1 class="momo03" style="text-align:center">문라이트 퍼레이드</h1><br>
 		<hr><br>
-			<h3 style="text-align:center">밤을 화려하게 장식해 줄 빛의 축제!<br>
+			<h3 class="mimi03" style="text-align:center">밤을 화려하게 장식해 줄 빛의 축제!<br>
 				반짝이는 빛과 신나는 음악이 만드는 환상의 퍼레이드!<br><br>
 				장소 : 퍼레이드 길, 카니발 광장 (가이드맵 167)<br>
 				기간 : 3.17(금) ~<br><br>
@@ -61,9 +77,9 @@
 	</div>
 	<div id = "parade_box">
 		<div class="title">
-			<h1 style="text-align:center">타임 오디세이</h1><br>
+			<h1 class="momo04" style="text-align:center">타임 오디세이</h1><br>
 			<hr><br>
-			<h3 style="text-align:center">어디에서도 경험해 보지 못한 황홀한 빛의 세계!<br>
+			<h3 class="mimi04" style="text-align:center">어디에서도 경험해 보지 못한 황홀한 빛의 세계!<br>
 				감동적 스토리와 환상적인 음악,<br>
 				그리고 밤하늘을 장식할 화려한 불꽃쇼로<br>
 				여러분을 초대합니다!<br><br>

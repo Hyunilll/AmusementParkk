@@ -2,8 +2,21 @@
     pageEncoding="UTF-8"%>
 <%@ include file="header.jsp" %>
 
-
-
+<style>
+    @keyframes fadeInUp {
+        0% {opacity: 0;transform: translate3d(0, 100%, 0);}
+        to {opacity: 1;transform: translateZ(0);}
+    }
+ 	.mainTit{ position: relative;animation: fadeInUp 3s;}
+    .mainTxt{ position: relative; animation: fadeInUp 4s;}
+    #mainTodayArea{ position: relative; animation: fadeInUp 2s;}
+    .boxArea{ position: relative; animation: fadeInUp 5s;}
+    #mainback{ position: relative; animation: fadeInUp 7s;}
+    #main_view_{ position: relative; animation: fadeInUp 8s;}
+    #maintitle{ position: relative; animation: fadeInUp 7s;}
+  
+</style>
+ 
 <div id="main_view">
     <div id="main_imgs">
    			<img src="images/mainimgs1.jpg" >
@@ -46,28 +59,28 @@
 		<div class="boxArea">                               <!-- 세번째상자 -->
 			<div class="box-tr">
 				<div class="box-td">
-					<a href="">
+					<a href="world.do?command=event01">
 						<span class="imggg"><img src="images/card.png" width="248" height="198"/></span>
 						<span class="price1">월드카드로 최대 10만원 캐시백 혜택 챙겨요! 40000원</span>		
 					</a>
 				</div>
 						
 				<div class="box-td">
-					<a href="">
+					<a href="world.do?command=event01">
 						<span class="imggg"><img src="images/point.jpg" width="248" height="198"/></span>
 						<span class="price1">월드 최대 30% 할인 + 이용금액 100% 캐시백까지</span>
 					</a>
 				</div>
 
 				<div class="box-td">
-					<a href="">
+					<a href="world.do?command=event01">
 						<span class="imggg"><img src="images/npay.jpg" width="248" height="198"/></span>
 						<span class="price1">가정의달은, 꼭 네이버페이로 39,900원</span>
 					</a>
 				</div>
 
 				<div class="box-td">
-					<a href="">
+					<a href="world.do?command=event01">
 						<span class="imggg"><img src="images/family.jpg" width="248" height="198"/></span>
 						<span class="price1">패밀리 패키지(어른+어린이) 70,000원</span>
 					</a>
@@ -77,28 +90,28 @@
 				
 			<div class="box-tr">
 				<div class="box-td">
-					<a href="">
+					<a href="world.do?command=event01">
 						<span class="imggg"><img src="images/friend.png" width="248" height="198"/></span>
 						<span class="price1">프랜드 패키지(어른+어른) 90,000원</span>
 					</a>
 				</div>
 
 				<div class="box-td">
-					<a href="">
+					<a href="world.do?command=event01">
 						<span class="imggg"><img src="images/fastfast.jpg" width="248" height="198"/></span>
 						<span class="price1">패스트패스 100,000원</span>
 					</a>
 				</div>
 
 				<div class="box-td">
-					<a href="">
+					<a href="world.do?command=event01">
 				 		<span class="imggg"><img src="images/springspring.jpg" width="248" height="198"/></span>
 						<span class="price1">스프링데이 30,000원</span>			
 					</a>
 				</div>
 
 				<div class="box-td">
-					<a href="">
+					<a href="world.do?command=event01">
 						<span class="imggg"><img src="images/76419_59366_5741.jpg" width="248" height="198"/></span>
 						<span class="price1">교복 패키지 50,000원</span>
 					</a>
