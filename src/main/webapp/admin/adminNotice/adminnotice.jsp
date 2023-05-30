@@ -20,8 +20,8 @@
                 <form action="">
                     <div class="search-wrap">
                         <label for="search" class="blind"> 공지사항 내용 검색 </label>
-                        <input id="search" type="search" name="" placeholder="검색어를 입력해주세요." value="">
-                        <button type="submit" class="btn btn-dark" value="검색" onClick="go_search('adminattraction');">검색</button>
+                        <input id="search" type="search" name="key" placeholder="검색어를 입력해주세요." value="${key}">
+                        <button type="submit" class="btn btn-dark" value="검색" onClick="go_search('adminnotice');">검색</button>
                         <button type="submit" class="btn btn-darkk" value="추가" onClick="go_insertform('insertnoticeForm')">추가</button>
                         
                     </div>
@@ -62,5 +62,6 @@
 	<jsp:param name="command" value="world.do?command=notice" />
 </jsp:include>
 </form>
+<form name="frm" method="post"> 
 <br><br><br>
 <%@ include file ="/admin/footer.jsp"%>

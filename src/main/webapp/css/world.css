@@ -132,7 +132,7 @@ img, fieldset {
 #logina #input{ position: relative;width:600px; height:70px; color:gray; border:1px solid silver; 
       margin: 0 auto; background: white; line-height: 70px; text-align:center; font-size: 100%; }
 #logina input[type=text], input[type=password]{ font-size:150%; border:0; outline: none; }
-#logina h2{font-size:150%; color: gray;}
+#logina h2{font-size:150%; color: gray; padding-top:30px;padding-bottom:8px; margin:0 auto;}
 #logina .menu1{ position: relative; margin: 0 auto; margin-top: 10px; width:600px; height:20px; text-align: right; }
 #logina .menu1 ul{ list-style: none; margin:0; padding:0; display:inline-block; }
 #logina .menu1 ul li{ float:left; padding:0 5px;  font-size:100%;  }
