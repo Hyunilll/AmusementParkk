@@ -74,13 +74,15 @@ a{ text-decoration-line: none; color: inherit;}
    font-weight:bold; font-size:30px;}
 
 /* main4  = > parade */
-#main_view_{background-color: #f7f7f7;position:relative;
-	text-align:center; width:1350px; height:300px; overflow:hidden;display: flex;
-  flex-wrap: wrap; margin:0 auto; }
-#parade{ padding-top:30px;width:300px; height:250;overflow: hidden;
-	margin:0 auto; padding-right:15px;padding-left:15px; float :left}
-.scale{transition:0.8s;}
-.scale:hover{ transform: scale(1.04);}
+.main_bottom{position:relative; width:1350px; height:600px; padding-top:140px; margin:0 auto;}
+.main_bottom #line {position:absolute; width:1350px; top:80px; left:50%; transform:translate(-50%, 0%); margin:0 auto; border-top:1px solid black;}
+.main_bottom h1{position:absolute; width:300px; top:-25px; left:50%; transform:translate(-50%, 0%); text-align:center; background-color:white;}
+.main_bottom h3{position:relative; width:1350px; height:70px; margin:0 auto; text-align:center; font-weight:normal;}
+#main_view_{position:relative; width:1350px; height:300px; background-color: #f7f7f7;
+	text-align:center; display: flex; flex-wrap: wrap; margin:0 auto;}
+#parade{width:250px; height:300px; padding:40px 15px; margin:0 auto; float:left; transition:0.8s;}
+#main_view_ #parade:hover{ transform:scale(1.04); font-weight:bold; color:#5c10e6}
+#main_view_ .title {position:relative; width:250px; height:80px; padding:10px; text-align:center;}
 
 /* parade */ 
 
@@ -364,18 +366,18 @@ section.notice {padding:  0;}
 .blind { position: absolute;overflow: hidden;clip: rect(0 0 0 0);margin: -1px;width: 1px;height: 1px;}
 
 /* 공지사항 디테일 */
-.event_arg{position:relative; border-top: 1px solid black; width:1300px;margin:0 auto;}
-.event01{position:relative;  width:1300px; height:5200px; background: white;  display: inline-block;text-align: center;margin:0 auto;}
-.event02{position:relative; font-size:250%; width:100%; padding-right:40px;padding-top:80px;font-weight:bold;height:200px; background-color:white; display: inline-block; margin:0 auto; text-align: center;}
-.event03{position:relative; width:100%; padding-top:40px;font-weight:bold;height:200px; background-color:white; text-align: center; float:left;}
-.event04{position:relative; padding-bottom:100px;padding-right:70px;font-size:120%;width:150px; height:60px; padding-top:20px;font-weight:bold; background-color:white; display: inline-block;text-align: center; }
-.event05{position:relative; padding-bottom:100px;font-size:120%;width:700px; height:60px; padding-top:20px;font-weight:bold; background-color:white; display: inline-block;text-align: left; }
-.event06{position:relative; padding-bottom:100px;font-size:120%;width:200px; height:60px; padding-top:20px;font-weight:bold; background-color:white; display: inline-block;text-align: right; }
-.event_argg{position:relative; border-top: 1px solid #e1e1e1; width:100%; }
-.event08{position:relative; width:100%; height:100%; margin:0 auto;}
-.event09{position:relative; padding-bottom:50px;width:100%; height:100px;background-color:white; display: inline-block; margin:0 auto; text-align: center;}
-.event10{position:relative; padding-top:20px; width:300px; height:100px; display: inline-block; margin:0 auto; text-align: center; }
-.submit{position:relative; font-size: 20px;padding-bottom:10px; width:200px; height:56px;color: #fff; background:rgb(111, 35, 249);;font-weight:bold;border-radius: 28px;}
+.event01{position:relative; width:1150px; height:100%; margin:0 auto;}
+.event02{position:relative; width:100%; height:200px; font-size:50px; font-weight:bold; text-align:center; 
+	padding:70px; border-bottom:1px solid black;}
+.event03{position:relative; width:100%; height:80px; font-weight:bold; padding:10px; border-bottom:1px solid lightgray;}
+.event04{position:relative; width:120px; height:100%; padding-top:15px; font-size:120%; text-align:center; float:left;}
+.event05{position:relative; width:790px; height:100%; padding-top:15px; font-size:120%; padding-left:10px; float:left;}
+.event06{position:relative; width:200px; height:100%; padding-top:15px; font-size:120%; text-align:center; float:left;}
+.event08{position:relative; width:100%; height:100%; padding:40px 0 40px 0; margin:0 auto; border-bottom:1px solid lightgray;}
+.event09{position:relative; width:100%; height:150px; padding:40px 500px;}
+.event10{position:relative; width:100%; height:100%;}
+.event10 input {width:130px; height:56px; border-radius:40px; background-color:#6f23f9;
+	font-size:20px; color:white; margin:0 10px; border:none;}
 
 /* event01 */
 @import url("https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap");

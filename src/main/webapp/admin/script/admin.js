@@ -216,11 +216,8 @@ function go_mod_saveat(){
 	}
 }
 
-
-
 function go_rep(lqseq){
-		
 	document.frm.action="world.do?command=adminQnaRepSave";
 	document.frm.submit();
-
 }
+
