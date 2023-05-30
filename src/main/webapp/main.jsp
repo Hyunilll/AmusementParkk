@@ -11,9 +11,8 @@
     .mainTxt{ position: relative; animation: fadeInUp 4s;}
     #mainTodayArea{ position: relative; animation: fadeInUp 2s;}
     .boxArea{ position: relative; animation: fadeInUp 5s;}
-    #mainback{ position: relative; animation: fadeInUp 7s;}
-    #main_view_{ position: relative; animation: fadeInUp 8s;}
-    #maintitle{ position: relative; animation: fadeInUp 7s;}
+	#mainback{ position: relative; animation: fadeInUp 7s;}
+    .main_bottom{ position: relative; animation: fadeInUp 7s;}
   
 </style>
  
@@ -152,45 +151,38 @@
 </div>
 
 <!--  절취선  -->
-
-<h1 style=" text-align: center; font-size: 300%;">-------What's New-------</h1>  
-<h3 style=" text-align: center;">꿈과 환상의 나라로 어서오세요</h3>
-
-<div id="main_view_">              
-	<div id="parade">
-	   <a href="world.do?command=parade">
-	        <div class="scale">
-	        	<img src="images/parade1.jpg" width="250" height="170" >
-	        </div>
-	        <div class="title">
-	        	<br><h3>카니발 판타지 퍼레이드</h3>
-	        </div>
-	    </a>
-	</div>       
-	<div id="parade">
-	   <a href="world.do?command=parade">
-	        <div class="scale"><img src="images/parade2.jpg" width="250" height="170" ></div>
-	        <div class="title"><h3>레니의 대모험~<br>드래곤 성을 찾아서~</h3></div>
-	    </a>
-	</div>       
-	<div id="parade">
-	   <a href="world.do?command=parade">
-	        <div class="scale"><img src="images/parade3.jpg" width="250" height="170" ></div>
-	        <div class="title"><br><h3>문라이트 퍼레이드</h3></div>
-	    </a>
-	</div>       
-	<div id="parade">
-	   <a href="world.do?command=parade">
-	        <div class="scale"><img src="images/parade4.jpg" width="250" height="170" ></div>
-	        <div class="title"><br><h3>타임 오디세이</h3></div>
-	    </a>
-	</div> 
-</div>      
-
-				
-				
-				<!--  절취선  -->
-				
-<br><br><br><br><br><br><br>
-
+<div class="main_bottom">
+	<div id="line">
+		<h1>What's New</h1>
+	</div>  
+	<h3>꿈과 환상의 나라로 어서오세요!</h3>
+	<div id="main_view_">              
+		<div id="parade">
+		   <a href="world.do?command=parade">
+		        <div class="scale">
+		        	<img src="images/parade1.jpg" width="250" height="170" >
+		        </div>
+		        <div class="title">카니발 판타지 퍼레이드</div>
+		    </a>
+		</div>       
+		<div id="parade">
+		   <a href="world.do?command=parade">
+		        <div class="scale"><img src="images/parade2.jpg" width="250" height="170" ></div>
+		        <div class="title">레니의 대모험~<br>드래곤 성을 찾아서~</div>
+		    </a>
+		</div>       
+		<div id="parade">
+		   <a href="world.do?command=parade">
+		        <div class="scale"><img src="images/parade3.jpg" width="250" height="170" ></div>
+		        <div class="title">문라이트 퍼레이드</div>
+		    </a>
+		</div>       
+		<div id="parade">
+		   <a href="world.do?command=parade">
+		        <div class="scale"><img src="images/parade4.jpg" width="250" height="170" ></div>
+		        <div class="title">타임 오디세이</div>
+		    </a>
+		</div> 
+	</div>      
+</div>
 <%@ include file="footer.jsp" %>
