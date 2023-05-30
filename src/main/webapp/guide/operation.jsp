@@ -34,7 +34,7 @@
 		<div id="rest_box">
 			<c:forEach var="AttractionVO" items="${aseqList}">
 				<a href="world.do?command=attractionDetailForm&aseq=${AttractionVO.aseq}">
-					<div class="att_list">
+					<div id="att_list">
 						<img src="images/attraction_images/${AttractionVO.image}"/>
 						<h3 class="nn">${AttractionVO.atname}</h3>
 					</div>

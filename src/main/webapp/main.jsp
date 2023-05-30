@@ -45,7 +45,7 @@
 
 <div id="mainTodayArea" >
 	<a href="world.do?command=guide" target='_blank'>
- 	<img src="images/clock.png" width="45" height="45" ><br>오늘의 파크 운영시간   10:00~21:00
+ 		<img src="images/icons/mainTodayArea_tit_icon.png"/>&nbsp;&nbsp;&nbsp;오늘의 파크 운영시간&nbsp;&nbsp;10:00 ~ 21:00
 	</a>
 </div>
 
@@ -53,7 +53,7 @@
 <br>
 <div class="mainbox">                                         <!-- 제일 큰 상자 -->
 	<div class="mainCon mainCon1"><!-- 나에게 꼭 맞는 혜택 -->     <!-- 첫번째 상자  -->
-		<p class="mainTit"><span>자신에게 맞는 혜택을</span> 알아볼까요?</p><br>
+		<p class="mainTit"><span style="font-weight:bold">자신에게 맞는 혜택</span> 알아볼까요?</p><br>
 		<p class="mainTxt">현재 진행 중인 할인혜택을 알아보세요.</p>
 		 <!-- 두번째 상자 -->
 		<div class="boxArea">                               <!-- 세번째상자 -->
@@ -136,7 +136,7 @@
 	<div id="mainimg">
 		<c:forEach var="AttractionVO" items="${bestList}">
 			<a href="world.do?command=attractionDetailForm&aseq=${AttractionVO.aseq}">
-				<div class="att_list">
+				<div id="att_list">
 					<img src="images/attraction_images/${AttractionVO.image}"/>
 					<h3>${AttractionVO.atname}</h3>
 				</div>
