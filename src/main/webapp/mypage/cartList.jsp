@@ -25,15 +25,15 @@
                 </tr>
                 </thead>
                 <tbody>
-                <c:forEach items="${cartList}"  var="ticketVO">
+                <c:forEach items="${cartList}"  var="cart2VO">
 	                <tr>
-	                	<td><fmt:formatDate value="${cartVO.indate}" type="date"/></td>
-	                    <td>${cartVO.ptseq}</td>
-	                    <th>어른 : ${cartVO.aquantity}<br> 
-	                    	청소년 : ${cartVO.cquantity}
+	                	<td><fmt:formatDate value="${cart2VO.indate}" type="date"/></td>
+	                    <td>${cart2VO.cseq}</td>
+	                    <th>어른 : ${cart2VO.p1}<br> 
+	                    	청소년 : ${cart2VO.p2}
 	                    </th>
-	                    <td><fmt:formatDate value="${cartVO.visitdate}" type="date"/></td>
-	                	<td><fmt:formatNumber type="currency" value="${cartVO.aquantity*cartVO.aprice 
+	                    <td><fmt:formatDate value="${cart2VO.visitdate}" type="date"/></td>
+	                	<td><fmt:formatNumber type="currency" value="${cart2VO.aquantity*cartVO.aprice 
 	                	+ cartVO.cquantity*cartVO.cprice}" /></td>
 	                </tr>
 	          	</c:forEach>

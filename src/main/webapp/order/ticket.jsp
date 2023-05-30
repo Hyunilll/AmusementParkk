@@ -47,7 +47,7 @@
 				<div class="order_quantity_box">
 					<input type='button' style="width:30px;" onclick='count("plus")'value='+'/>
 					<div id='result' >0
-						<input type="hidden" id="result" name="aquantity">
+						<input type="hidden" id="result" name="p1">
 					</div>
 					 <!-- $('#result').attr('value','Hello');-->
 					<input type='button' style="width:30px;" onclick='count("minus")'value='-'/>
@@ -60,7 +60,7 @@
 					<input type='button' style="width:30px;" onclick='count2("plus")'value='+'/>
 					
 					<div id='result2' >0
-						<input type="hidden" id ="result2" name="cquantity">
+						<input type="hidden" id ="result2" name="p2">
 					</div>
 					<input type='button' style="width:30px;" onclick='count2("minus")'value='-'/>
 				 </div>
