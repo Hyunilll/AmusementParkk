@@ -12,12 +12,19 @@ a{ text-decoration-line: none; color: inherit;}
 #top_menu ul li a:hover {color: blue; font-weight: bold;}
 
 
-#sub_menu{ position:relative;  width:1350px ;  height:120px;  margin:0 auto; padding:20px;}
-.logo {float:left; width:100px; height:100px; margin: 0 0 0 50px;}
-.category { position:relatiove; width: 1300px; height:85px; margin:0 auto; }
-.category_top_menu li{  display:block;  height:10px;float:left; font-family: '맑은 고딕';
-	 font-size:140%; margin: 20px 0 10px 80px; font-weight:bold;}
-.category_top_menu li:hover { color: blue; font-weight: bold;} 
+#sub_menu{position:relative; width:1350px; height:120px; margin:0 auto; padding:20px 20px 0 20px; border-bottom:1px solid lightgray;}
+.logo {position:relative; width:107px; height:100%; margin:0 auto; float:left;}
+.category {position:relative; width:1100px; height:100%; float:left; padding:0 100px;}
+
+.dropdown {position:relative; width:200px; display:inline-block;}
+.dropbtn {width:100%; font-weight:bold; padding:30px; padding-bottom:40px; text-align:center; cursor:pointer; 
+	font-size:20px; border:none; background-color:white;}
+.dropbtn:hover {color:#5c10e6;}
+/*display:none;*/
+.dropdown-content {position:absolute; display:none; z-index:2; font-weight:400; background:#f7f7f7; min-width:200px;}
+.dropdown-content a {display:block; text-decoration:none; font-size:100%; padding:12px 20px; }
+.dropdown-content a:hover {color:#5c10e6; font-weight: bold;}
+.dropdown:hover .dropdown-content {display:block;}
 
 /* main1 */
 
