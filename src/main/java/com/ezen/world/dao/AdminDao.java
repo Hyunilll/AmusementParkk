@@ -285,6 +285,64 @@ public class AdminDao {
 	
 		
 	}
+
+
+	public int getAllCountAttraction(String key) {
+		int count=0;
+		String sql = "select count(*) as cnt from attraction "
+				+ " where atname like '%'||?||'%' ";
+		con = Dbman.getConnection();
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1,  key);
+			rs = pstmt.executeQuery();
+			if(rs.next()) count = rs.getInt("cnt");
+			
+		}catch (SQLException e) { e.printStackTrace();
+		} finally { Dbman.close(con, pstmt, rs);  }
+		return count;
+	
+	}
+
+
+	public ArrayList<AttractionVO> getattraction(Paging paging, String key) {
+		ArrayList<AttractionVO> list = new ArrayList<AttractionVO>();
+		con = Dbman.getConnection();
+		String sql = " select * from ( "
+				+ " select * from ( "
+				+ " select rownum as rn, at.* from "
+				+ " ((select * from attraction "
+				+ "	where atname like '%'||?||'%'  order by aseq desc) at) "
+				+ " ) where rn>=? "
+				+ " ) where rn<=? ";
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1,  key);								
+			pstmt.setInt(2,  paging.getStartNum()) ;		
+			pstmt.setInt(3,  paging.getEndNum() );
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				AttractionVO avo = new AttractionVO();
+				
+				avo.setAseq(rs.getInt("aseq"));				
+				avo.setPnum(rs.getInt("pnum"));
+				avo.setAtname(rs.getString("atname"));		
+				avo.setAcontent(rs.getString("acontent"));
+				avo.setAct1(rs.getString("act1"));		
+				avo.setAct2(rs.getString("act2"));
+				avo.setImage(rs.getString("image"));
+				avo.setLimitkey(rs.getString("limitkey"));
+				avo.setLimitage(rs.getString("limitage"));
+				avo.setBestat(rs.getString("bestat"));
+				avo.setAresult(rs.getString("aresult"));
+				list.add(avo);
+			}
+		} catch (SQLException e) { e.printStackTrace();
+		} finally {  Dbman.close(con, pstmt, rs);   }
+		return list;
+		
+	}
 	
 	
 }

@@ -9,6 +9,7 @@
 .cancel{position:relative; font-size: 20px;padding-bottom:10px; width:200px; height:55px;color:#6317ed; background:white;font-weight:bold;border-radius: 28px;border:1px solid #6317ed;}
 </style>
 
+<form name="frm" method="post">
 <section class="notice">
   <div class="page-titlee">
         <div class="containerr">
@@ -19,15 +20,15 @@
     <div class="board-searchh">
         <div class="containerr">
             <div class="search-window">
-                <form action="">
+                
                     <div class="search-wrap">
-                        <label for="search" class="blind"> 회원 이름 검색 </label>
-                        <input id="search" type="search" name="" placeholder="어트렉션 이름을 입력해주세요." value="">
-                        <button type="submit" class="btn btn-dark" value="검색" onClick="go_search('adminattractionDetail')">검색</button>
+                        <label for="search" class="blind">어트렉션 검색 </label>
+                        <input id="search" type="search" name="key" placeholder="어트렉션 이름을 입력해주세요." value="${key}">
+                        <button type="submit" class="btn btn-dark" value="검색" onClick="go_search('adminattractionForm')">검색</button>
                         <button type="submit" class="btn btn-darkk" value="전체보기" onClick="go_total('adminattractionForm')">전체보기</button>
                         
                     </div>
-                </form>
+                
             </div>
         </div>
     </div>
@@ -61,5 +62,6 @@
     </div>
 <br><br><br><br><br><br>
 </section>
+</form>
 
 <%@ include file="../footer.jsp" %>
