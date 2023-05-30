@@ -17,7 +17,7 @@ public class PassTicketAction implements Action {
 		String url = "order/ticket.jsp";  // 최종 목적지
 		HttpSession session = request.getSession();
 		MemberVo mvo = (MemberVo)session.getAttribute("loginUser");
-		
+	
 		if( mvo == null ) {
 			url = "world.do?command=loginForm";
 		}else {

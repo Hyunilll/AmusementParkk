@@ -44,32 +44,22 @@
 				<h3>어른</h3>
 				<p>만19세이상</p>
 				</div>
-				<div class="order_quantity_box">
-					<input type='button' style="width:30px;" onclick='count("plus")'value='+'/>
-					<div id='result' >0
-						<input type="hidden" id="result" name="p1">
-					</div>
-					 <!-- $('#result').attr('value','Hello');-->
-					<input type='button' style="width:30px;" onclick='count("minus")'value='-'/>
+				<div class="order_quantity_box">	
+					<button onclick="increaseNumber(event, 'result')" style="width:30px;">+</button>
+					<input type="text" name="p1" id="result" value="0">
+					<button onclick="decreaseNumber(event, 'result')" style="width:30px;">-</button>
 				</div>	 
 				<div class="order_quantity_text">
 				<h3>청소년</h3>
 				<p>만13세~만18세</p>
 				</div>
 				<div class="order_quantity_box">
-					<input type='button' style="width:30px;" onclick='count2("plus")'value='+'/>
-					
-					<div id='result2' >0
-						<input type="hidden" id ="result2" name="p2">
-					</div>
-					<input type='button' style="width:30px;" onclick='count2("minus")'value='-'/>
+					<button onclick="increaseNumber(event, 'result2')" style="width:30px;">+</button>
+					<input type="text" name="p2" id="result2" value="0">
+					<button onclick="decreaseNumber(event, 'result2')" style="width:30px;">-</button>
 				 </div>
 					
 			</div>
-			<!-- 
-			<h2 style="font-size:120%; text-align:center;">total</h2><br>
-			<div class="order_total"></div>
-			 -->
 			<div id="board-list">
 		        <div class="container">
 		            <table class="board-table" style="font-size:20px">  
@@ -109,7 +99,7 @@
 	       </div>
 	       	<div id="reserve_buttons" style = "padding-top:40px;">
 	       	<!-- 	<input type="button" value="구매하기" onClick="location.href='world.do?command=cartList'">  -->
-	        	<input type="button" value="결제하기" class="submit" onclick="go_cart();"> 
+	        	<input type="button" value="결제하기" class="submit" onclick="go_cart('0')"> 
 	       	</div>
 	                	
 		</div>
