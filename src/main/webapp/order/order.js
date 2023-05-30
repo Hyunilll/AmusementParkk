@@ -1,16 +1,7 @@
-function go_cart(){
-	if (document.formm.result.value== "" ) {
-	    alert("수량을 입력하여 주세요.");
-	    document.formm.result.focus();
-	    
-	    
-	}else if(document.formm.selectedDate==""){
-		alert("방문날짜를 선택해 주세요.");
-		document.formm.selectedDate.focus();
-	}else{
-		document.formm.action ="world.do?command=passTicketInsert";
+function go_cart(num){
+		document.formm.action ="world.do?command=passTicketInsert&kind="+num;
 		document.formm.submit();
-	}
+	
 }
 
 
@@ -24,46 +15,24 @@ function toggleAnswer(answerId) {
     }
 }
 
-function count(type)  { //어른
-	  // 결과를 표시할 element
-	  const resultElement = document.getElementById('result');
-	  
-	  // 현재 화면에 표시된 값
-	  let number = resultElement.innerText;
-	  
-	  // 더하기/빼기
-	  if(type === 'plus') {
-	    number = parseInt(number) + 1;
-	    	
-	  }else if(type === 'minus')  {
-	    number = parseInt(number) - 1;
-	    	if(number==-1) return;
-	  }
-	  
-	  // 결과 출력
-	  resultElement.innerText = number;
-	}
-	
-function count2(type)  { //청소년 
-	  // 결과를 표시할 element
-	  const resultElement = document.getElementById('result2');
-	  
-	  // 현재 화면에 표시된 값
-	  let number = resultElement.innerText;
-	  
-	  // 더하기/빼기
-	  if(type === 'plus') {
-	    number = parseInt(number) + 1;
-	  		
-	  }else if(type === 'minus')  {
-	    number = parseInt(number) - 1;
-	    	if(number==-1) return;
-	  }
-	  
-	  // 결과 출력
-	  resultElement.innerText = number;
-	}
-	
+ function increaseNumber(event, result) { // 증가
+	event.preventDefault(); // 폼 제출 기본 동작 중지
+    var resultInput = document.getElementById(result);
+    var currentValue = parseInt(resultInput.value);
+    var newValue = currentValue + 1;
+    resultInput.value = newValue;
+  }
+
+ function decreaseNumber(event, result) {//  감소
+	 event.preventDefault();
+    var resultInput = document.getElementById(result);
+    var currentValue = parseInt(resultInput.value);
+    
+    if (currentValue > 0) {
+      var newValue = currentValue - 1;
+      resultInput.value = newValue;
+    }
+  }
 	
 	// 달력 
 	

@@ -23,7 +23,7 @@
 					</div>
 					<div id="reserve_buttons">
 					<input type="button" value="티켓구매" class="reserve" 
-						onclick="location.href='world.do?command=passTicket&kind=0'">
+						onclick="location.href='world.do?command=passTicket'">
 					</div>
 				</div>
 				
@@ -38,7 +38,7 @@
 					</div>
 					 <div id="reserve_buttons">
 					<input type="button" value="티켓구매" class="reserve" 
-						onclick="location.href='world.do?command=fastTicket&kind=1'">
+						onclick="location.href='world.do?command=fastTicket'">
 					</div>
 				</div>
 		</div>

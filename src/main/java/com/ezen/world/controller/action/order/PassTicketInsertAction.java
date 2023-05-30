@@ -30,12 +30,21 @@ public class PassTicketInsertAction implements Action {
 			cvo.setP1( Integer.parseInt( request.getParameter("p1")));
 			cvo.setP2( Integer.parseInt( request.getParameter("p2")));
 			
+			int kind =  Integer.parseInt( request.getParameter("kind"));
+			if(kind==0) {
+				cvo.setPrice1(Integer.parseInt( request.getParameter("p1"))*53000);
+				cvo.setPrice2(Integer.parseInt( request.getParameter("p2"))*30000);
+			}
+			if(kind==1) {
+				cvo.setPrice1(Integer.parseInt( request.getParameter("p1"))*110000);
+				cvo.setPrice2(Integer.parseInt( request.getParameter("p2"))*70000);
+			}
+			
 			Cart2Dao cdao = Cart2Dao.getInstance();
 			cdao.insertTicket( cvo );
 			url = "world.do?command=cartList";
 		}
 		
-		response.sendRedirect(url);
 
 		RequestDispatcher dp=request.getRequestDispatcher(url);
 		dp.forward(request, response); 

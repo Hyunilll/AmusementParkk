@@ -15,7 +15,7 @@ insert into Lmember(id, pwd, name, zip_num, address1, address2, phone, email)val
 select*from Lworker;
 select*from Lmember;
 
-select*from attraction;
+select*from cart2;
 
 -- 어트렉션 추가
 insert into attraction(aseq, pnum, atname, acontent, act1, act2, image, limitkey, limitage ) values

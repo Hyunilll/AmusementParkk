@@ -28,33 +28,20 @@ public class CartListAction implements Action {
 			Cart2Dao cdao = Cart2Dao.getInstance();
 			ArrayList<Cart2VO> cartList = cdao.selectCart(mvo.getId());
 			request.setAttribute("cartList", cartList);
-			// 장바구니 물건을 한번에 주문했을때 결제할 총금액 계산
-			
-			Cart2VO cvo =new Cart2VO();
-			int kind= cvo.getKind();
-			int price1 = 0; //일반 어른 가격
-			int price2 = 0;//일반 어린이 가격
-			int price3 = 0;//패스 어른 가격
-			int price4 = 0;//패스 어린이 가격
+		
 			int totalPrice = 0; //합계
-			if(kind == 0) {
-				price1= cvo.getP1() * 53000;
-				price2= cvo.getP2() * 30000;
+			
+			for( Cart2VO cvo : cartList) {
+				
+				totalPrice =cvo.getPrice1()+cvo.getPrice2();
+				}
+				
+				
+				request.setAttribute("totalPrice", totalPrice);
 			}
-			if(kind == 1) {
-				price3= cvo.getP1() * 110000;
-				price4= cvo.getP2() * 70000;
-			}
-			totalPrice =price1+price2+price3+price4;
-			request.setAttribute("price1", price1);
-			request.setAttribute("price2", price2);
-			request.setAttribute("price3", price3);
-			request.setAttribute("price4", price4);
-			request.setAttribute("totalPrice", totalPrice);
-			 
-		}
-		//RequestDispatcher rd = request.getRequestDispatcher(url);
-		//rd.forward(request, response);
+			
+			
+		
 		request.getRequestDispatcher(url).forward(request, response);
 		
 	}

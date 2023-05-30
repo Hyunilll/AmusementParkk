@@ -33,12 +33,12 @@
 	                    <th>어른 : ${cart2VO.p1}<br> 
 	                    	청소년 : ${cart2VO.p2}
 	                    </th>
-	                    <th>어른 : ${cart2VO.p1}<br> 
-	                    	청소년 : ${cart2VO.p2}
+	                    <th> <fmt:formatNumber type="currency" value="${cart2VO.p1 * 53000}" /><br> 
+	                 		 <fmt:formatNumber type="currency" value="${cart2VO.price2}" />
 	                    </th>
 	                    <td><fmt:formatDate value="${cart2VO.visitdate}" type="date"/></td>
 	                    
-	                	<td><fmt:formatNumber type="currency" value="${totalPrice}" /></td>
+	                	<td><fmt:formatNumber type="currency" value="${cart2VO.price1+cart2VO.price2}" /></td>
 	                </tr>
 	          	</c:forEach>
                 
