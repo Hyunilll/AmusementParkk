@@ -20,6 +20,7 @@
                     <th scope="col" class="th-num">주문일자</th>
                     <th scope="col" class="th-num">주문번호</th>
                     <th scope="col" class="th-date" style="text-align:center;">인원수</th>
+                    <th scope="col" class="th-date" style="text-align:center;">가격</th>
                     <th scope="col" class="th-num">방문일자</th>
                     <th scope="col" class="th-num">가격</th>
                 </tr>
@@ -32,9 +33,12 @@
 	                    <th>어른 : ${cart2VO.p1}<br> 
 	                    	청소년 : ${cart2VO.p2}
 	                    </th>
+	                    <th>어른 : ${cart2VO.p1}<br> 
+	                    	청소년 : ${cart2VO.p2}
+	                    </th>
 	                    <td><fmt:formatDate value="${cart2VO.visitdate}" type="date"/></td>
-	                	<td><fmt:formatNumber type="currency" value="${cart2VO.aquantity*cartVO.aprice 
-	                	+ cartVO.cquantity*cartVO.cprice}" /></td>
+	                    
+	                	<td><fmt:formatNumber type="currency" value="${totalPrice}" /></td>
 	                </tr>
 	          	</c:forEach>
                 
