@@ -347,10 +347,10 @@ public class AdminDao {
 		
 
 	}
-}
 
 
-	/* 
+
+	
 	public int getAllCountnotice(String key) {
 		int count=0;
 		String sql = "select count(*) as cnt from lqna "
@@ -369,9 +369,9 @@ public class AdminDao {
 		return count;
 
 	}
-*/
 
-/* 
+
+
 	public ArrayList<NoticeVO> adminNoticeList(Paging paging, String key) {
 		ArrayList<NoticeVO> list = new ArrayList<NoticeVO>();
 		con = Dbman.getConnection();
@@ -391,7 +391,7 @@ public class AdminDao {
 	
 	
 }
-*/
+
 /*
 	public ArrayList<QnaVO> adminQnaList(Paging paging, String key) {
 		ArrayList<QnaVO> list = new ArrayList<QnaVO>();
