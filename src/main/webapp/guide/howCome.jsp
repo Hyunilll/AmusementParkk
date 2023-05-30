@@ -29,7 +29,7 @@ h2 {font-family: 'NotoSans-Bold', '맑은 고딕', 'Malgun Gothic', sans-serif; 
         			<td>
           				<div class="location">
             				<img src="images/loca.png">
-            					<h4>롯데월드 어드벤처 (서울 송파구 올림픽로 240)</h4>
+            					<h4>롯데월드 어드벤처 (서울 송파구 올림픽로 240)</h4><br><br>
           				</div>
         			</td>
       			</tr>	

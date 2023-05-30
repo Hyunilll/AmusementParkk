@@ -17,8 +17,8 @@ a{ text-decoration-line: none; color: inherit;}
 .category {position:relative; width:1100px; height:100%; float:left; padding:0 100px;}
 
 .dropdown {position:relative; width:200px; display:inline-block;}
-.dropbtn {width:100%; font-weight:bold; padding:30px; padding-bottom:40px; text-align:center; cursor:pointer; 
-	font-size:20px; border:none; background-color:white;}
+.dropbtn {width:100%; font-weight:bold; padding:30px; padding-bottom:30px; text-align:center; cursor:pointer; 
+	font-size:23px; border:none; background-color:white;}
 .dropbtn:hover {color:#5c10e6;}
 /*display:none;*/
 .dropdown-content {position:absolute; display:none; z-index:2; font-weight:400; background:#f7f7f7; min-width:200px;}
@@ -415,7 +415,7 @@ section.notice {padding:  0;}
 #qna_write form fieldset { padding: 10px 0 20px 5px;   border: none;width:1150px;text-align:center;margin: 0px auto;}
 #qna_write form label {  width: 200px;    float: left;    margin: 5px 0;  font-weight:bold;}
 #qna_write form input { margin: 5px 0;    border: 1px solid #999;   }
-#qna_write form .submit{position:relative; font-size: 20px;padding-bottom:10px; width:200px; height:56px;color: #fff; background:rgb(111, 35, 249);;font-weight:bold;border-radius: 28px;border:1px solid #6317ed}
+#qna_write form .submit{position:relative; font-size: 20px;padding-bottom:10px; width:200px; height:56px;color: #fff; background:rgb(111, 35, 249);font-weight:bold;border-radius: 28px;border:1px solid #6317ed}
 #qna_write form  .cancel {position:relative; font-size: 20px;padding-bottom:10px; width:200px; height:56px;color:#6317ed; background:white;font-weight:bold;border-radius: 28px;border:1px solid #6317ed}
 #qna_table{font-size: 13px;width: 100%;border-top: 1px solid #ccc;border-bottom: 1px solid #ccc;}
 
@@ -430,7 +430,8 @@ section.notice {padding:  0;}
 .fix02 .submit, .fix02 .cancel {height: 30px;width: 150px;border:1px solid #6317ed; font-weight:bold;
 		position:relative; padding-bottom:10px; background:rgb(111, 35, 249);border-radius: 28px; box-shadow: 3px 3px 2px #ccc; font-size: 20px; background-repeat: repeat-x; 
 		background-position: center center;	color:#fff;margin: 0 0 0 20px;  }
-.fix03 th, td{  padding: 20px;border: 1px dashed #ccc;}
+.fix03 th{  padding: 20px;border: 1px dashed #ccc;}
+.fix03 td{  padding: 20px;border: 1px dashed #ccc;}
 .fix03 tr{border: 1px dashed gray;}
 .fix03 label { width: 140px; float: left; margin: 5px 0; }
 .clearr {clear: both; }
