@@ -141,7 +141,7 @@ img, fieldset {
 #logina #buttons input{margin:30px 0 0 20px  ; width:200px; height:60px; border: 1px solid #666; 
 border-radius: 10px; box-shadow: 3px 3px 2px #ccc; font-size:150%;}
 #logina #buttons input[type=submit]{background : #6317ed;color:white; }
-#logina #buttons input[type=button]{background : #52fff9}
+#logina #buttons input[type=button]{background :white;color:#6317ed }
 #logina #content{margin:30px; font-size:100%;}
 
 
