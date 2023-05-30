@@ -19,16 +19,11 @@ public class NoticeDetailAction implements Action {
 		
 		String url = "notice/noticeDetail.jsp";
 		int nseq = Integer.parseInt( request.getParameter("nseq") );
-		
-		HttpSession session = request.getSession();
-	    MemberVo mvo = (MemberVo) session.getAttribute("loginUser");
-	    if (mvo == null) {
-	        url = "world.do?command=loginForm";
-	    } else {	
+	
 	    	NoticeDao ndao = NoticeDao.getInstance();
 	    	NoticeVO nvo = ndao.getnotice( nseq );
 	    	request.setAttribute("noticeVO", nvo);
-	    }
+	    
 		request.getRequestDispatcher(url).forward(request, response);
 
 	}
