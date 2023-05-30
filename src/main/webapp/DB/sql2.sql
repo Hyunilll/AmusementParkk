@@ -79,6 +79,8 @@ insert into attraction(aseq, pnum, atname, acontent, act1, act2, image, limitkey
 select*from attraction;
 
 
+
+
 ------공지사항 리스트!! ---- 
 insert into notice(nseq, title, ncontent , id) values
 (notice_nseq.nextval, '1. 구)교환권(사용불가) 안내', '01.jpg' , 'scott');
