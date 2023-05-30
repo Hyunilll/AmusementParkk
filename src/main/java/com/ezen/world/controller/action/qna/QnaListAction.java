@@ -22,20 +22,30 @@ public class QnaListAction implements Action {
 		String url = "qna/qnaList.jsp";
 		
 		HttpSession session = request.getSession();
-	    MemberVo mvo = (MemberVo) session.getAttribute("loginUser");
-	    if (mvo == null) {
-	    	url = "world.do?command=LoginForm";
-	    } else {
+		MemberVo mvo = (MemberVo)session.getAttribute("loginUser");
+		
+		if( mvo == null ) {
+			url = "world.do?command=loginForm";
+		}else {
 	    	
 	    	QnaDao qdao = QnaDao.getInstance();
 	    	
-	    	int page = 1;
-	    	if( request.getParameter("page") != null )
-	    		page = Integer.parseInt( request.getParameter("page") );
-	    	
-	    	Paging paging = new Paging();
-	    	paging.setPage(page);
-	    	
+	    	if( request.getParameter("changMenu")!=null) {
+				session.removeAttribute("page");
+			}
+			Paging paging = new Paging();
+			paging.setDisplayPage(10);
+			paging.setDisplayRow(10);
+			
+			if( request.getParameter("page")!=null) {
+				paging.setPage( Integer.parseInt( request.getParameter("page") ) );
+				session.setAttribute("page", Integer.parseInt( request.getParameter("page")  ) );
+			} else if( session.getAttribute("page") != null ) {
+				paging.setPage( (Integer)session.getAttribute("page") );
+			} else {
+				paging.setPage(1);
+			}
+			
 	    	int count = qdao.getAllCount();
 	    	paging.setTotalCount(count);
 	    	

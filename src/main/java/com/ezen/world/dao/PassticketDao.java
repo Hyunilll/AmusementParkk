@@ -18,6 +18,8 @@ public class PassticketDao {
 	Connection con = null;
 	PreparedStatement pstmt = null;
 	ResultSet rs = null;
+	
+	
 	public ArrayList<PassticketVO> getticket() {
 		ArrayList<PassticketVO> list = new ArrayList<PassticketVO>();
 		con = Dbman.getConnection();

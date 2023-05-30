@@ -34,7 +34,7 @@
 					<c:when test='${qnaVO.rep=="N"}'> <!-- 관리자 답변 전 표시 -->		
 		    			<th>답변내용</th>
 		    			<td colspan="2"><textarea name="reply" rows="2" cols="45"></textarea>
-		   					<input type="button" class="btn4" value="저장" onClick="go_rep()">
+		   					
 		   						
 		   <!--  				<input type="button" class="btn4" value="저장"
 		   					onClick="location.href='world.do?command=adminQnaRepSave&lqseq=${qnaVO.lqseq}'"></td>
@@ -51,8 +51,18 @@
 		</table>
 		<div class="clearr"></div>
 		<div id="buttonss" style="margin:0 0 0 200px;">
-			<input type="button"  value="목록보기" class="submit" onclick="location.href='world.do?command=adminqna'">
+			<c:choose>
+				<c:when test='${qnaVO.rep=="N" }'>
+					<input type="button" class="btn4" value="저장" onClick="go_rep()">
+					<input type="button"  value="목록보기" class="submit" onclick="location.href='world.do?command=adminqna'">
+				</c:when>
+				<c:otherwise>
+					<input type="button"  value="목록보기" class="submit" onclick="location.href='world.do?command=adminqna'">
+				</c:otherwise>
+			</c:choose>
+			
 		</div>
+		
 	</form>
 </article>
 </section>
