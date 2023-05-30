@@ -47,7 +47,8 @@
                 </thead>
      		<c:forEach items="${aseqList}" var="AttractionVO">
 			<tr><td>${ AttractionVO.aseq}</td>
-		    	<td>${AttractionVO.atname}</td><td>${AttractionVO.aresult}</td>
+		    	<td><a href="world.do?command=adminattractionDetail&aseq=${AttractionVO.aseq}">${AttractionVO.atname}</a>
+		    	</td><td>${AttractionVO.aresult}</td>
 		    	
 		    	</tr>
 	  </c:forEach>
@@ -65,3 +66,5 @@
 </form>
 
 <%@ include file="../footer.jsp" %>
+
+ 

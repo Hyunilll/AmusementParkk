@@ -6,7 +6,7 @@
 <section class="notice">
   <div class="page-title">
         <div class="container">
-            <h3 style="font-size: 28px;color: #333333;font-weight: 400;text-align: center;">공지사항</h3>
+             <h3 style="font-family: 'NotoSans-Bold', '맑은 고딕', 'Malgun Gothic', sans-serif;font-size: 50px;color: #000;text-align: center; padding-top: 0px;">공지사항</h3>
         </div>
     </div>
 

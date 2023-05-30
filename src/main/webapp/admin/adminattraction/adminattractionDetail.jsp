@@ -16,7 +16,7 @@
    	</div>
 </div>
 <div id="att_Detail_img_tool">
-	<img id="att_Detail_img" src="images/attraction_images/${AttractionVO.image}"/>
+	<img id="att_Detail_img" src="images/attraction_images/${AttractionVO.image}"width="500px"/>
 </div>
 <div id="att_Info_back">
 	<div id="att_Info_box_tool">

@@ -287,23 +287,26 @@ public class AdminDao {
 	}
 
 
+
 	public int getAllCountAttraction(String key) {
 		int count=0;
 		String sql = "select count(*) as cnt from attraction "
 				+ " where atname like '%'||?||'%' ";
+
 		con = Dbman.getConnection();
 		try {
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1,  key);
+	
+
 			rs = pstmt.executeQuery();
 			if(rs.next()) count = rs.getInt("cnt");
 			
 		}catch (SQLException e) { e.printStackTrace();
 		} finally { Dbman.close(con, pstmt, rs);  }
 		return count;
-	
-	}
 
+	}
 
 	public ArrayList<AttractionVO> getattraction(Paging paging, String key) {
 		ArrayList<AttractionVO> list = new ArrayList<AttractionVO>();
@@ -342,7 +345,84 @@ public class AdminDao {
 		} finally {  Dbman.close(con, pstmt, rs);   }
 		return list;
 		
+
+	}
+}
+
+
+	/* 
+	public int getAllCountnotice(String key) {
+		int count=0;
+		String sql = "select count(*) as cnt from lqna "
+				+ " where title like '%'||?||'%' ";
+		con = Dbman.getConnection();
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1,  key);
+	
+
+			rs = pstmt.executeQuery();
+			if(rs.next()) count = rs.getInt("cnt");
+			
+		}catch (SQLException e) { e.printStackTrace();
+		} finally { Dbman.close(con, pstmt, rs);  }
+		return count;
+
+	}
+*/
+
+/* 
+	public ArrayList<NoticeVO> adminNoticeList(Paging paging, String key) {
+		ArrayList<NoticeVO> list = new ArrayList<NoticeVO>();
+		con = Dbman.getConnection();
+		String sql = " select * from ( "
+				+ " select * from ( "
+				+ " select rownum as rn, lq.* from "
+				+ " ((select * from lqna "
+				+ "	where title like '%'||?||'%' order by lqseq desc) lq) "
+				+ " ) where rn>=? "
+				+ " ) where rn<=? ";
+		
+		
+		
+		return null;
+
 	}
 	
 	
 }
+*/
+/*
+	public ArrayList<QnaVO> adminQnaList(Paging paging, String key) {
+		ArrayList<QnaVO> list = new ArrayList<QnaVO>();
+		con = Dbman.getConnection();
+		String sql = " select * from ( "
+				+ " select * from ( "
+				+ " select rownum as rn, lq.* from "
+				+ " ((select * from lqna "
+				+ "	where title like '%'||?||'%' or content like '%'||?||'%' order by lqseq desc) lq) "
+				+ " ) where rn>=? "
+				+ " ) where rn<=? ";
+		
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1,  key);								
+			pstmt.setString(2,  key);
+			pstmt.setInt(3,  paging.getStartNum()) ;		
+			pstmt.setInt(4,  paging.getEndNum() );
+			rs = pstmt.executeQuery();
+			while(rs.next()) {
+				QnaVO qvo = new QnaVO();
+				qvo.setLqseq(rs.getInt("lqseq"));				
+				qvo.setTitle(rs.getString("title"));
+				qvo.setContent(rs.getString("content"));		
+				qvo.setId(rs.getString("id"));
+				qvo.setIndate(rs.getTimestamp("indate"));		
+				qvo.setReply(rs.getString("reply"));
+				qvo.setRep(rs.getString("rep"));
+				list.add(qvo);
+			}
+		} catch (SQLException e) { e.printStackTrace();
+		} finally {  Dbman.close(con, pstmt, rs);   }
+		return list;
+	}*/
