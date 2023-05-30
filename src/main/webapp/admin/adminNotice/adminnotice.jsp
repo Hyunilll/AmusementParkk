@@ -10,26 +10,28 @@
 <section class="notice">
   <div class="page-title">
         <div class="container">
-            <h3 style="font-size: 28px;color: #333333;font-weight: 400;text-align: center;">공지사항</h3>
+            <h3 style="margin-right:70px; font-size: 60px;color: #333333;font-weight: 400;text-align: center;">공지사항</h3>
         </div>
     </div>
-
-    <div id="board-search">
-        <div class="container">
+    
+      <div class="board-searchh">
+        <div class="containerr">
             <div class="search-window">
-              
+                <form action="">
                     <div class="search-wrap">
-                        <label for="search" class="blind">공지사항 내용 검색</label>
-                        <input id="search" type="search" name="" placeholder="검색어를 입력해주세요." value="">             
-                        <button type="button" class="btn btn-dark">검색</button>             
+                        <label for="search" class="blind"> 공지사항 내용 검색 </label>
+                        <input id="search" type="search" name="" placeholder="검색어를 입력해주세요." value="">
+                        <button type="submit" class="btn btn-dark" value="검색" onClick="go_search('adminattraction');">검색</button>
+                        <button type="submit" class="btn btn-darkk" value="추가" onClick="go_insertform('insertnoticeForm')">추가</button>
+                        
                     </div>
-             			<div id="plusebtn">
-			              <button type="button" id="btn2" onClick="go_insertform('insertnoticeForm')">추가</button>  
-			            </div> 
+                </form>
             </div>
         </div>
     </div>
-   
+    
+    
+
     <div id="board-list">
         <div class="container">
             <table class="board-table">

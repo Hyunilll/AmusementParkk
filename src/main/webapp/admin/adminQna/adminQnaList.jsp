@@ -12,7 +12,7 @@
 <section class="notice">
   <div class="page-title">
         <div class="container">
-            <h3 style="font-size: 28px;color: #333333;font-weight: 400;text-align: center;">Q&amp;A</h3>
+            <h3 style="margin-top:30px;margin-right:70px; font-size: 60px;color: #333333;font-weight: 400;text-align: center;">Q&amp;A</h3>
         </div>
     </div>
     

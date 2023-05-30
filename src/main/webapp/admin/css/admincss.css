@@ -171,7 +171,7 @@ border-radius: 10px; box-shadow: 3px 3px 2px #ccc; font-size:150%;}
 /* 공지사항*/
 table {border-collapse: collapse;border-spacing: 0;}
 section.notice {padding:  0;}
-.page-title { margin-top:100px; margin-bottom: 60px;}
+.page-title { margin-top:50px; margin-bottom: 80px;}
 #board-search .search-window {position: relative; padding: 15px 0;background-color: #f9f7f9;}
 #board-search .search-window .search-wrap {position: relative;margin: 0 auto;width:  600px; }
 #board-search .search-window .search-wrap input { height: 40px;width: 100%;font-size: 14px;padding: 7px 14px;border: 1px solid #ccc;}
@@ -236,7 +236,7 @@ section.notice {padding:  0;}
 
 
 
-/*어드민공지사항123*/
+/*adminmember*/
 table {border-collapse: collapse;border-spacing: 0;}
 section.notice {padding:  0;}
 .page-titlee { margin-top:50px; margin-bottom: 80px;}
