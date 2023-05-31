@@ -1,7 +1,6 @@
 package com.ezen.world.dao;
 
 import java.sql.Connection;
-import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -73,6 +72,19 @@ public class Cart2Dao {
 		} catch (SQLException e) { e.printStackTrace();
 		} finally { Dbman.close(con, pstmt, rs);  }
 		return list;
+	}
+
+
+	public void deleteCart(int cseq) {
+		
+		String sql ="Delete from cart2 where cseq=?";
+		con= Dbman.getConnection();
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setInt(1, cseq  );
+			pstmt.executeUpdate();
+		} catch (SQLException e) {e.printStackTrace();
+		} finally { Dbman.close(con, pstmt, rs); }
 	}
 		
 	}

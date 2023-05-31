@@ -24,7 +24,7 @@
 						<li><a href="world.do?command=admin">관리자</a></li>
 					</c:when>
 					<c:otherwise>
-						<li><a href="world.do?command=mypage">마이페이지</a></li>
+						<li><a href="world.do?command=cartList">마이페이지</a></li>
 						<li><a href="world.do?command=logout">logout</a></li>
 						<li><a href="world.do?command=editForm">정보수정</a></li>
 						<li>${loginUser.name}(${loginUser.id})</li>

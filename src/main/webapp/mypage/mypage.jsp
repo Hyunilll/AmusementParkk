@@ -43,6 +43,7 @@
 	                    	<td>${cart2VO.visitdate} </td> 
 	                	<td><fmt:formatNumber type="currency" value="${cart2VO.price1+cart2VO.price2}" /></td>
 	                </tr>
+	                <td><input type="checkbox" name="cseq" value="${cart2VO.cseq}"></td>
 	          	</c:forEach>
                 
                 </tbody>
