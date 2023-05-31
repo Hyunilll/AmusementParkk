@@ -9,12 +9,28 @@
 		<div class="order_box_select">
 			<div class="order_box_title">예매</div>
 			<div class="order_box_text">
-				<img src="images/reserve_imgs1.jpg"/>
-				<div class="order_box_text_content">★자유이용권★</div>
+				<img src="images/reserve_imgs_free.png"/>
+				<div class="order_box_text_content">★자유이용권★<br>
+					<p style="line-height:23px; font-size:16px;">
+						어른 53,000원<br>
+						청소년 45,000원<br>
+						어린이 30,000원<br>
+					</p>
+					<input type="button" value="예매하기" class="order_box_text_button" 
+						onclick="location.href='world.do?command=passTicket'">
+				</div>
 			</div>
 			<div class="order_box_text">
-				<img src="images/reserve_imgs1.jpg"/>
-				<div class="order_box_text_content">★자유이용권★</div>
+				<img src="images/reserve_imgs_pass.png"/>
+				<div class="order_box_text_content">★패스트패스★<br>
+					<p style="line-height:23px; font-size:16px;">
+						어른 110,000원<br>
+						청소년 90,000원<br>
+						어린이 70,000원<br>
+					</p>
+					<input type="button" value="예매하기" class="order_box_text_button" 
+						onclick="location.href='world.do?command=fastTicket'">
+				</div>
 			</div>
 		</div>
 	</div>
