@@ -115,7 +115,7 @@ function decrease(event, result) {
 }
 	
 	
-	g
+
 	// 달력 
 	
 	var selectedDate;
@@ -173,6 +173,7 @@ function showCalendar() {
 
       var selectedDateElement = document.getElementById("selectedDate");
       selectedDateElement.textContent = selectedDate;
+      document.getElementById('selectedDate').value = selectedDate;
       calendar.classList.remove("active");
     });
     daysElement.appendChild(day);
