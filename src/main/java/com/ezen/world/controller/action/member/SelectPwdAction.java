@@ -13,7 +13,6 @@ public class SelectPwdAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		  
 		String id = request.getParameter("id");
 	    String name = request.getParameter("name");
 	    String phone = request.getParameter("phone");
