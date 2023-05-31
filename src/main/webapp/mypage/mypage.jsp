@@ -28,19 +28,20 @@
                 </tr>
                 </thead>
                 <tbody>
-                <c:forEach items="${ticketList}"  var="TicketVO">
+                <c:forEach items="${cartList}"  var="cart2VO">
 	                <tr>
-	                	<td><fmt:formatDate value="${TicketVO.indate}" type="date"/></td>
-	                    <td>${TicketVO.ptseq}</td>
+	                	<td><fmt:formatDate value="${cart2VO.indate}" type="date"/></td>
+	                    <td>${cart2VO.ptseq}</td>
 	                    <td>유형</td>
-	                    <th>어른 : ${TicketVO.aquantity}<br> 
-	                    	청소년 : ${TicketVO.cquantity}
+	                    <th>어른 : ${cart2VO.p1}<br> 
+	                    	청소년 : ${cart2VO.p2}
 	                    </th>
 	                    <td>어트렉션</td> 
-	                    <td><fmt:formatDate value="${TicketVO.visitdate}" type="date"/></td>
-	                	<td><fmt:formatNumber type="currency" value="${TicketVO.aquantity*TicketVO.apassprice 
-	                	+ TicketVO.cquantity*TicketVO.cpassprice}" /></td>
-	                	<td><input type="checkbox" name="ptseq" value="${TicketVO.ptseq}"></td>
+	                  <th> <fmt:formatNumber type="currency" value="${cart2VO.price1}" /><br> 
+	                 		 <fmt:formatNumber type="currency" value="${cart2VO.price2}" />
+	                    </th>
+	                    	<td>${cart2VO.visitdate} </td> 
+	                	<td><fmt:formatNumber type="currency" value="${cart2VO.price1+cart2VO.price2}" /></td>
 	                </tr>
 	          	</c:forEach>
                 

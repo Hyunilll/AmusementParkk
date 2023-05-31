@@ -20,4 +20,5 @@
 	</div>
 </div>
 </article>
+
 <%@ include file ="/admin/footer.jsp"%>
