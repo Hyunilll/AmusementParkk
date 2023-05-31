@@ -69,6 +69,7 @@ public class AdminnoticeDetailAction implements Action {
 	    
 	    request.setAttribute("noticeVO", nvo);
 	    
+
 		request.getRequestDispatcher(url).forward(request, response);
 
 	}
