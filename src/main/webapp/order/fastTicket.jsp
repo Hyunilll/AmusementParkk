@@ -30,7 +30,7 @@
 						<img src="images/ticket_images/calendar.png" style="width:40px; height:40px;">
 					</div>
 					<div id="calendar"  class="calendar">
-						<input type="hidden" id="calendar" name="visitdate">
+						
 					</div>	
 				</div>
 			</div>
