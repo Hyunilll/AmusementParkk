@@ -411,7 +411,9 @@ public class AdminDao {
 	}
 
 
-	public int getAllCountnotice(String key) {
+
+
+	public int getAllCountNotice(String key) {
 		int count=0;
 		String sql = "select count(*) as cnt from nseq "
 				+ " where title like '%' ||?||'%' ";
