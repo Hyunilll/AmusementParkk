@@ -24,13 +24,14 @@
 			<div class="order_box_date">
 				<div class="order_box_date_text" style="margin-top:10px;">
 					<div id="selectedDate" class="selected-date"></div>
+					<input type="hidden" id="calendar" name="visitdate">
 				</div>
 				<div class="order_box_date_date" style="margin-top:10px;">
 					<div class="calendarImage" onclick="showCalendar()">
 						<img src="images/ticket_images/calendar.png" style="width:40px; height:40px;">
 					</div>
 					<div id="calendar"  class="calendar">
-						<input type="hidden" id="calendar" name="visitdate">
+						
 					</div>	
 				</div>
 			</div>
