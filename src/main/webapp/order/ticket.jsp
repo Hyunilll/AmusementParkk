@@ -13,18 +13,14 @@
 	
 <div id =" wrap" style=" width:100%; height:100%; background: lightgray;">
 	<div id = "order_box">
+	
 		<div class="order_box_select2">
 			<div class="order_box_title" style="margin-top:7px;">
-				<h2>티켓 예매</h2>
-			</div>
-			
-			<!--  인원선택 -->
+				<h2>자유이용권 예매</h2>
+				<!--  인원선택 -->
 			<div class="order_box_date">
 				<div class="order_box_date_text" style="margin-top:10px;">
-					<input type="text" id="selectedDate" value="" name="visitdate">
-						
-					
-					
+					<div id="selectedDate" class="selected-date"></div>
 				</div>
 				<div class="order_box_date_date" style="margin-top:10px;">
 					<div class="calendarImage" onclick="showCalendar()">
@@ -35,6 +31,7 @@
 					</div>	
 				</div>
 			</div>
+			
 			
 			<!--  달력 선택 날짜 표기 -->
 			<div class="order_selectdate">
@@ -108,7 +105,9 @@
 		</div>
 	</div>
 </div>
+</div>
 </form>
+
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     
 <%@ include file="../footer.jsp" %>>
