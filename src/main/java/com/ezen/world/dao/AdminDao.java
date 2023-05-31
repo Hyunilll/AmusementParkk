@@ -386,23 +386,6 @@ public class AdminDao {
 	}
 
 
-	public int getAllCountNotice(String key) {
-		int count=0;
-		String sql = "select count(*) as cnt from nseq "
-				+ " where title like '%' ||?||'%' ";
-		con = Dbman.getConnection();
-		try {
-			pstmt = con.prepareStatement(sql);
-			pstmt.setString(1,  key);
-			rs = pstmt.executeQuery();
-			if(rs.next()) count = rs.getInt("cnt");
-			
-		}catch (SQLException e) { e.printStackTrace();
-		} finally { Dbman.close(con, pstmt, rs);  }
-		return count;
-
-	}
-
 
 	public NoticeVO getNotice(int nseq) {
 	    NoticeVO nvo = new NoticeVO();
@@ -425,5 +408,23 @@ public class AdminDao {
 	        Dbman.close(con, pstmt, rs);
 	    }
 	    return nvo;
+	}
+
+
+	public int getAllCountnotice(String key) {
+		int count=0;
+		String sql = "select count(*) as cnt from nseq "
+				+ " where title like '%' ||?||'%' ";
+		con = Dbman.getConnection();
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1,  key);
+			rs = pstmt.executeQuery();
+			if(rs.next()) count = rs.getInt("cnt");
+			
+		}catch (SQLException e) { e.printStackTrace();
+		} finally { Dbman.close(con, pstmt, rs);  }
+		return count;
+
 	}
 }
