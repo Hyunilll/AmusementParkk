@@ -9,18 +9,16 @@ import javax.servlet.http.HttpServletResponse;
 import com.ezen.world.controller.action.Action;
 import com.ezen.world.dao.MemberDao;
 
-public class SelectPwdAction implements Action {
+public class ResetPwdAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		 
 		String id = request.getParameter("id");
-	    String name = request.getParameter("name");
-	    String phone = request.getParameter("phone");
+	    String pwd = request.getParameter("pwd");
 	    MemberDao mdao = MemberDao.getInstance();
-	    int result = mdao.findMember(id, name, phone);
-	    request.setAttribute("result", result);
-	    request.setAttribute("id", id);
+	    mdao.resetNewPwd(id, pwd);
+	    request.setAttribute("result", 3);
 	    request.getRequestDispatcher("member/findPwd.jsp").forward(request, response);
 	   }
-
 	}
