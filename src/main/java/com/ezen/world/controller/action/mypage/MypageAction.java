@@ -16,7 +16,7 @@ public class MypageAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String url = "order/cartList.jsp";  
+		String url = "mypage/cartList.jsp";  
 		
 		PassticketDao ptdao= PassticketDao.getInstance();
 		ArrayList<PassticketVO> list =  ptdao.getticket();

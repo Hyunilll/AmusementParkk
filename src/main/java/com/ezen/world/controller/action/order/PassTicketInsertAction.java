@@ -1,6 +1,8 @@
 package com.ezen.world.controller.action.order;
 
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -25,10 +27,27 @@ public class PassTicketInsertAction implements Action {
 			url = "world.do?command=loginForm";
 		}else {
 			Cart2VO cvo = new Cart2VO();
+			
+			
 			cvo.setId( mvo.getId() );
 			cvo.setKind( Integer.parseInt( request.getParameter("kind")));
 			cvo.setP1( Integer.parseInt( request.getParameter("p1")));
 			cvo.setP2( Integer.parseInt( request.getParameter("p2")));
+			
+			//cvo.setVisitdate(request.getParameter("visitdate"));
+		
+			
+			String dateStr = request.getParameter("visitdate"); // request 객체에서 날짜 정보를 받아옴
+			SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd"); // 날짜 형식 지정
+			
+				 
+			try {
+				cvo.setVisitdate(dateFormat.parse(dateStr));
+			} catch (ParseException e) {
+				e.printStackTrace();
+			}
+		
+			
 			
 			int kind =  Integer.parseInt( request.getParameter("kind"));
 			if(kind==0) {
@@ -46,8 +65,7 @@ public class PassTicketInsertAction implements Action {
 		}
 		
 
-		RequestDispatcher dp=request.getRequestDispatcher(url);
-		dp.forward(request, response); 
+		response.sendRedirect(url);
 
 	}
 

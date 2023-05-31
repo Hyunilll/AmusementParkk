@@ -31,6 +31,33 @@
 					<div id="calendar" class="calendar"></div>	
 				</div>
 			</div>
+				<!--  달력 선택 날짜 표기 -->
+			<div class="order_selectdate">
+				<h2>인원 선택/방문일자</h2>
+			</div>
+			
+			<!-- 수량 표시 -->
+			<div class="order_quantity">
+				<div class="order_quantity_text">
+				<h3>어른</h3>
+				<p>만19세이상</p>
+				</div>
+				<div class="order_quantity_box">	
+					<button onclick="increaseNumber(event, 'result')" style="width:30px;">+</button>
+					<input type="text" name="p1" id="result" value="0" size="5">
+					<button onclick="decreaseNumber(event, 'result')" style="width:30px;">-</button>
+				</div>	 
+				<div class="order_quantity_text">
+				<h3>청소년</h3>
+				<p>만13세~만18세</p>
+				</div>
+				<div class="order_quantity_box">
+					<button onclick="increaseNumber(event, 'result2')" style="width:30px;">+</button>
+					<input type="text" name="p2" id="result2" value="0" size="5" >
+					<button onclick="decreaseNumber(event, 'result2')" style="width:30px;">-</button>
+				 </div>
+					
+			</div>
 			
 		<!--  어트랙션 선택 -->
 		<div>
@@ -81,7 +108,7 @@
 	    <!--  버튼 -->
 	    
 	       	<div id="reserve_buttons" style = "padding-top:40px;">
-	       		<input type="button" value="구매하기" onClick="go_cart();">
+	       		<input type="button" value="구매하기" onClick="go_cart('1');">
 	       	</div>
 	                	
 		</div>

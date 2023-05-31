@@ -1,6 +1,7 @@
 package com.ezen.world.dao;
 
 import java.sql.Connection;
+import java.sql.Date;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -22,8 +23,8 @@ public class Cart2Dao {
 	public void insertTicket(Cart2VO cvo) {
 		con = Dbman.getConnection();
 		String sql = "insert into cart2(cseq, id, kind, p1, p2, tatname1, tatname2, tatname3,"
-				+ " price1, price2)"
-				+ " values(cart2_cseq.nextval, ?, ?, ?, ?, ?, ?, ?,?,?) ";
+				+ " price1, price2, visitdate)"
+				+ " values(cart2_cseq.nextval, ?, ?, ?, ?, ?, ?, ?,?,? ,?) ";
 		try {
 			pstmt = con.prepareStatement(sql);
 			pstmt.setString(1, cvo.getId());
@@ -35,8 +36,9 @@ public class Cart2Dao {
 			pstmt.setString(7, cvo.getTatname3());
 			pstmt.setInt(8, cvo.getPrice1());
 			pstmt.setInt(9, cvo.getPrice2());
+			pstmt.setDate (10,new java.sql.Date(cvo.getVisitdate().getTime()));
 			pstmt.executeUpdate();
-		
+			
 		} catch (SQLException e) { e.printStackTrace();
 		} finally { Dbman.close(con, pstmt, rs);
 		}
@@ -63,7 +65,7 @@ public class Cart2Dao {
 				cvo.setTatname1(rs.getString("tatname2"));
 				cvo.setTatname1(rs.getString("tatname3"));
 				cvo.setIndate(rs.getTimestamp("indate"));
-				cvo.setVisitdate(rs.getTimestamp("visitdate"));
+				cvo.setVisitdate(rs.getDate("visitdate"));
 				cvo.setPrice1(rs.getInt("price1"));
 				cvo.setPrice2(rs.getInt("price2"));	
 				list.add(cvo);

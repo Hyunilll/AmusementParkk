@@ -29,17 +29,7 @@ public class CartListAction implements Action {
 			ArrayList<Cart2VO> cartList = cdao.selectCart(mvo.getId());
 			request.setAttribute("cartList", cartList);
 		
-			int totalPrice = 0; //합계
-			
-			for( Cart2VO cvo : cartList) {
-				
-				totalPrice =cvo.getPrice1()+cvo.getPrice2();
-				}
-				
-				
-				request.setAttribute("totalPrice", totalPrice);
-			}
-			
+		}
 			
 		
 		request.getRequestDispatcher(url).forward(request, response);
