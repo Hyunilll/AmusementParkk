@@ -1,10 +1,28 @@
 function go_cart(num){
-	
-	
 		document.formm.action ="world.do?command=passTicketInsert&kind="+num;
 		document.formm.submit();
 	
 }
+
+
+function count_check(obj) {
+	
+	var chkBox = document.getElementsByName("attraction") //name값 불러옴
+	var chkCnt = 0; // chkCnt 초기값 0 설정
+	
+	for ( var i = 0; i < chkBox.length; i++){
+		if (chkBox[i].checked){ // chkBox가 체크 됐을 경우
+			chkCnt++; // 1증가
+		}	
+	}
+	if (chkCnt > 3){ // 3개 
+		alert("3개까지만 선택 가능합니다.") // 경고문
+		obj.checked = false; // 경고 후 체크 되지 않게 설정.
+		return false;
+	}
+     
+}
+
 
 
 
@@ -35,7 +53,69 @@ function toggleAnswer(answerId) {
       resultInput.value = newValue;
     }
   }
+  
+  
+  /* 패스트티켓 카운트 */
+  /*
+   function increase(event, result) { // 증가
+	event.preventDefault(); // 폼 제출 기본 동작 중지
+    var resultInput = document.getElementById(result);
+    var currentValue = parseInt(resultInput.value);
+	    if(currentValue === 1)
+     return false;	
+    var newValue = currentValue + 1;
+    resultInput.value = newValue;
+
+  }
+
+ function decrease(event, result) {//  감소
+	 event.preventDefault();
+    var resultInput = document.getElementById(result);
+    var currentValue = parseInt(resultInput.value);
+    
+    if (currentValue > 0) {
+      var newValue = currentValue - 1;
+      resultInput.value = newValue;
+    }
+  }
+  */
 	
+	function increase(event, result) {
+  event.preventDefault();
+  var resultInput = document.getElementById(result);
+  var currentValue = parseInt(resultInput.value);
+
+  if (currentValue === 1) {
+    return false; // Return false if the current value is already 1
+  }
+  
+  var otherResult = result === 'result' ? 'result2' : 'result';
+  var otherResultInput = document.getElementById(otherResult);
+  otherResultInput.value = 0; // Set the other result input value to 0
+
+  var newValue = currentValue + 1;
+  resultInput.value = newValue;
+}
+
+function decrease(event, result) {
+  event.preventDefault();
+  var resultInput = document.getElementById(result);
+  var currentValue = parseInt(resultInput.value);
+
+  if (currentValue === 0) {
+    return false; // Return false if the current value is already 0
+  }
+
+  var otherResult = result === 'result' ? 'result2' : 'result';
+  var otherResultInput = document.getElementById(otherResult);
+  otherResultInput.value = 0; // Set the other result input value to 0
+
+  var newValue = currentValue - 1;
+  resultInput.value = newValue;
+}
+	
+	
+	g
 	// 달력 
 	
 	var selectedDate;
@@ -93,7 +173,6 @@ function showCalendar() {
 
       var selectedDateElement = document.getElementById("selectedDate");
       selectedDateElement.textContent = selectedDate;
-      document.getElementById('selectedDate').value = selectedDate;
       calendar.classList.remove("active");
     });
     daysElement.appendChild(day);
