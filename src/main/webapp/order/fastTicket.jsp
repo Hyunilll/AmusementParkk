@@ -12,14 +12,15 @@
 	.container {position:relative; width:100%;} 
 </style>
  
- <form name="formm" method="post"	action="world.do">
-	<input type="hidden" name="command" value="ticket">   
+ <form name="formm" method="post">
+
 <div id =" wrap" style=" width:100%; height:100%; background: lightgray;">
+
 	<div id = "order_box">
 		<div class="order_box_select2">
 			<div class="order_box_title" style="margin-top:7px;">
 				<h2>패스트패스 예매</h2>
-			</div>
+				<!--  인원선택 -->
 			<div class="order_box_date">
 				<div class="order_box_date_text" style="margin-top:10px;">
 					<div id="selectedDate" class="selected-date"></div>
@@ -28,7 +29,9 @@
 					<div class="calendarImage" onclick="showCalendar()">
 						<img src="images/ticket_images/calendar.png" style="width:40px; height:40px;">
 					</div>
-					<div id="calendar" class="calendar"></div>	
+					<div id="calendar"  class="calendar">
+						<input type="hidden" id="calendar" name="visitdate">
+					</div>	
 				</div>
 			</div>
 				<!--  달력 선택 날짜 표기 -->
@@ -59,12 +62,36 @@
 					
 			</div>
 			
+			<!--  달력 선택 날짜 표기 -->
+			<div class="order_selectdate">
+				<h2>인원 선택/방문일자</h2>
+			</div>
+			
+			<!-- 수량 표시 -->
+			<div class="order_quantity">
+				<div class="order_quantity_text">
+				<h3>어른</h3>
+				<p>만19세이상</p>
+				</div>
+				<div class="order_quantity_box">	
+					<button onclick="increaseNumber(event, 'result')" style="width:30px;">+</button>
+					<input type="text" name="p1" id="result" value="0">
+					<button onclick="decreaseNumber(event, 'result')" style="width:30px;">-</button>
+				</div>	 
+				<div class="order_quantity_text">
+				<h3>청소년</h3>
+				<p>만13세~만18세</p>
+				</div>
+				<div class="order_quantity_box">
+					<button onclick="increaseNumber(event, 'result2')" style="width:30px;">+</button>
+					<input type="text" name="p2" id="result2" value="0">
+					<button onclick="decreaseNumber(event, 'result2')" style="width:30px;">-</button>
+				 </div>
+					
+			</div>
+			
 		<!--  어트랙션 선택 -->
-		<div>
-		
-		</div>
-			
-			
+
 			
 		<!-- 안내 -->
 			<div id="board-list">
@@ -113,6 +140,7 @@
 	                	
 		</div>
 	</div>
+</div>
 </div>
 </form>
 <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
