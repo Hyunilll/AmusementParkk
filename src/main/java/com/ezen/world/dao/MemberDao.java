@@ -103,7 +103,7 @@ public class MemberDao {
 
 	public void updateMember(MemberVo mvo) {
 		con = Dbman.getConnection();
-		String sql = "Update member set pwd=?, name=?, zip_num=?, address1=?, "
+		String sql = "Update Lmember set pwd=?, name=?, zip_num=?, address1=?, "
 				+ "address2=?, email=?, phone=? where id = ?";
 		try {
 			pstmt = con.prepareStatement(sql);
@@ -124,7 +124,7 @@ public class MemberDao {
 
 	public void deleteMember(String id) {
 		con = Dbman.getConnection();
-		String sql = "Update member set useyn='N' where id = ?";
+		String sql = "Update Lmember set useyn='N' where id = ?";
 				
 		try {
 			pstmt = con.prepareStatement(sql);
@@ -134,5 +134,49 @@ public class MemberDao {
 		} finally { Dbman.close(con, pstmt, rs);	
 		}
 	}
+	
+	public MemberVo selectId(String name, String phone) {
+		MemberVo mvo = null;
+	      String sql = "SELECT ID FROM Lmember WHERE name = ? AND phone = ?";
+	      con = Dbman.getConnection();
+	      try {
+	         pstmt = con.prepareStatement(sql);
+	         pstmt.setString(1, name);
+	         pstmt.setString(2, phone);
+	         rs = pstmt.executeQuery();
+	          while( rs.next() ) {
+	             mvo = new MemberVo();
+	            mvo.setId( rs.getString("id") );
+	          }
+	      } catch (SQLException e) { e.printStackTrace();
+	      } finally { Dbman.close(con, pstmt, rs);
+	      }
+	      return mvo;
+	   }
 
+	public int findMember(String id, String name, String phone) {
+
+	      int count = 0;
+	      con = Dbman.getConnection();
+	      String sql="SELECT COUNT(*) cnt FROM Lmember WHERE id = ? AND name = ? AND phone = ?";
+	      try {
+	            pstmt = con.prepareStatement(sql);
+	            pstmt.setString(1, id);
+	            pstmt.setString(2, name);
+	            pstmt.setString(3, phone);
+	            rs = pstmt.executeQuery();
+	            if (rs.next()) {
+	               count = rs.getInt("cnt");
+	            }
+	      } catch (SQLException e) {
+	         e.printStackTrace();
+	      } finally {
+	         Dbman.close(con, pstmt, rs);
+	      }
+	      return count;
+	   }
+
+	
 }
+
+

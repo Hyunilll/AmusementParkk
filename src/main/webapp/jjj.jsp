@@ -1,85 +1,22 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-
+<%@ page import="java.util.Calendar" %>
 <!DOCTYPE html>
 <html>
 <head>
 <style>
-.selected-date {
-  margin-top: 10px;
-  text-align: center;
-}
-
-.calendar-popup {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 9999;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-  padding: 20px;
-  display: none;
-  width: 300px;
-  max-height: 326px; /* 최대 높이 설정 */
-}
-
-.calendar-container {
-  position: relative;
-  display: inline-block;
-}
-
-.calendar-popup .month {
-  text-align: center;
-  font-weight: bold;
-  margin-bottom: 10px;
-}
-
-.calendar-popup .navigator {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
-}
-
-.calendar-popup .navigator button {
-  background-color: transparent;
-  border: none;
-  outline: none;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.calendar-popup .navigator .prev-btn::before {
-  content: "\25C0";
-}
-
-.calendar-popup .navigator .next-btn::before {
-  content: "\25B6";
-}
-
-.calendar-popup .days {
-  display: grid;
-  grid-template-columns: repeat(7, 1fr);
-  grid-gap: 5px;
-}
-
-.calendar-popup .day {
-  text-align: center;
-  padding: 10px;
-  cursor: pointer;
-}
-
-.calendar-popup .day:hover {
-  background-color: #f2f2f2;
-}
-
-.calendar-popup .day.selected {
-  background-color: #ccc;
-}
-
-.calendar-popup .hidden {
-  display: none;
-}
+.selected-date {margin-top: 10px;text-align: center;}
+.calendar-popup {position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);z-index: 9999;background-color: #fff;box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);padding: 20px;display: none;width: 300px;max-height: 350px; }
+.calendar-container {position: relative;display: inline-block;}
+.calendar-popup .month { text-align: center;font-weight: bold;margin-bottom: 10px;}
+.calendar-popup .navigator {display: flex;justify-content: space-between;align-items: center;margin-bottom: 10px;}
+.calendar-popup .navigator button {background-color: transparent;border: none;outline: none;cursor: pointer;font-weight: bold;}
+.calendar-popup .navigator .next-btn::before {content: "\25B6";}
+.calendar-popup .navigator .prev-btn::before {content: "\25C0";} 
+.calendar-popup .days {display: grid;grid-template-columns: repeat(7, 1fr);gap: 5px;text-align: center;}
+.calendar-popup .day {padding: 10px;cursor: pointer;}
+.calendar-popup .day:hover { background-color: #f2f2f2;}
+.calendar-popup .day.selected {background-color: #ccc;}
+.calendar-popup .hidden {display: none;}
 </style>
 <script>
 
@@ -112,6 +49,7 @@
       var prevButton = document.createElement("button");
       prevButton.classList.add("prev-btn");
       prevButton.addEventListener("click", function() {
+        calendarPopup.innerHTML = ""; // 기존 달력 요소 삭제
         displayCalendar(month === 1 ? year - 1 : year, month === 1 ? 12 : month - 1);
       });
       navigatorElement.appendChild(prevButton);
@@ -119,6 +57,7 @@
       var nextButton = document.createElement("button");
       nextButton.classList.add("next-btn");
       nextButton.addEventListener("click", function() {
+        calendarPopup.innerHTML = ""; // 기존 달력 요소 삭제
         displayCalendar(month === 12 ? year + 1 : year, month === 12 ? 1 : month + 1);
       });
       navigatorElement.appendChild(nextButton);
@@ -134,12 +73,24 @@
       var firstDayOfWeek = firstDay.getDay();
       var totalDays = lastDay.getDate();
 
+      var weekdays = ["일", "월", "화", "수", "목", "금", "토"];
+
+      for (var i = 0; i < weekdays.length; i++) {
+        var weekday = document.createElement("div");
+        weekday.classList.add("day");
+        weekday.textContent = weekdays[i];
+        daysElement.appendChild(weekday);
+      }
+
+      // 첫 번째 요일까지 빈 칸 생성
       for (var i = 0; i < firstDayOfWeek; i++) {
         var emptyDay = document.createElement("div");
-        emptyDay.classList.add("day", "hidden");
+        emptyDay.classList.add("day");
+        emptyDay.classList.add("hidden");
         daysElement.appendChild(emptyDay);
       }
 
+      var dayOfWeek = firstDayOfWeek;
       for (var i = 1; i <= totalDays; i++) {
         var day = document.createElement("div");
         day.classList.add("day");
@@ -169,33 +120,25 @@
         });
 
         daysElement.appendChild(day);
+
+        dayOfWeek++;
+        if (dayOfWeek % 7 === 0) {
+          dayOfWeek = 0;
+        }
+      }
+
+      // 다음 달 첫 번째 요일까지 빈 칸 생성
+      for (var i = dayOfWeek; i < 7; i++) {
+        var emptyDay = document.createElement("div");
+        emptyDay.classList.add("day");
+        emptyDay.classList.add("hidden");
+        daysElement.appendChild(emptyDay);
       }
 
       calendarPopup.style.display = "block";
     }
 
     displayCalendar(year, month);
-  }
-  var currentCalendar; // 현재 표시된 달력 요소를 저장하는 변수
-
-  function displayCalendar(year, month) {
-    // 현재 표시된 달력 요소가 있으면 숨기기
-    if (currentCalendar) {
-      currentCalendar.style.display = "none";
-    }
-
-    var calendarContainer = document.getElementById("calendarPopup");
-    calendarContainer.innerHTML = "";
-
-    var monthElement = document.createElement("div");
-    monthElement.classList.add("month");
-    monthElement.textContent = year + "년 " + month + "월";
-    calendarContainer.appendChild(monthElement);
-
-    // 이하 생략...
-    
-    calendarContainer.style.display = "block";
-    currentCalendar = calendarContainer; // 현재 달력 요소를 저장
   }
 </script>
 </head>

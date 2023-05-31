@@ -5,7 +5,7 @@
 <style>
 .ar{position: absolute; left:300px; }
 </style>
-
+<script src="member/member.js"></script>
 <div id=logina>
 
    <div id="login">
@@ -26,8 +26,8 @@
    <div class="ar">&nbsp;&nbsp;&nbsp;${message}</div>
    <div class="menu1">
       <ul>
-          <li><a href="#">아이디 찾기 | </a></li>
-             <li><a href="#">비밀번호 찾기</a></li>
+          <li onclick="findId();"  style="cursor:pointer;">아이디 찾기 |</li>
+          <li onclick="findPwd();" style="cursor:pointer;">비밀번호 찾기</li>
       </ul>
    </div>
    <div id="buttons">

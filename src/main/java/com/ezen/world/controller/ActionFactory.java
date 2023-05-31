@@ -39,6 +39,8 @@ import com.ezen.world.controller.action.member.JoinAction;
 import com.ezen.world.controller.action.member.JoinFormAction;
 import com.ezen.world.controller.action.member.LoginFormAction;
 import com.ezen.world.controller.action.member.LogoutAction;
+import com.ezen.world.controller.action.member.SelectIdAction;
+import com.ezen.world.controller.action.member.SelectPwdAction;
 import com.ezen.world.controller.action.member.loginAction;
 import com.ezen.world.controller.action.mypage.CartListAction;
 import com.ezen.world.controller.action.mypage.MypageAction;
@@ -149,8 +151,9 @@ public class ActionFactory {
 		//이달의 혜택
 		else if( command.equals("event01") ) ac= new Event01Action();
 		
-		
-		
+		// 아이디 비번 찾기
+		else if( command.equals("selectId") ) ac= new SelectIdAction();
+		else if( command.equals("selectPwd") ) ac= new SelectPwdAction();
 		
 		
 		return ac;

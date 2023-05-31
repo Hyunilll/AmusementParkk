@@ -54,7 +54,7 @@
         });
         
 function go_(){
-	location.href = "shop.do?command=adminProductList";
+	location.href = "world.do?command=adminProductList";
 }
 
 
