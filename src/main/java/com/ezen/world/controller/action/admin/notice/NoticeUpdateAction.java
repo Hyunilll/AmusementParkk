@@ -23,7 +23,7 @@ public class NoticeUpdateAction implements Action {
 		HttpSession session = request.getSession();
 		AdminVo avo = (AdminVo)session.getAttribute("loginAdmin");
 		if(avo==null) {
-			url="shop.do?command=admin";
+			url="world.do?command=admin";
 		}else {
 			NoticeVO nvo = new NoticeVO();
 			ServletContext context = session.getServletContext();

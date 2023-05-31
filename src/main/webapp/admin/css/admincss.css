@@ -28,10 +28,6 @@ nav#top_menu ul li a:hover {color: blue; font-weight: bold;}
 .lotteon-banner {position: absolute; top: 75px; right: 0;}
 #footer .container .bottom .left {float: left;}
 #footer .container .bottom .left .flogo {float: left;}
-img, fieldset {
-    border: none;
-    vertical-align: top;
-}
 #footer .container .bottom .left div {padding-left:140px;}
 #footer .container .bottom .left div p:first-child {margin-top:0;}
 #footer .container .bottom .left div p span {margin-left:0; padding-left:0;}
@@ -64,7 +60,7 @@ border-radius: 10px; box-shadow: 3px 3px 2px #ccc; font-size:150%;}
 #logina #buttons input[type=button]{background : #52fff9}
 #logina #content{margin:30px; font-size:100%;}
 
-/*admin attraction*/
+/* admin attraction */
 .att_title_img {position:relative; width:100%; height:485px; display:inline-box; text-align:center; margin:0 auto;}
 #att_title_text {position:absolute; top:30%; left:50%; transform:translate(-50%, -50%); color:white;
    text-align:center; font-weight:bold; font-size:50px; text-shadow: 2px 2px 6px black;}
@@ -81,48 +77,6 @@ border-radius: 10px; box-shadow: 3px 3px 2px #ccc; font-size:150%;}
 #at_arg{position:relative; width:100%; height:20px;}
 .att_list:hover{background-color:#5c10e6; box-shadow:3px 3px 15px gray; border:none; color:white;}
 
-/* attractionDetail */
-.att_Detail_title {position:relative; width:100%; height:380px; display:inline-box; text-align:center; margin:0 auto;}
-#att_Detail_text {position:relative; text-align:center; font-weight:bold; font-size:60px; padding: 100px 0 0 0;}
-#att_Detail_exp{position:relative; text-align:center; font-weight:normal; font-size:20px; padding: 20px 0;}
-
-#att_Detail_tag{position:relative; width:100%; height:80px; display:flex; justify-content:center; align-items:center;}
-#att_Detail_tag ul{width:720px; height:54px; margin:0 auto; list-style:none; display:flex; justify-content:center; align-items:center; text-align:center;}
-#att_Detail_tag ul li{width:110px; height:40px; border-radius:40px 40px 40px 40px; border:1px solid lightgray; float:left;
-	margin-right:40px; font-size:16px; line-height:40px;}
-
-#att_Detail_img_tool {width:100%; height:700px; margin:0 auto;}
-#att_Detail_img {width:100%; height:100%; object-fit:cover;}
-
-#att_Info_back {width:100%; height:794px; text-align:center; background-image: url("../../images/att_Info_bg.jpg");}
-#att_Info_box_tool {position:relative; margin:0 auto; width:620px; height:470px;}
-.att_Info_box {position:relative; width:270px; height:360px; margin:60px 20px 20px 20px; text-align:center; background-color:white; box-shadow:5px 5px 5px gray; float:left;}
-.att_Info_icon {padding:40px 0 0 0;}
-.att_Info_text {padding:15px 0 0 0; font-size:20px;}
-#att_Info_pnum {padding:40px 0 0 0; font-size:50px; font-weight:bold;}
-#att_Info_limit {padding:50px 0 0 0; font-size:20px;}
-#att_Info_text2 {position:relative; width:100%; height:70px; text-align:center; font-weight:bold; font-size:40px; padding:10px;}
-#att_Info_bottom {position:relative; width:100%; height:200px; padding:40px;}
-#att_Info_bottom_tool {width:620px; height:130px; margin:0 auto;}
-#att_Info_icon_tool {width:150px; height:130px; float:left;}
-#att_Info_icon2 {position:relative; margin:0 auto; width:125px; height:100px;}
-#att_Info_icon_text2 {position:relative; margin:0 auto; width:125px; height:30px; font-size:16px;}
-
-.closeInfo {width: 1170px; padding-bottom: 100px; border-bottom: 1px solid #e1e1e1; text-align: center; margin: 40px auto 0;}
-.att_holiday_tool{border: 1px solid #e1e1e1; background: #f8f8f8; padding: 80px 0; margin-top: 40px; text-align: center;}
-.att_holiday_tool .txt {display: inline-block; font-size: 18px; color: #777; margin: 0;}
-.att_holiday_tool .txt span{display: inline-block; background:url(../images/icons/holidayDiv_txtBg.png) no-repeat 0; padding-left:110px; line-height:100px;}
-
-.closeInfo .txt {font-size:16px; color:#555; line-height: 28px; margin-top: 30px;}
-.closeInfo .link {margin-top: 20px;}
-.closeInfo .link a {display: inline-block; border: 1px solid #e1e1e1; padding: 0 40px; height: 48px; 
-	line-height: 46px; font-size: 16px; color: #000; text-align: center; background: #f6f6f6; border-radius: 25px;}
-
-.btnArea {text-align: center; margin-top: 60px;}
-.purpleBtn {display: inline-block; padding: 0 70px; height: 56px; line-height: 54px; font-size:20px; 
-	color: #fff; text-align: center; border-radius: 28px; background: rgb(111, 35, 249);}
-
-
 /*admin attraction detail*/
 .att_Detail_title {position:relative; width:100%; height:380px; display:inline-box; text-align:center; margin:0 auto;}
 #att_Detail_text {position:relative; text-align:center; font-weight:bold; font-size:60px; padding: 100px 0 0 0;}
@@ -131,12 +85,12 @@ border-radius: 10px; box-shadow: 3px 3px 2px #ccc; font-size:150%;}
 #att_Detail_tag{position:relative; width:100%; height:80px; display:flex; justify-content:center; align-items:center;}
 #att_Detail_tag ul{width:720px; height:54px; margin:0 auto; list-style:none; display:flex; justify-content:center; align-items:center; text-align:center;}
 #att_Detail_tag ul li{width:110px; height:40px; border-radius:40px 40px 40px 40px; border:1px solid lightgray; float:left;
-	margin-right:40px; font-size:16px; line-height:40px;}
+	margin:20px; font-size:16px; line-height:40px;}
 
 #att_Detail_img_tool {width:100%; height:700px; margin:0 auto;}
 #att_Detail_img {width:100%; height:100%; object-fit:cover;}
 
-#att_Info_back {width:100%; height:794px; text-align:center; background-image: url("../images/att_Info_bg.jpg");}
+#att_Info_back {width:100%; height:794px; text-align:center; background-image: url("../../images/att_Info_bg.jpg");}
 #att_Info_box_tool {position:relative; margin:0 auto; width:620px; height:470px;}
 .att_Info_box {position:relative; width:270px; height:360px; margin:60px 20px 20px 20px; text-align:center; background-color:white; box-shadow:5px 5px 5px gray; float:left;}
 .att_Info_icon {padding:40px 0 0 0;}
@@ -160,14 +114,12 @@ border-radius: 10px; box-shadow: 3px 3px 2px #ccc; font-size:150%;}
 .closeInfo .link a {display: inline-block; border: 1px solid #e1e1e1; padding: 0 40px; height: 48px; 
 	line-height: 46px; font-size: 16px; color: #000; text-align: center; background: #f6f6f6; border-radius: 25px;}
 
-.btnArea {text-align: center; margin-top: 60px;}
-.purpleBtn {display: inline-block; padding: 0 70px; height: 56px; line-height: 54px; font-size: 18px; 
-	color: #fff; text-align: center; border-radius: 28px; background: rgb(111, 35, 249);}
+.btnArea {position:relative; width:100%; height:100px; padding:20px 410px;}
+.purpleBtn {width:140px; height:56px; border-radius:40px; background-color:#6f23f9;
+	font-size:20px; color:white; margin:0 10px; border:none;}
 	
-
-
-
-
+	
+	
 /* 공지사항*/
 table {border-collapse: collapse;border-spacing: 0;}
 section.notice {padding:  0;}

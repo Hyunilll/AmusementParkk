@@ -70,9 +70,8 @@
 	</p>
 
 	<div class="btnArea">
-		<a href="world.do?command=adminattractionForm" class="purpleBtn">목록</a>
-		<a href="world.do?command=adminUpdateNoticeForm" class="purpleBtn">수정</a>
-
+		<input type="button" value="목 록" class="purpleBtn" onclick="location.href='world.do?command=adminattractionForm'">
+		<input type="button" value="수 정" class="purpleBtn" onclick="go_modat('${AttractionVO.aseq}')">
 	</div>
 </div>
 </form>

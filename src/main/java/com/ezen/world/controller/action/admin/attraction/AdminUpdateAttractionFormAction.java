@@ -23,13 +23,11 @@ public class AdminUpdateAttractionFormAction implements Action {
 		if(avo==null) {
 			url="world.do?command=admin";
 		}else {
-			//전달된 놀이기구번호로 공지내역을 조회하고 리퀘스트에 저장
-			int aseq = Integer.parseInt( request.getParameter("aseq") );
+			//전달된 놀이기구번호로 놀이기구를 조회하고 리퀘스트에 저장
+			int aseq = Integer.parseInt(request.getParameter("aseq"));
 			AttractionDao adao = AttractionDao.getInstance();
 			AttractionVO atvo = adao.getAttraction(aseq);
 			request.setAttribute("AttractionVO", atvo);
-			
-			
 		}
 		request.getRequestDispatcher(url).forward(request, response);
 
