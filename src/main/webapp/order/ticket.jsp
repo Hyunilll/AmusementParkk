@@ -9,20 +9,14 @@
 	.container {position:relative; width:900px;} 
 </style>
  
- <form name="formm" method="post">
-	
-<div id =" wrap" style=" width:100%; height:100%; background: lightgray;">
-	<div id = "order_box">
-	
+<form name="formm" method="post">
+<div id ="wrap">
+	<div class="order_box2">
 		<div class="order_box_select2">
-			<div class="order_box_title" style="margin-top:7px;">
-				<h2>자유이용권 예매</h2>
-				<!--  인원선택 -->
+			<div class="order_box_title">자유이용권 예매</div>
 			<div class="order_box_date">
-				<div class="order_box_date_text" style="margin-top:10px;">
-					<div id="selectedDate" class="selected-date"></div>
-				</div>
-				<div class="order_box_date_date" style="margin-top:10px;">
+				<div class="order_selectdate">인원 선택/방문일자</div>
+				<div class="order_box_date_date">
 					<div class="calendarImage" onclick="showCalendar()">
 						<img src="images/ticket_images/calendar.png" style="width:40px; height:40px;">
 					</div>
@@ -31,12 +25,13 @@
 					</div>	
 				</div>
 			</div>
-			
-			
-			<!--  달력 선택 날짜 표기 -->
-			<div class="order_selectdate">
-				<h2>인원 선택/방문일자</h2>
+			<div class="order_box_date">
+				<div class="order_box_date_text">
+					<div id="selectedDate" class="selected-date"></div>
+				</div>
 			</div>
+			<!--  달력 선택 날짜 표기 -->
+			
 			
 			<!-- 수량 표시 -->
 			<div class="order_quantity">
@@ -104,10 +99,7 @@
 	                	
 		</div>
 	</div>
-</div>
+	</div>
 </div>
 </form>
-
-<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    
 <%@ include file="../footer.jsp" %>>
