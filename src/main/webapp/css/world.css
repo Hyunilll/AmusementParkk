@@ -128,7 +128,6 @@ img, fieldset {
 
 
 /* login */
-
 #logina{position: relative; width:1180px; display: grid; min-height: 10vh; height:800px; margin: 0 auto; text-align: center;}
 #logina #login {position: relative; width:100%; height:250px; margin: 0 auto; line-height: 160px; text-align: center; font-size:200%}
 #logina #input{ position: relative;width:600px; height:70px; color:gray; border:1px solid silver; 
@@ -169,66 +168,6 @@ background-image : url('../images/timeVisual_bg_on.jpg'); margin: 0 auto; border
 #rest_box{position:relative; width:auto; height:100%; margin:0 auto; }
 .holidayBox{font-weight:bold;font-size:80%; }
 
-/* reserve */
-
-#order_box{position:relative; width: 100%; height: 800px; display: grid; min-height: 10vh;
-	background-image : url('../images/reserve_imgs2.jpg'); background-size: contain;
-	  z-index:1; }
-.order_box_select {position:relative; width: 900px; height: 650px; z-index:2; background:white; margin : 100px 200px 100px 500px; }
-	.order_box_title{position:relative; width:100%; height:50px; margin:0 auto; 
-		text-align:center; padding: 0;  border-bottom: 2px solid #e1e1e1;}
-	
-	.order_box_text{position:relative; width:100%; height:560px; background:white; margin: 0 auto;  }
-		.order_box_text_container{ position:relative; border-radius:15px;  float:left;   width:360px; height: 450px; background:white; 
-		 margin : 10px 0 0 60px;}
-	
-			.order_box_text_imgs{position:relative; width:100%; height: 360px; border-radius:15px; background-image : url('../images/reserve_imgs1.jpg'); background-size: cover; }
-			.order_box_text_content{position:relative; width:100%; height: 150px;  border-radius:15px; background:white; opacity:1;
-				 text-align:center; }
-		
-					
-#reserve_buttons input{margin: 0 auto;  width:100px; height:30px; 
-	border-radius: 5px; box-shadow: 2px 2px 2px lightgray; font-size:120%; }
-#reserve_buttons input[type=button]{background : #FDFDFD;}
-
-/* passticket */
-
-.order_box_select2 {position:relative; width: 900px; height:100%; z-index:2; 
-background:lightgray; margin : 100px 200px 100px 500px; }
-.order_box_date{position:relative; width:100%; height:60px; margin:0 auto; border:1px solid red; border-bottom: 2px solid #e1e1e1;}
-.order_box_date_text{position: relative; float:left; width:300px;   height: 40px; margin:0 auto; border:1px solid blue;}
-.order_box_date_date{position: relative; float: right; width:50px;  border:1px solid green;}
-.order_selectdate{position:relative; width:900px; padding-top:10px; margin:0 auto; height: 60px; text-align:center; border-bottom: 2px solid #e1e1e1;}
-.order_quantity{position: relative; width:900px; height:110px; margin: 0 auto;}
-.order_quantity_box{position:relative; float:left; width:100px; margin: 10px 0  0  10px;  height:80px; }
-.order_quantity_text{position:relative; float:left; width:180px; padding: 10px; margin: 10px 0 0 100px;  height:80px; }
-
-/* 달력 */
-.calendar {display: none;position: absolute; margin: 0 0 0 60px; background: #fff;border: 1px solid #ccc;padding: 10px;}
-.calendar.active {display: block;}
-.calendar .month {text-align: center;font-weight: bold;margin-bottom: 10px;}
-.calendar .days {display: grid;grid-template-columns: repeat(7, 1fr);}
-.calendar .days .day {text-align: center;padding: 5px;border: 1px solid #ccc;cursor: pointer;}
-.calendar .days .day:hover {background-color: #f2f2f2;}.calendar .days .day.selected {background-color: #ffcc00;}
-.calendar .days .day.selected {background-color: #ffcc00;}
-.selected-date {margin-top: 10px;text-align: center;}
-#selectedDate {text-align:center; font-size:30px; font-weight:bold;}
-
-
-
-/* price.jsp */
-
-.bigBox{position:relative; width:100%;height:2000px;background:#fff; display: inline-block;text-align: center;margin:0 auto;  }
-.bigBox1{position:relative; padding-top:180px;font-size:300%; width:1400px; font-weight:bold;height:100px;background:#fff;display: inline-block; margin:0 auto; text-align: center; }
-.bigBox2{position:relative; padding-top:90px;font-size:150%; width:1400px;font-weight:bold; height:100px; background:#fff;  display: inline-block;margin:0 auto; text-align: center;}
-.bigBoxx{position:relative;width:1400px; height:400px; background:#fff; display: inline-block;margin:0 auto; text-align: center;}
-.bigBox3{position:relative;width:500px; height:400px;font-weight:bold;display: inline-block;margin:0 auto; text-align: center; border:1px solid #e1e1e1;}
-.bigBox4{position:relative;width:1400px; height:180px;font-family: '맑은 고딕'; font-weight:bold;padding-top:50px; display: inline-block;margin:10px; text-align: center;background:#f8f8f8; border:1px solid #e1e1e1;}
-.bigBox5{position:relative;width:1400px; height:400px; display: inline-block;margin:20px; text-align: left;background:#f8f8f8; border:1px solid #e1e1e1;}
-.bigBox6{position:relative;width:1400px; height:500px; display: inline-block;margin:20px; text-align: left;background:#f8f8f8; border:1px solid #e1e1e1;}
-ul,ol,li{list-style:none; }
-.smallBox1{font-size:200%;height:80px;font-weight:bold;padding-top:30px;background-color:#f8f8f8; color:#550adf;font-family: '맑은 고딕'; }
-.priceUl{font-size:100%;font-weight:bold;padding-top:10px;}
 
 /* contract */
 .join2{position:relative; width:1150px; height:800px; margin:0 auto;} 
@@ -283,7 +222,7 @@ ul,ol,li{list-style:none; }
 #att_Detail_tag{position:relative; width:100%; height:80px; display:flex; justify-content:center; align-items:center;}
 #att_Detail_tag ul{width:720px; height:54px; margin:0 auto; list-style:none; display:flex; justify-content:center; align-items:center; text-align:center;}
 #att_Detail_tag ul li{width:110px; height:40px; border-radius:40px 40px 40px 40px; border:1px solid lightgray; float:left;
-	margin-right:40px; font-size:16px; line-height:40px;}
+	margin:20px; font-size:16px; line-height:40px;}
 
 #att_Detail_img_tool {width:100%; height:700px; margin:0 auto;}
 #att_Detail_img {width:100%; height:100%; object-fit:cover;}

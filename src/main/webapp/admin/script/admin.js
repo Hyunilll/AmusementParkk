@@ -39,7 +39,7 @@ function go_total(comm ){
 
 
 
-//공지사항---------------
+//------ 공지사항 ------
 function go_insertform(comm){ //공지추가 폼으로 이동
 	document.frm.action = "world.do?command="+comm;
 	document.frm.submit();
@@ -58,27 +58,22 @@ function go_insertnt(){ //공지추가 동작액션으로 이동
 	}
 }
 
-//------------
 function go_mov(comm){ // 공지사항 목록으로 이동
 	document.insertnt.action = "world.do?command="+comm;
 	document.insertnt.submit();
-	
+}
+
+function go_deletent(nseq){ //공지 삭제
+	if(confirm('정말 삭제하시겠습니까?')){
+		var url="world.do?command=noticeDelete&nseq="+nseq;
+		location.href=url;
+	}
 }
 
 function go_modnt(nseq){ // 공지 수정폼으로 이동
 	var url="world.do?command=adminUpdateNoticeForm&nseq="+nseq;
 	location.href=url;
 }
-
-function go_deletent(nseq){ //공지 삭제
-if(confirm('정말 삭제하시겠습니까?')){
-	var url="world.do?command=noticeDelete&nseq="+nseq;
-	location.href=url;
-	}
-	
-}
-
-
 
 function go_mod_savent(){ // 공지 수정 버튼 클릭
 	if( document.updatent.title.value==""){  
@@ -96,8 +91,6 @@ function go_mod_savent(){ // 공지 수정 버튼 클릭
 }
 
 // 놀이기구 ----------------------------------------------------------------------------
-
-
 function go_insertat(){
 	if( document.insertnt.atname.value==""){ 
 		alert('놀이기구 이름을 입력하세요');
@@ -155,14 +148,6 @@ function go_modat(aseq){ // 놀이기구 수정폼으로 이동
 	location.href=url;
 }
 
-function go_deleteat(aseq){ //놀이기구 삭제
-if(confirm('정말 삭제하시겠습니까?')){
-	var url="world.do?command=attractionDelete&aseq="+aseq;
-	location.href=url;
-	}
-}
-
-
 // 놀이기구 수정버튼 클릭
 function go_mod_saveat(){
 	if( document.insertnt.atname.value==""){ 
@@ -213,6 +198,14 @@ function go_mod_saveat(){
 		document.insertnt.action = "world.do?command=updateAttraction";
 		document.insertnt.submit();
 		}
+	}
+}
+
+//놀이기구 삭제
+function go_deleteat(aseq){
+if(confirm('정말 삭제하시겠습니까?')){
+	var url="world.do?command=attractionDelete&aseq="+aseq;
+	location.href=url;
 	}
 }
 

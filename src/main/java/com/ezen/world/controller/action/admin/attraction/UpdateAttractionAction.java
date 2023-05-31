@@ -24,7 +24,7 @@ public class UpdateAttractionAction implements Action {
 		AdminVo avo = (AdminVo)session.getAttribute("loginAdmin");
 		
 		if(avo==null) {
-			url="shop.do?command=admin";
+			url="world.do?command=admin";
 		}else {
 			AttractionVO atvo = new AttractionVO();
 			ServletContext context = session.getServletContext();
