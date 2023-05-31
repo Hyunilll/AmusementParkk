@@ -150,53 +150,53 @@ function go_modat(aseq){ // 놀이기구 수정폼으로 이동
 
 // 놀이기구 수정버튼 클릭
 function go_mod_saveat(){
-	if( document.insertnt.atname.value==""){ 
+	if( document.updateat.atname.value==""){ 
 		alert('놀이기구 이름을 입력하세요');
-		document.insertnt.atname.focus();
+		document.updateat.atname.focus();
 		
-	}else if (document.insertnt.acontent.value == "") {
+	}else if (document.updateat.acontent.value == "") {
 		alert('놀이기구 설명을 입력하세요.'); 	
-		document.insertnt.acontent.focus();	
+		document.updateat.acontent.focus();	
 		
-	}else if (document.insertnt.act1.value == "") {
+	}else if (document.updateat.act1.value == "") {
 		alert('카테고리 1을 입력하세요.'); 	
-		document.insertnt.act1.focus();	
+		document.updateat.act1.focus();	
 		
-	}else if (document.insertnt.act2.value == "") {
+	}else if (document.updateat.act2.value == "") {
 		alert('카테고리 2를 입력하세요.'); 	
-		document.insertnt.act2.focus();	
+		document.updateat.act2.focus();	
 		
-	}else if (document.insertnt.image.value == "") {
+	}else if (document.updateat.image.value == "") {
 		alert('놀이기구 사진을 입력하세요.'); 	
-		document.insertnt.image.focus();	
+		document.updateat.image.focus();	
 		
-	}else if (document.insertnt.acontent.value == "") {
+	}else if (document.updateat.acontent.value == "") {
 		alert('놀이기구 설명을 입력하세요.'); 	
-		document.insertnt.acontent.focus();	
+		document.updateat.acontent.focus();	
 		
-	}else if (document.insertnt.pnum.value == "") {
+	}else if (document.updateat.pnum.value == "") {
 		alert('탑승인원 입력하세요.'); 	
-		document.insertnt.pnum.focus();	
+		document.updateat.pnum.focus();	
 		
-	}else if (document.insertnt.limitkey.value == "") {
+	}else if (document.updateat.limitkey.value == "") {
 		alert('제한사항 1을 입력하세요'); 	
-		document.insertnt.limitkey.focus();	
+		document.updateat.limitkey.focus();	
 		
-	}else if (document.insertnt.acontent.value == "") {
+	}else if (document.updateat.acontent.value == "") {
 		alert('제한사항 2를 입력하세요'); 	
-		document.insertnt.acontent.focus();	
+		document.updateat.acontent.focus();	
 		
-	}else if (document.insertnt.bestat.value == "") {
+	}else if (document.updateat.bestat.value == "") {
 		alert('놀이기구 베스트 정보를 설정하세요.'); 	
-		document.insertnt.bestat.focus();
+		document.updateat.bestat.focus();
 		
-	}else if (document.insertnt.aresult.value == "") {
+	}else if (document.updateat.aresult.value == "") {
 		alert('놀이기구 운휴 정보를 입력하세요.'); 	
-		document.insertnt.aresult.focus();			
+		document.updateat.aresult.focus();			
 	}else{
 		if(confirm('수정하시겠습니까?')){
-		document.insertnt.action = "world.do?command=updateAttraction";
-		document.insertnt.submit();
+		document.updateat.action = "world.do?command=updateAttraction";
+		document.updateat.submit();
 		}
 	}
 }
