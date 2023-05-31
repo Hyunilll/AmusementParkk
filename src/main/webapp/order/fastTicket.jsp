@@ -23,7 +23,7 @@
 				<!--  인원선택 -->
 			<div class="order_box_date">
 				<div class="order_box_date_text" style="margin-top:10px;">
-					<div id="selectedDate" class="selected-date"></div>
+					<input type="text" id="selectedDate" name="visitdate" value="" >
 				</div>
 				<div class="order_box_date_date" style="margin-top:10px;">
 					<div class="calendarImage" onclick="showCalendar()">
@@ -70,8 +70,7 @@
 	              	type="checkbox" name="attraction" value= "${attractionVO.atname}">
 	              	${attractionVO.atname}
 	              	<img style="width:50px; height:50px; "src="images/attraction_images/${attractionVO.image}"/>
-	              	</label>
-	              	
+	              	</label>   	
 	         </c:forEach>
 		</div>
 			
@@ -119,7 +118,7 @@
 	    <!--  버튼 -->
 	    
 	       	<div id="reserve_buttons" style = "padding-top:40px;">
-	       		<input type="button" value="구매하기" onClick="go_cart();">
+	       		<input type="button" value="구매하기" onClick="go_cart('1');">
 	       	</div>
 	                	
 		</div>

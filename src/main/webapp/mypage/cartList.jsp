@@ -21,7 +21,7 @@
                     <th scope="col" class="th-num">티켓유형</th>
                     <th scope="col" class="th-date" style="text-align:center;">인원수</th>
                     <th scope="col" class="th-date" style="text-align:center;">가격</th>
-                    <th scope="col" class="th-num">어트랙션</th>
+                    <th scope="col" class="th-date">어트랙션</th>
                     <th scope="col" class="th-num">방문일자</th>
                     <th scope="col" class="th-num">총액</th>
                     <th scope="col" class="th-num">삭제</th>
@@ -50,7 +50,9 @@
 	                    <th> <fmt:formatNumber type="currency" value="${cart2VO.price1}" /><br> 
 	                 		 <fmt:formatNumber type="currency" value="${cart2VO.price2}" />
 	                    </th>
-	                    <td>어트렉션</td> 
+	                    <td>${cart2VO.tatname1}<br> 
+	                    ${cart2VO.tatname2}<br>  
+	                    ${cart2VO.tatname3} </td>                  
 	                    	<td>${cart2VO.visitdate} </td>
 	                	<td><fmt:formatNumber type="currency" value="${cart2VO.price1+cart2VO.price2}" /></td>
 	                	<td><input type="checkbox" name="cseq" value="${cart2VO.cseq}"></td>
