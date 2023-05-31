@@ -1,4 +1,30 @@
+-----------------------------------------------------------
+CREATE TABLE cart2
+(
+	cseq number(10,0) NOT NULL,
+	id varchar2(20) NOT NULL,
+	p1 number(10,0),
+	p2 number(10,0),
+	kind number(10,0),
+	tatname1 varchar2(100),
+	tatname2 varchar2(100),
+	tatname3 varchar2(100),
+	price1 number(10,0) NOT NULL ,
+	price2 number(10,0) NOT NULL,
+	indate date DEFAULT sysdate,
+	visitdate date DEFAULT sysdate,
+	PRIMARY KEY (cseq)
+);
 
+CREATE SEQUENCE cart2_cseq INCREMENT BY 1 START WITH 1;
+
+ALTER TABLE cart2
+	ADD FOREIGN KEY (id)
+	REFERENCES Lmember (id)
+;
+select*from cart2;
+
+--------------------------------------------------
 
 /* Drop Tables */
 

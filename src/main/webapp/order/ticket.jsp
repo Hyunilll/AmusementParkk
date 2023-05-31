@@ -21,7 +21,10 @@
 			<!--  인원선택 -->
 			<div class="order_box_date">
 				<div class="order_box_date_text" style="margin-top:10px;">
-					<div id="selectedDate" class="selected-date"></div>
+					<input type="text" id="selectedDate" value="" name="visitdate">
+						
+					
+					
 				</div>
 				<div class="order_box_date_date" style="margin-top:10px;">
 					<div class="calendarImage" onclick="showCalendar()">
@@ -55,7 +58,7 @@
 				</div>
 				<div class="order_quantity_box">
 					<button onclick="increaseNumber(event, 'result2')" style="width:30px;">+</button>
-					<input type="text" name="p2" id="result2" value="0">
+					<input type="text" name="p2" id="result2" value="0" size="5">
 					<button onclick="decreaseNumber(event, 'result2')" style="width:30px;">-</button>
 				 </div>
 					

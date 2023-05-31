@@ -1,6 +1,8 @@
 package com.ezen.world.dto;
 
 import java.sql.Timestamp;
+import java.util.Date;
+
 
 public class Cart2VO {
 
@@ -13,7 +15,7 @@ public class Cart2VO {
 	private String tatname2;
 	private String tatname3;
 	private Timestamp indate;	
-	private Timestamp visitdate;
+	private Date visitdate;
 	private Integer price1;
 	private Integer price2;
 	private Integer price3;
@@ -73,10 +75,10 @@ public class Cart2VO {
 	public void setIndate(Timestamp indate) {
 		this.indate = indate;
 	}
-	public Timestamp getVisitdate() {
+	public Date getVisitdate() {
 		return visitdate;
 	}
-	public void setVisitdate(Timestamp visitdate) {
+	public void setVisitdate(Date visitdate) {
 		this.visitdate = visitdate;
 	}
 	public Integer getPrice1() {
