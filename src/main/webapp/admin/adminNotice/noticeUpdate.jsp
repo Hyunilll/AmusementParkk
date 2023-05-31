@@ -9,10 +9,10 @@
 		<div class="update_title">공지사항 수정</div>
 		<div class="update_main">
 			<div>
-				<p>제목</p><input type="text" name="title"><br>
+				<p>제목</p><input type="text" name="title" value="${noticeVO.title}"><br>
 			</div>
 			<div>
-		    	<p>내용</p><input type="file" name="ncontent"><br>
+		    	<p>내용</p><input type="file" name="ncontent" value="${noticeVO.ncontent}"><br>
 		    </div>
 		    <div>
 		    	<p>관리자 아이디</p><input type="text" value="${loginAdmin.id}" name="id">
