@@ -20,7 +20,7 @@
 				<!--  인원선택 -->
 			<div class="order_box_date">
 				<div class="order_box_date_text" style="margin-top:10px;">
-					<div id="selectedDate" class="selected-date"></div>
+					<input type="text" id="selectedDate" name="visitdate" value="" >
 				</div>
 				<div class="order_box_date_date" style="margin-top:10px;">
 					<div class="calendarImage" onclick="showCalendar()">

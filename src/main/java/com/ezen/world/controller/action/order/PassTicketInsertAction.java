@@ -3,8 +3,6 @@ package com.ezen.world.controller.action.order;
 import java.io.IOException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -27,7 +25,7 @@ public class PassTicketInsertAction implements Action {
 			url = "world.do?command=loginForm";
 		}else {
 			Cart2VO cvo = new Cart2VO();
-			
+			Cart2Dao cdao = Cart2Dao.getInstance();
 			
 			cvo.setId( mvo.getId() );
 			cvo.setKind( Integer.parseInt( request.getParameter("kind")));
@@ -57,9 +55,15 @@ public class PassTicketInsertAction implements Action {
 			if(kind==1) {
 				cvo.setPrice1(Integer.parseInt( request.getParameter("p1"))*110000);
 				cvo.setPrice2(Integer.parseInt( request.getParameter("p2"))*70000);
+				String[] attrr =request.getParameterValues("attraction");
+				
+				cvo.setTatname1(attrr[0]);
+				cvo.setTatname2(attrr[1]);
+				cvo.setTatname3(attrr[2]);
+				
 			}
 			
-			Cart2Dao cdao = Cart2Dao.getInstance();
+			
 			cdao.insertTicket( cvo );
 			url = "world.do?command=cartList";
 		}

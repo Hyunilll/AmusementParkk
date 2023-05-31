@@ -1,7 +1,21 @@
 function go_cart(num){
+	if(document.formm.visitdate.value==""){
+		alert("방문 일자를 선택해주세요")
+		return;
+	}
+	if(document.formm.p1.value==0&&document.formm.p2.value==0){
+		alert("인원을 선택해주세요")
+		return;
+	}
+	if(num==1){
+		if(document.formm.attraction.length2<2){
+			alert("놀이기구 3개를 선택해 주세요")
+		}
+	}
+	else{
 		document.formm.action ="world.do?command=passTicketInsert&kind="+num;
 		document.formm.submit();
-	
+	}
 }
 
 
@@ -80,12 +94,13 @@ function toggleAnswer(answerId) {
   }
   */
 	
-	function increase(event, result) {
+function increase(event, result) {
   event.preventDefault();
   var resultInput = document.getElementById(result);
   var currentValue = parseInt(resultInput.value);
 
   if (currentValue === 1) {
+	  alert("패스 티켓은 1인당 1개만 구매 가능합니다.")
     return false; // Return false if the current value is already 1
   }
   
@@ -180,6 +195,7 @@ function showCalendar() {
   }
   calendar.classList.toggle("active");
 }
+
 
 function addLeadingZero(value) {
   return value < 10 ? "0" + value : value;
