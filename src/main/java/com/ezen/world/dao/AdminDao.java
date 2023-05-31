@@ -287,23 +287,6 @@ public class AdminDao {
 	}
 
 
-	public int getAllCountnotice(String key) {
-		int count=0;
-		String sql = "select count(*) as cnt from nseq "
-				+ " where title like '%'||?||'%' ";
-		con = Dbman.getConnection();
-		try {
-			pstmt = con.prepareStatement(sql);
-			pstmt.setString(1,  key);
-			
-			rs = pstmt.executeQuery();
-			if(rs.next()) count = rs.getInt("cnt");
-			
-		}catch (SQLException e) { e.printStackTrace();
-		} finally { Dbman.close(con, pstmt, rs);  }
-		return count;
-	}
-		
 
 
 	public ArrayList<NoticeVO> adminNoticeList(Paging paging, String key) {
@@ -312,30 +295,71 @@ public class AdminDao {
 		String sql = " select * from ( "
 				+ " select * from ( "
 				+ " select rownum as rn, lq.* from "
-				+ " ((select * from nseq "
+				+ " ((select * from notice "
 				+ "	where title like '%'||?||'%' order by nseq desc) lq) "
 				+ " ) where rn>=? "
 				+ " ) where rn<=? ";
+		
 		try {
 			pstmt = con.prepareStatement(sql);
-			pstmt.setString(1,  key);								
-			pstmt.setString(2,  key);
-			pstmt.setInt(3,  paging.getStartNum()) ;		
-			pstmt.setInt(4,  paging.getEndNum() );
+			pstmt.setString(1,  key);
+			pstmt.setInt(2,  paging.getStartNum()) ;		
+			pstmt.setInt(3,  paging.getEndNum() );								
 			rs = pstmt.executeQuery();
 			while(rs.next()) {
-				NoticeVO qvo = new NoticeVO();
-				qvo.setId(rs.getString("id"));
-				qvo.setPwd(rs.getString("pwd"));
-				qvo.setName(rs.getString("name"));
-				qvo.setPhone(rs.getString("phone"));
-				list.add(qvo);
+				NoticeVO nvo = new NoticeVO();
+				nvo.setNseq(rs.getInt("nseq"));				
+				nvo.setTitle(rs.getString("title"));
+				nvo.setNcontent(rs.getString("ncontent"));
+				nvo.setId(rs.getString("id"));
+				nvo.setIndate(rs.getTimestamp("indate"));		
+				list.add(nvo);
 			}
 		} catch (SQLException e) { e.printStackTrace();
 		} finally {  Dbman.close(con, pstmt, rs);   }
 		return list;
-		
-		
+
 	}
-	
+
+
+	public int getAllCountNotice(String key) {
+		int count=0;
+		String sql = "select count(*) as cnt from nseq "
+				+ " where title like '%' ||?||'%' ";
+		con = Dbman.getConnection();
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1,  key);
+			rs = pstmt.executeQuery();
+			if(rs.next()) count = rs.getInt("cnt");
+			
+		}catch (SQLException e) { e.printStackTrace();
+		} finally { Dbman.close(con, pstmt, rs);  }
+		return count;
+
+	}
+
+
+	public NoticeVO getNotice(int nseq) {
+	    NoticeVO nvo = new NoticeVO();
+	    String sql = "select * from notice where nseq = ?";
+	    con = Dbman.getConnection();
+	    try {
+	        pstmt = con.prepareStatement(sql);
+	        pstmt.setInt(1, nseq);
+	        rs = pstmt.executeQuery();
+	        if (rs.next()) {
+	            nvo.setNseq(rs.getInt("nseq"));
+	            nvo.setTitle(rs.getString("title"));
+	            nvo.setNcontent(rs.getString("ncontent"));
+	            nvo.setId(rs.getString("id"));
+	            nvo.setIndate(rs.getTimestamp("indate"));
+	        }
+	    } catch (SQLException e) {
+	        e.printStackTrace();
+	    } finally {
+	        Dbman.close(con, pstmt, rs);
+	    }
+	    return nvo;
+	}
 }

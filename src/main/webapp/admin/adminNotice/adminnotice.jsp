@@ -59,8 +59,9 @@
 </section>
 
 <jsp:include page="../../paging/page.jsp">
-	<jsp:param name="command" value="world.do?command=notice" />
+	<jsp:param name="command" value="world.do?command=adminnotice" />
 </jsp:include>
+
 </form>
 <form name="frm" method="post"> 
 <br><br><br>
