@@ -1,5 +1,6 @@
 function go_cart(num){
-
+	document.formm.action ="world.do?command=passTicketInsert&kind="+num;
+	document.formm.submit();
 	if(document.formm.visitdate.value==""){
 		alert("방문 일자를 선택해주세요")
 		return;
@@ -7,8 +8,7 @@ function go_cart(num){
 	if(document.formm.p1.value==0&&document.formm.p2.value==0){
 		alert("인원을 선택해주세요")
 		return;
-	}
-
+  }
 	else{
 		document.formm.action ="world.do?command=passTicketInsert&kind="+num;
 		document.formm.submit();
