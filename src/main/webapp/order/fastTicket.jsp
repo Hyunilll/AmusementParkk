@@ -57,6 +57,17 @@
 	       	<!-- 	<input type="button" value="구매하기" onClick="location.href='world.do?command=cartList'">  -->
 	        	<input type="button" value="결제하기" class="purpleButton" onclick="go_cart()"> 
 	       	</div>
+		<!--  어트랙션 선택 -->
+		<div>
+		     <c:forEach items="${aseqList}"  var="attractionVO">
+	              <label><input onclick="count_check(this);"
+	              	type="checkbox" name="attraction" value= "${attractionVO.atname}">
+	              	${attractionVO.atname}
+	              	<img style="width:50px; height:50px; "src="images/attraction_images/${attractionVO.image}"/>
+	              	</label>   	
+	         </c:forEach>
+		</div>
+		<!-- 안내 -->
 			<div id="board-list">
 		        <div class="container">
 		            <table class="board-table" style="font-size:20px">  

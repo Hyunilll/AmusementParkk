@@ -69,9 +69,10 @@
 		※ 기상 변화 및 파크 상황에 따라 운휴 일정이 변경될 수 있습니다.
 	</p>
 
-	<div class="btnArea">
+	<div class="event10">
 		<input type="button" value="목 록" class="purpleBtn" onclick="location.href='world.do?command=adminattractionForm'">
 		<input type="button" value="수 정" class="purpleBtn" onclick="go_modat('${AttractionVO.aseq}')">
+		<input type="button" value="삭 제" class="purpleBtn" onclick="go_deleteat('${AttractionVO.aseq}')">
 	</div>
 </div>
 </form>

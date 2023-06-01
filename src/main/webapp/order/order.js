@@ -1,6 +1,18 @@
 function go_cart(num){
 	document.formm.action ="world.do?command=passTicketInsert&kind="+num;
 	document.formm.submit();
+	if(document.formm.visitdate.value==""){
+		alert("방문 일자를 선택해주세요")
+		return;
+	}
+	if(document.formm.p1.value==0&&document.formm.p2.value==0){
+		alert("인원을 선택해주세요")
+		return;
+  }
+	else{
+		document.formm.action ="world.do?command=passTicketInsert&kind="+num;
+		document.formm.submit();
+	}
 }
 
 
@@ -19,6 +31,7 @@ function count_check(obj) {
 		obj.checked = false; // 경고 후 체크 되지 않게 설정.
 		return false;
 	}
+
      
 }
 
@@ -79,12 +92,13 @@ function toggleAnswer(answerId) {
   }
   */
 	
-	function increase(event, result) {
+function increase(event, result) {
   event.preventDefault();
   var resultInput = document.getElementById(result);
   var currentValue = parseInt(resultInput.value);
 
   if (currentValue === 1) {
+	  alert("패스 티켓은 1인당 1개만 구매 가능합니다.")
     return false; // Return false if the current value is already 1
   }
   
@@ -179,6 +193,7 @@ function showCalendar() {
   }
   calendar.classList.toggle("active");
 }
+
 
 function addLeadingZero(value) {
   return value < 10 ? "0" + value : value;

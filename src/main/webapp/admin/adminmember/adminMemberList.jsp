@@ -57,7 +57,7 @@
 
             </table>
         </div>
-        <br> <br> <br>
+        <br>
         <jsp:include page="../../paging/page.jsp">
 		<jsp:param name="command" value="world.do?command=adminmember" />
 		</jsp:include>

@@ -29,7 +29,6 @@ public class AdminUpdateNoticeFormAction implements Action {
 			NoticeVO nvo = ndao.getnotice(nseq);
 			request.setAttribute("noticeVO", nvo);
 			
-			
 		}
 		request.getRequestDispatcher(url).forward(request, response);
 
