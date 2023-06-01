@@ -32,6 +32,7 @@ public class QnaListAction implements Action {
 	    	
 	    	if( request.getParameter("changMenu")!=null) {
 				session.removeAttribute("page");
+				session.removeAttribute("key");
 			}
 			Paging paging = new Paging();
 			paging.setDisplayPage(10);
@@ -46,13 +47,24 @@ public class QnaListAction implements Action {
 				paging.setPage(1);
 			}
 			
-	    	int count = qdao.getAllCount();
+			String key="";
+			if( request.getParameter("key") != null ) {
+				key = request.getParameter("key");
+				session.setAttribute("key", key);
+			} else if( session.getAttribute("key") != null ) {
+				key = (String)session.getAttribute("key");
+			} else {
+				key="";
+				session.removeAttribute("key");
+			}
+	    	int count = qdao.getAllCount(key);
 	    	paging.setTotalCount(count);
 	    	
-	    	ArrayList<QnaVO> list = qdao.selectQna( paging );
+	    	ArrayList<QnaVO> list = qdao.selectQna( paging,key );
 	    	
 	    	request.setAttribute("qnaList", list);
 	    	request.setAttribute("paging", paging);
+	    	request.setAttribute("key", key);
 	    }
 	    request.getRequestDispatcher(url).forward(request, response);
 	}

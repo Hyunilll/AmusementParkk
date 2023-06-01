@@ -20,20 +20,24 @@ public class NoticeDao {
 	ResultSet rs = null;
 	
 	
-	public ArrayList<NoticeVO> selectNotice(Paging paging) {
+	public ArrayList<NoticeVO> selectNotice(Paging paging, String key) {
 		ArrayList<NoticeVO> list = new ArrayList<NoticeVO>();
 		con = Dbman.getConnection();
 
+
 		String sql = " select * from ( "
 				+ " select * from ( "
-				+ " select rownum as rn, n.* from ((select * from notice order by nseq desc) n) "
+				+ " select rownum as rn, n.* from "
+				+ " ((select * from notice "
+				+ "	where title like '%'||?||'%'  order by nseq desc) n) "
 				+ " ) where rn>=? "
 				+ " ) where rn<=? ";
 		
 		try {
 			pstmt = con.prepareStatement(sql);
-			pstmt.setInt(1,  paging.getStartNum() );
-			pstmt.setInt(2,  paging.getEndNum() );
+			pstmt.setString(1,  key);
+			pstmt.setInt(2,  paging.getStartNum() );
+			pstmt.setInt(3,  paging.getEndNum() );
 			rs = pstmt.executeQuery();
 			while(rs.next()) {
 		    	NoticeVO nvo = new NoticeVO();
@@ -51,12 +55,15 @@ public class NoticeDao {
 	}
 		
 
-	public int getAllCount() {
+	public int getAllCount(String key) {
 		int count= 0;
-		String sql = "select count(*) as cnt from notice";
+		// String sql = "select count(*) as cnt from notice";
+		String sql = "select count(*) as cnt from notice "
+				+ " where title like '%'||?||'%' ";
 		con = Dbman.getConnection();
 		try {
 			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, key);
 			rs = pstmt.executeQuery();
 			if( rs.next() ) count = rs.getInt("cnt");
 		} catch (SQLException e) { e.printStackTrace();

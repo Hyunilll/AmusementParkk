@@ -57,6 +57,23 @@ function go_(){
 	location.href = "world.do?command=adminProductList";
 }
 
+function go_search(comm){
+	 if( document.frm.key.value == "" ){
+		alert("검색버튼 사용시에는 검색어 입력이 필수입니다");
+	 	return;
+	} 
+	var url = "world.do?command=" + comm + "&page=1";   // 검색어로 검색한 결과의 1페이지로 이동
+	document.frm.action = url;
+	document.frm.submit();
+	
+}
+
+function go_total(comm ){
+	document.frm.key.value = "";
+	document.frm.action = "world.do?command=" + comm + "&page=1";
+	document.frm.submit();
+}
+
 
 
 

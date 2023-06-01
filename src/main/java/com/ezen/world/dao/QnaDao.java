@@ -21,12 +21,14 @@ public class QnaDao {
 	
 	
 	
-	public int getAllCount() {
+	public int getAllCount(String key) {
 		int count= 0;
-		String sql = "select count(*) as cnt from Lqna";
+		String sql = "select count(*) as cnt from lqna "
+				+ " where title like '%'||?||'%' ";
 		con = Dbman.getConnection();
 		try {
 			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, key);
 			rs = pstmt.executeQuery();
 			if( rs.next() ) count = rs.getInt("cnt");
 		} catch (SQLException e) { e.printStackTrace();
@@ -36,18 +38,23 @@ public class QnaDao {
 
 
 
-	public ArrayList<QnaVO> selectQna(Paging paging) {
+	public ArrayList<QnaVO> selectQna(Paging paging, String key) {
 		ArrayList<QnaVO> list = new ArrayList<QnaVO>();
+
 		String sql = " select * from ( "
 				+ " select * from ( "
-				+ " select rownum as rn, q.* from ((select * from lqna order by lqseq desc) q) "
+				+ " select rownum as rn, l.* from "
+				+ " ((select * from lqna "
+				+ "	where title like '%'||?||'%'  order by lqseq desc) l) "
 				+ " ) where rn>=? "
 				+ " ) where rn<=? ";
+		
 		con = Dbman.getConnection();
 		try {
 			pstmt = con.prepareStatement(sql);
-			pstmt.setInt(1,  paging.getStartNum() );
-			pstmt.setInt(2,  paging.getEndNum() );
+			pstmt.setString(1,  key);
+			pstmt.setInt(2,  paging.getStartNum() );
+			pstmt.setInt(3,  paging.getEndNum() );
 			rs = pstmt.executeQuery();
 			while(rs.next()) {
 		    	QnaVO qvo = new QnaVO();
