@@ -14,10 +14,10 @@
       <input type="hidden" name="command" value="selectId" />
       <table id="find-id">
          <tr>
-         <th>이름&nbsp;</th><td><input type="text" name="name" class="input-text input-text-bg-gray input-text-font-normal" maxlength="20" /></td>
+         <th>이름&nbsp;</th><td><input type="text" name="name" class="input-text" maxlength="20" /></td>
          </tr>
          <tr>
-         <th>전화번호&nbsp;</th><td><input type="text" name="phone" class="input-text input-text-bg-gray input-text-font-normal" maxlength="20" /></td>
+         <th>전화번호&nbsp;</th><td><input type="text" name="phone" class="input-text" maxlength="20" /></td>
          </tr>
       </table>
       <br />

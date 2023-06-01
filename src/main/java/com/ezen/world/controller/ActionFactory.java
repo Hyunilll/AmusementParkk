@@ -39,9 +39,11 @@ import com.ezen.world.controller.action.member.JoinAction;
 import com.ezen.world.controller.action.member.JoinFormAction;
 import com.ezen.world.controller.action.member.LoginFormAction;
 import com.ezen.world.controller.action.member.LogoutAction;
+import com.ezen.world.controller.action.member.ResetPwdAction;
 import com.ezen.world.controller.action.member.SelectIdAction;
 import com.ezen.world.controller.action.member.SelectPwdAction;
 import com.ezen.world.controller.action.member.loginAction;
+import com.ezen.world.controller.action.mypage.CartDeleteAction;
 import com.ezen.world.controller.action.mypage.CartListAction;
 import com.ezen.world.controller.action.mypage.MypageAction;
 import com.ezen.world.controller.action.notice.NoticeAction;
@@ -97,9 +99,9 @@ public class ActionFactory {
 		else if( command.equals("fastTicket") ) ac= new FastTicketAction(); // 패스트패스 예매창 이동
 		else if( command.equals("passTicketInsert") ) ac= new PassTicketInsertAction(); // 자유이용권 장바구니에 정보 저장
 		
-		// 장바구니
+		// 장바구니  
 		else if( command.equals("cartList") ) ac= new CartListAction(); // 자유이용권 장바구니에 정보 저장
-		
+		else if( command.equals("cartDelete") ) ac= new CartDeleteAction();
 		
 		
 		//이용가이드
@@ -154,7 +156,7 @@ public class ActionFactory {
 		// 아이디 비번 찾기
 		else if( command.equals("selectId") ) ac= new SelectIdAction();
 		else if( command.equals("selectPwd") ) ac= new SelectPwdAction();
-		
+		else if( command.equals("resetPwd") ) ac= new ResetPwdAction();
 		
 		return ac;
 	}
