@@ -42,6 +42,15 @@ public class CartListAction implements Action {
 			}
 			
 			Cart2Dao cdao = Cart2Dao.getInstance();
+	       
+			if(request.getParameterValues("cseq")!=null) {
+	            
+	            String[] cseqArr =request.getParameterValues("cseq");
+	            for( String cseq : cseqArr)
+	               cdao.cartOrder(Integer.parseInt(cseq));
+	            
+	            }
+			
 			int count = cdao.getAllCountCart2();
 			paging.setTotalCount(count);
 			

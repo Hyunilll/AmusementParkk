@@ -8,7 +8,7 @@
 <section class="notice">
   <div class="page-title">
         <div class="container">
-            <h3 style="font-size: 28px;color: #333333;font-weight: 400;text-align: center;">나의 주문 내역</h3>
+            <h3 style="font-size: 28px;color: #333333;font-weight: 400;text-align: center;">주문 내역</h3>
         </div>
     </div>
     <div class="board-list">
@@ -20,11 +20,12 @@
                     <th scope="col" class="th-num">주문번호</th>
                     <th scope="col" class="th-num">티켓유형</th>
                     <th scope="col" class="th-date" style="text-align:center;">인원수</th>
-                    <th scope="col" class="th-date" style="text-align:center;">가격</th>
+                    <th scope="col" class="th-num" style="text-align:center;">가격</th>
                     <th scope="col" class="th-date">어트랙션</th>
                     <th scope="col" class="th-num">방문일자</th>
                     <th scope="col" class="th-num">총액</th>
-                    <th scope="col" class="th-num">삭제</th>
+                    <th scope="col" class="th-num">처리 상태</th>
+                    <th scope="col" class="th-num">선택</th>
                 
           
                 </tr>
@@ -55,6 +56,12 @@
 	                    ${cart2VO.tatname3} </td>                  
 	                    	<td>${cart2VO.visitdate} </td>
 	                	<td><fmt:formatNumber type="currency" value="${cart2VO.price1+cart2VO.price2}" /></td>
+	                	<td>
+                         	<c:choose>
+                        	<c:when test='${cart2VO.result == 0}'>결제 대기</c:when>                  
+                         	<c:otherwise><b style="color:red;">결제 완료</b></c:otherwise>
+                     		</c:choose>
+                  		</td>
 	                	<td><input type="checkbox" name="cseq" value="${cart2VO.cseq}"></td>
 	                </tr>
 	          	</c:forEach>
@@ -65,7 +72,9 @@
     </div>
     <div class="dede" >
     <a href="#"onClick="go_cart_delete()"><h3>삭제하기</h3></a>
+    <a href="#"onClick="go_order()"><h3>결제하기</h3></a>
     </div>
+    
 </section>
 </form>
 

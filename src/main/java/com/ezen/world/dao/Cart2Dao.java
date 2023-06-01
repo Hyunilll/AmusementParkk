@@ -4,12 +4,12 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.sql.Timestamp;
+
 import java.util.ArrayList;
-import java.util.Date;
+
 
 import com.ezen.world.dto.Cart2VO;
-import com.ezen.world.dto.QnaVO;
+
 import com.ezen.world.util.Dbman;
 import com.ezen.world.util.Paging;
 
@@ -71,6 +71,7 @@ public class Cart2Dao {
 				cvo.setVisitdate(rs.getDate("visitdate"));
 				cvo.setPrice1(rs.getInt("price1"));
 				cvo.setPrice2(rs.getInt("price2"));	
+				cvo.setResult(rs.getInt("result"));
 				list.add(cvo);
 			}
 		} catch (SQLException e) { e.printStackTrace();
@@ -136,13 +137,25 @@ public ArrayList<Cart2VO> selectCart2(Paging paging) {
 	    	qvo.setVisitdate(rs.getDate("visitdate"));
 	    	qvo.setPrice1(rs.getInt("price1"));
 	    	qvo.setPrice2(rs.getInt("price2"));
-	    	qvo.setPrice3(rs.getInt("price3"));
-	    	qvo.setPrice4(rs.getInt("price4"));
+	    	qvo.setResult(rs.getInt("result"));
 	    	list.add(qvo);
 	    }
 	} catch (SQLException e) {e.printStackTrace();
 	} finally { Dbman.close(con, pstmt, rs);  }
 	return list;
+}
+
+
+public void cartOrder(int cseq) {
+	String sql ="update cart2 set result='1' where cseq=?";
+	con= Dbman.getConnection();
+	try {
+		pstmt = con.prepareStatement(sql);
+		pstmt.setInt(1, cseq  );
+		pstmt.executeUpdate();
+	} catch (SQLException e) {e.printStackTrace();
+	} finally { Dbman.close(con, pstmt, rs); }
+	
 }
 
 

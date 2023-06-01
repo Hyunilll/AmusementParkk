@@ -80,32 +80,6 @@ function toggleAnswer(answerId) {
     }
   }
   
-  
-  /* 패스트티켓 카운트 */
-  /*
-   function increase(event, result) { // 증가
-	event.preventDefault(); // 폼 제출 기본 동작 중지
-    var resultInput = document.getElementById(result);
-    var currentValue = parseInt(resultInput.value);
-	    if(currentValue === 1)
-     return false;	
-    var newValue = currentValue + 1;
-    resultInput.value = newValue;
-
-  }
-
- function decrease(event, result) {//  감소
-	 event.preventDefault();
-    var resultInput = document.getElementById(result);
-    var currentValue = parseInt(resultInput.value);
-    
-    if (currentValue > 0) {
-      var newValue = currentValue - 1;
-      resultInput.value = newValue;
-    }
-  }
-  */
-	
 function increase(event, result) {
   event.preventDefault();
   var resultInput = document.getElementById(result);

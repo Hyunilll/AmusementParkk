@@ -18,8 +18,7 @@ public class Cart2VO {
 	private Date visitdate;
 	private Integer price1;
 	private Integer price2;
-	private Integer price3;
-	private Integer price4;
+	private Integer result;
 	
 	public Integer getCseq() {
 		return cseq;
@@ -93,17 +92,12 @@ public class Cart2VO {
 	public void setPrice2(Integer price2) {
 		this.price2 = price2;
 	}
-	public Integer getPrice3() {
-		return price3;
+	public Integer getResult() {
+		return result;
 	}
-	public void setPrice3(Integer price3) {
-		this.price3 = price3;
+	public void setResult(Integer result) {
+		this.result = result;
 	}
-	public Integer getPrice4() {
-		return price4;
-	}
-	public void setPrice4(Integer price4) {
-		this.price4 = price4;
-	}
+	
 	
 }

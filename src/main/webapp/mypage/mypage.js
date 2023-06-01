@@ -29,3 +29,28 @@ function go_cart_delete(){
 		}
 
 	}
+	
+	
+function go_order(){
+	var count=0;
+	if(document.formm.cseq.length==undefined){
+		//체크박스가 한개인 경우
+		if(document.formm.cseq.checked==true)
+			count++;
+	}else{
+		//체크박스가 두개 이상인 겨우 반복실행문을 이용하여 모든 체크박스를 하나씩 점검하여 체크된 갯수 카운트
+		for(var i=0; i<document.formm.cseq.length; i++){
+			if(document.formm.cseq[i].checked==true)
+			count++;
+		}
+	}
+
+	if(count ==0){
+			alert("결제할 항목을 선택하세요");
+	}else{
+			document.formm.action="world.do?command=cartList";
+			document.formm.submit();
+			//jsp파일에 있는 체크된 체크박스 들의 벨류 (cseq값들)이 배열로 전송된다.
+		}
+}
+	
