@@ -5,18 +5,19 @@
 <head>
 <style>
 .selected-date {margin-top: 10px;text-align: center;}
-.calendar-popup {position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);z-index: 9999;background-color: #fff;box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);padding: 20px;display: none;width: 300px;max-height: 350px; }
+.calendar-popup {position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);z-index: 9999;background-color: #fff;box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);padding: 20px;display: none;width: 300px;max-height: 350px;overflow: auto;}
 .calendar-container {position: relative;display: inline-block;}
-.calendar-popup .month { text-align: center;font-weight: bold;margin-bottom: 10px;}
+.calendar-popup .month {text-align: center;font-weight: bold;margin-bottom: 10px;}
 .calendar-popup .navigator {display: flex;justify-content: space-between;align-items: center;margin-bottom: 10px;}
 .calendar-popup .navigator button {background-color: transparent;border: none;outline: none;cursor: pointer;font-weight: bold;}
 .calendar-popup .navigator .next-btn::before {content: "\25B6";}
 .calendar-popup .navigator .prev-btn::before {content: "\25C0";} 
 .calendar-popup .days {display: grid;grid-template-columns: repeat(7, 1fr);gap: 5px;text-align: center;}
 .calendar-popup .day {padding: 10px;cursor: pointer;}
-.calendar-popup .day:hover { background-color: #f2f2f2;}
+.calendar-popup .day:hover {background-color: #f2f2f2;}
 .calendar-popup .day.selected {background-color: #ccc;}
 .calendar-popup .hidden {display: none;}
+.calendar-popup .empty-day {visibility: hidden;}
 </style>
 <script>
 

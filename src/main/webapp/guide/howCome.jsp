@@ -15,7 +15,7 @@ h2 {font-family: 'NotoSans-Bold', '맑은 고딕', 'Malgun Gothic', sans-serif; 
   function goToNaverMap() {
 	 window.open("http://naver.me/xItoPO6v", "_blank");
   }
-</script>
+</script><br><br>
 <h2>오시는 길</h2><br><br>
 <div class="image-box">
   <img src="images/map.jpg" alt="지도 이미지">

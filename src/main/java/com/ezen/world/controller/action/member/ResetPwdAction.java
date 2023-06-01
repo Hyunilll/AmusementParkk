@@ -13,6 +13,7 @@ public class ResetPwdAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
 		 
 		String id = request.getParameter("id");
 	    String pwd = request.getParameter("pwd");
@@ -22,3 +23,6 @@ public class ResetPwdAction implements Action {
 	    request.getRequestDispatcher("member/findPwd.jsp").forward(request, response);
 	   }
 	}
+
+		
+

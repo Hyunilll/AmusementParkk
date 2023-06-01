@@ -154,27 +154,43 @@ public class MemberDao {
 	      return mvo;
 	   }
 
-	public int findMember(String id, String name, String phone) {
+	public MemberVo selectPwd(String id, String name, String phone) {
 
-	      int count = 0;
-	      con = Dbman.getConnection();
-	      String sql="SELECT COUNT(*) cnt FROM Lmember WHERE id = ? AND name = ? AND phone = ?";
+			MemberVo mvo = null;
+		    String sql = "SELECT PWD FROM Lmember WHERE id = ? AND name = ? AND phone = ?";
+		    con = Dbman.getConnection();
+		    try {
+		        pstmt = con.prepareStatement(sql);
+		        pstmt.setString(1, id);
+		        pstmt.setString(2, name);
+		        pstmt.setString(3, phone);
+		        rs = pstmt.executeQuery();
+		        while( rs.next() ) {
+		             mvo = new MemberVo();
+		            mvo.setPwd( rs.getString("pwd") );
+		          }
+		      } catch (SQLException e) { e.printStackTrace();
+		      } finally { Dbman.close(con, pstmt, rs);
+		      }
+		      return mvo;
+		   }
+
+	public void resetNewPwd(String id, String pwd) {
+	
+		con = Dbman.getConnection();
+	      String sql="UPDATE member SET pwd = ? WHERE id = ?";
 	      try {
 	            pstmt = con.prepareStatement(sql);
-	            pstmt.setString(1, id);
-	            pstmt.setString(2, name);
-	            pstmt.setString(3, phone);
-	            rs = pstmt.executeQuery();
-	            if (rs.next()) {
-	               count = rs.getInt("cnt");
-	            }
+	            pstmt.setString(1, pwd);
+	            pstmt.setString(2, id);
+	            pstmt.executeUpdate();
 	      } catch (SQLException e) {
 	         e.printStackTrace();
 	      } finally {
 	         Dbman.close(con, pstmt, rs);
 	      }
-	      return count;
-	   }
+		
+	}
 
 	public void resetNewPwd(String id, String pwd) {
 		
