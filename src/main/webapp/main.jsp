@@ -133,7 +133,7 @@
 	</div>
 	<h2 style="font-size:30px; text-align:center; line-height:80px;">인기 어트랙션</h2>
 	<div id="mainimg">
-		<c:forEach var="AttractionVO" items="${bestList}">
+		<c:forEach var="AttractionVO" items="${bestList}" begin="0" end="2">
 			<a href="world.do?command=attractionDetailForm&aseq=${AttractionVO.aseq}">
 				<div id="att_list">
 					<img src="images/attraction_images/${AttractionVO.image}"/>
