@@ -58,6 +58,8 @@ function go_insertnt(){ //공지추가 동작액션으로 이동
 	}
 }
 
+
+
 function go_mov(comm){ // 공지사항 목록으로 이동
 	document.insertnt.action = "world.do?command="+comm;
 	document.insertnt.submit();
@@ -79,9 +81,6 @@ function go_mod_savent(){ // 공지 수정 버튼 클릭
 	if( document.updatent.title.value==""){  
 		alert('제목을 입력하세요');
 		document.updatent.title.focus();
-	}else if (document.updatent.ncontent.value == "") {
-		alert('공지할 사진을 입력하세요.'); 	
-		document.updatent.ncontent.focus();	
 	}else{
 	if(confirm('수정하시겠습니까?')){
 	document.updatent.action = "world.do?command=noticeUpdate";
@@ -142,6 +141,8 @@ function go_insertat(){
 	
 }
 
+
+
 // 놀이기구 수정
 function go_modat(aseq){ // 놀이기구 수정폼으로 이동
 	var url="world.do?command=adminUpdateAttractionForm&aseq="+aseq;
@@ -166,10 +167,6 @@ function go_mod_saveat(){
 		alert('카테고리 2를 입력하세요.'); 	
 		document.updateat.act2.focus();	
 		
-	}else if (document.updateat.image.value == "") {
-		alert('놀이기구 사진을 입력하세요.'); 	
-		document.updateat.image.focus();	
-		
 	}else if (document.updateat.acontent.value == "") {
 		alert('놀이기구 설명을 입력하세요.'); 	
 		document.updateat.acontent.focus();	
@@ -184,15 +181,7 @@ function go_mod_saveat(){
 		
 	}else if (document.updateat.acontent.value == "") {
 		alert('제한사항 2를 입력하세요'); 	
-		document.updateat.acontent.focus();	
-		
-	}else if (document.updateat.bestat.value == "") {
-		alert('놀이기구 베스트 정보를 설정하세요.'); 	
-		document.updateat.bestat.focus();
-		
-	}else if (document.updateat.aresult.value == "") {
-		alert('놀이기구 운휴 정보를 입력하세요.'); 	
-		document.updateat.aresult.focus();			
+		document.updateat.acontent.focus();		
 	}else{
 		if(confirm('수정하시겠습니까?')){
 		document.updateat.action = "world.do?command=updateAttraction";
@@ -209,6 +198,7 @@ if(confirm('정말 삭제하시겠습니까?')){
 	}
 }
 
+//답글달기
 function go_rep(lqseq){
 	document.frm.action="world.do?command=adminQnaRepSave";
 	document.frm.submit();

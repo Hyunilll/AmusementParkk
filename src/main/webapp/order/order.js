@@ -1,4 +1,5 @@
 function go_cart(num){
+
 	if(document.formm.visitdate.value==""){
 		alert("방문 일자를 선택해주세요")
 		return;
@@ -7,11 +8,7 @@ function go_cart(num){
 		alert("인원을 선택해주세요")
 		return;
 	}
-	if(num==1){
-		if(document.formm.attraction.length2<2){
-			alert("놀이기구 3개를 선택해 주세요")
-		}
-	}
+
 	else{
 		document.formm.action ="world.do?command=passTicketInsert&kind="+num;
 		document.formm.submit();
@@ -34,6 +31,7 @@ function count_check(obj) {
 		obj.checked = false; // 경고 후 체크 되지 않게 설정.
 		return false;
 	}
+
      
 }
 

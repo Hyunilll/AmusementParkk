@@ -193,7 +193,7 @@ table {border-collapse: collapse;border-spacing: 0;}
 section.notice {padding:  0;}
 .page-titlee { margin-top:50px; margin-bottom: 80px;}
 .board-searchh .search-window {padding: 15px 0;background-color: #f9f7f9;}
-.board-searchh .search-window .search-wrap {position: relative;margin: 0 auto;width: 90%;max-width: 700px;}
+.board-searchh .search-window .search-wrap {position: relative;margin: 0 auto;width: 90%;max-width: 800px;}
 .board-searchh .search-window .search-wrap input { margin-left:50px;height: 40px;width: 400px;font-size: 14px;padding: 7px 14px;border: 1px solid #ccc; }
 .board-searchh .search-window .search-wrap input:focus {border-color: #333;outline: 0;border-width: 1px;}
 .board-searchh .search-window .search-wrap .btn {position: relative;right: 0;top: 0;bottom: 0;width: 100px;height: 40px;padding: 0;font-size: 16px;}

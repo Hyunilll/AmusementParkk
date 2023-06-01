@@ -6,7 +6,6 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
-import com.ezen.world.dto.AttractionVO;
 import com.ezen.world.dto.PassticketVO;
 import com.ezen.world.util.Dbman;
 

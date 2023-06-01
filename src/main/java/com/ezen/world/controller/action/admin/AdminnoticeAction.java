@@ -12,7 +12,6 @@ import com.ezen.world.controller.action.Action;
 import com.ezen.world.dao.AdminDao;
 import com.ezen.world.dto.AdminVo;
 import com.ezen.world.dto.NoticeVO;
-import com.ezen.world.dto.QnaVO;
 import com.ezen.world.util.Paging;
 
 public class AdminnoticeAction implements Action {
