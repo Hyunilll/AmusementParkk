@@ -25,7 +25,7 @@
    </form>
    <br />
    <c:if test="${not empty Lmember}">
-      <h2>회원님의 아이디는 ${Lmember.id} 입니다.</h2>
+      <h2>회원님의 아이디는 '${Lmember.id}' 입니다.</h2>
    </c:if>
 </div>
 </body>

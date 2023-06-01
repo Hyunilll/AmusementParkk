@@ -17,8 +17,11 @@ public class InsertAttractionFormAction implements Action {
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
 		AdminVo avo = (AdminVo)session.getAttribute("loginAdmin");
-		
 		String url = "admin/adminattraction/insertAttractionForm.jsp";
+		if(avo==null) {
+			url="world.do?command=admin";
+		}else {
+		}
 		RequestDispatcher dispatcher=request.getRequestDispatcher(url);
 	    dispatcher.forward(request, response);
 

@@ -13,12 +13,15 @@ public class ResetPwdAction implements Action {
 
 	@Override
 	public void execute(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		 
-		String id = request.getParameter("id");
-	    String pwd = request.getParameter("pwd");
-	    MemberDao mdao = MemberDao.getInstance();
-	    mdao.resetNewPwd(id, pwd);
-	    request.setAttribute("result", 3);
-	    request.getRequestDispatcher("member/findPwd.jsp").forward(request, response);
-	   }
-	}
+
+		
+		      String id = request.getParameter("id");
+		      String pwd = request.getParameter("pwd");
+		      MemberDao mdao = MemberDao.getInstance();
+		      mdao.resetNewPwd(id, pwd);
+		      request.setAttribute("result", 3);
+		      request.getRequestDispatcher("member/resetPwd.jsp").forward(request, response);
+		   }
+
+}
+

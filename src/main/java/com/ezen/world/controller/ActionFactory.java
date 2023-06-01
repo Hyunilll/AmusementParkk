@@ -157,6 +157,7 @@ public class ActionFactory {
 		else if( command.equals("selectId") ) ac= new SelectIdAction();
 		else if( command.equals("selectPwd") ) ac= new SelectPwdAction();
 		else if( command.equals("resetPwd") ) ac= new ResetPwdAction();
+
 		
 		return ac;
 	}

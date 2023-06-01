@@ -415,7 +415,7 @@ public class AdminDao {
 
 	public int getAllCountNotice(String key) {
 		int count=0;
-		String sql = "select count(*) as cnt from nseq "
+		String sql = "select count(*) as cnt from notice "
 				+ " where title like '%' ||?||'%' ";
 		con = Dbman.getConnection();
 		try {

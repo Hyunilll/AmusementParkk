@@ -21,11 +21,12 @@
         <div class="containerr">
             <div class="search-window">
                 
-                    <div class="search-wrap">
+                    <div class="search-wrap" >
                         <label for="search" class="blind">어트렉션 검색 </label>
                         <input id="search" type="search" name="key" placeholder="어트렉션 이름을 입력해주세요." value="${key}">
                         <button type="submit" class="btn btn-dark" value="검색" onClick="go_search('adminattractionForm')">검색</button>
                         <button type="submit" class="btn btn-darkk" value="전체보기" onClick="go_total('adminattractionForm')">전체보기</button>
+                        <button type="submit" class="btn btn-darkk" value="추가" onClick="go_insertform('insertAttractionForm')">추가</button>
                         
                     </div>
                 
@@ -54,8 +55,7 @@
 	  </c:forEach>
             </table>
         </div>
-        <br> <br> <br>
-          <br> <br> <br>
+<br>
        <jsp:include page="../../paging/page.jsp">
 	<jsp:param name="command" value="world.do?command=adminattractionForm" />
 </jsp:include>
