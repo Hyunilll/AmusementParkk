@@ -22,7 +22,7 @@
 				<div class="order_box_date_select" onclick="showCalendar()">
 					<img src="images/ticket_images/calendar.png" style="width:40px; height:40px;">
 				</div>
-				<!-- 달력 선택 날짜 표기 -->
+				<div id="calendarPopup" class="calendar-popup"></div>
 				<div class="order_box_date_date">
 					<input type="text"  id="selectedDate" name="visitdate" value="">
 				</div>

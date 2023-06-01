@@ -40,6 +40,7 @@ import com.ezen.world.controller.action.member.JoinFormAction;
 import com.ezen.world.controller.action.member.LoginFormAction;
 import com.ezen.world.controller.action.member.LogoutAction;
 import com.ezen.world.controller.action.member.ResetPwdAction;
+import com.ezen.world.controller.action.member.ResetPwdFormAction;
 import com.ezen.world.controller.action.member.SelectIdAction;
 import com.ezen.world.controller.action.member.SelectPwdAction;
 import com.ezen.world.controller.action.member.loginAction;
@@ -155,7 +156,7 @@ public class ActionFactory {
 		else if( command.equals("selectId") ) ac= new SelectIdAction();
 		else if( command.equals("selectPwd") ) ac= new SelectPwdAction();
 		else if( command.equals("resetPwd") ) ac= new ResetPwdAction();
-
+		else if( command.equals("resetPwdForm") ) ac= new ResetPwdFormAction();
 		
 		return ac;
 	}

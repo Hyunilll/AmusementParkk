@@ -174,6 +174,8 @@ function findPwd() {
 }
 
 function resetPwd(){
-	document.formm.action = "world.do?command=resetPwd";
+	document.formm.action = "world.do?command=resetPwdForm";
 	document.formm.submit();
 }
+
+
