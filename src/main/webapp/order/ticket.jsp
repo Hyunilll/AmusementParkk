@@ -24,7 +24,7 @@
 				</div>
 				<!-- 달력 선택 날짜 표기 -->
 				<div class="order_box_date_date">
-					<div id="selectedDate" class="selected-date"></div>
+					<input type="text"  id="selectedDate" name="visitdate" value="">
 				</div>
 			</div>
 			<!-- 수량 표시 -->
