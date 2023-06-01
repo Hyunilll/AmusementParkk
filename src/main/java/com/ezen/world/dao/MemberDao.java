@@ -175,20 +175,20 @@ public class MemberDao {
 		      return mvo;
 		   }
 
-	public void resetNewPwd(String id, String pwd) {
-	
+
+	public void resetNewPwd(MemberVo mvo) {
+		
 		con = Dbman.getConnection();
-	      String sql="UPDATE member SET pwd = ? WHERE id = ?";
-	      try {
-	            pstmt = con.prepareStatement(sql);
-	            pstmt.setString(1, pwd);
-	            pstmt.setString(2, id);
-	            pstmt.executeUpdate();
-	      } catch (SQLException e) {
-	         e.printStackTrace();
-	      } finally {
-	         Dbman.close(con, pstmt, rs);
-	      }
+		String sql = "Update Lmember set pwd=? where id = ?";
+		try {
+			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, mvo.getPwd());
+			pstmt.setString(2, mvo.getId());      
+			pstmt.executeUpdate();
+		} catch (SQLException e) { e.printStackTrace();
+		} finally { Dbman.close(con, pstmt, rs);	
+		}
+	
 		
 	}
 
