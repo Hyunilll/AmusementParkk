@@ -24,7 +24,7 @@
 				</div>
 				<div id="calendarPopup" class="calendar-popup"></div>
 				<div class="order_box_date_date">
-					<input type="text"  id="selectedDate" name="visitdate" value="">
+					<input type="text"  id="selectedDate" name="visitdate" value=" ">
 				</div>
 			</div>
 			<!-- 수량 표시 -->

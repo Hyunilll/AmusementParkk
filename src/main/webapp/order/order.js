@@ -220,7 +220,8 @@ function decrease(event, result) {
 
           var selectedDateElement = document.getElementById("selectedDate");
           selectedDateElement.textContent =  selectedDate;
-
+          document.getElementById('selectedDate').value = selectedDate;
+	
           calendarPopup.style.display = "none"; 
         });
 
