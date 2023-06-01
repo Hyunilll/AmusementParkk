@@ -54,6 +54,14 @@ function count_check(obj) {
 
 function toggleAnswer(answerId) {
     var answer = document.getElementById(answerId);
+    var allAnswers = document.getElementsByClassName("answer");
+
+    for (var i = 0; i < allAnswers.length; i++) {
+        if (allAnswers[i].id !== answerId) {
+            allAnswers[i].style.display = "none";
+        }
+    }
+
     if (answer.style.display === "none") {
         answer.style.display = "table-row";
     } else {

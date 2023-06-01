@@ -53,21 +53,24 @@
 					<button onclick="increase(event, 'result2')" class="order_quantity_count_button">+</button>
 				</div>	
 			</div>
+			<!--  어트랙션 선택 -->
+			<div class="check_wrapp">
+				<c:forEach items="${aseqList}" var="attractionVO" >
+					<div class="rect">
+						<div class="check_btn">
+							<input type="checkbox" value="${attractionVO.atname}" name="attraction" 
+								class="check_btnbtn" onclick="count_check(this);"/>
+						</div>
+						<div class="check_atname">${attractionVO.atname}</div>
+			            <img src="images/attraction_images/${attractionVO.image}" class="check_image"/>
+			        </div>	
+	         	</c:forEach>
+			</div>
 			<div id="reserve_buttons" class="order_box_button">
 	       	<!-- 	<input type="button" value="구매하기" onClick="location.href='world.do?command=cartList'">  -->
 	        	<input type="button" value="결제하기" class="purpleButton" onclick="go_cart('1')"> 
 	       	</div>
-		<!--  어트랙션 선택 -->
-		<div>
-		     <c:forEach items="${aseqList}"  var="attractionVO">
-	              <label><input onclick="count_check(this);"
-	              	type="checkbox" name="attraction" value= "${attractionVO.atname}">
-	              	${attractionVO.atname}
-	              	<img style="width:50px; height:50px; "src="images/attraction_images/${attractionVO.image}"/>
-	              	</label>   	
-	         </c:forEach>
-		</div>
-		<!-- 안내 -->
+			<!-- 안내 -->
 			<div id="board-list">
 		        <div class="container">
 		            <table class="board-table" style="font-size:20px">  
@@ -76,7 +79,7 @@
 		                </tr>   
 		                <tr id="answer1" style="display:none">
 		               		 
-		                	<th style="font-size:15px; font-weight:normal;background:#F7F7F7;"><br>
+		                	<th style="font-size:15px; font-weight:normal;background:#F7F7F7;">
 								<b>예매취소 안내</b> <br>
 								<b>온라인 예매 시 선택한 날짜에만 방문 및 이용이 가능하며, 미사용시에 해당날짜가 지나면 자동 취소 됩니다.</b><br>
 								(사용 후에는 취소가 불가능합니다.)<br>
@@ -93,7 +96,7 @@
 		                </tr>
 		                <tr id="answer2" style="display:none">
 		               		 
-		                	<th style="font-size:15px; font-weight:normal; background:#F7F7F7"><br>
+		                	<th style="font-size:15px; font-weight:normal; background:#F7F7F7">
 								<b>이용 안내</b><br>
 								<b> 1. 어드벤처 예매페이지 및 모바일APP을 통한 티켓예매 </b><br>
 								<b> 2. 카카오 알림톡(또는 문자메시지)으로 웹티켓 URL 발송 </b><br>

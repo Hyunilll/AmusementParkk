@@ -7,9 +7,12 @@
         to {opacity: 1;transform: translateZ(0);}
     }
  	
-   .operation_box_title{ position: relative; animation: fadeInUp 2s;}
+   .operation_box_title{position:relative; animation:fadeInUp 2s;}
+   .operation_date_box{position:relative; animation:fadeInUp 2s;}
+   .operation_time_box{position:relative; animation:fadeInUp 2s;}
    .toto{ position: relative; animation: fadeInUp 4s;}
    #rest_box{ position: relative; animation: fadeInUp 4s;}
+   .holidayBox{position:relative; animation:fadeInUp 2s;}
    
 </style>
 
