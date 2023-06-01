@@ -1,6 +1,5 @@
 function go_cart(num){
-	document.formm.action ="world.do?command=passTicketInsert&kind="+num;
-	document.formm.submit();
+
 	if(document.formm.visitdate.value==""){
 		alert("방문 일자를 선택해주세요")
 		return;
