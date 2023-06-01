@@ -24,7 +24,7 @@
 						<li><a href="world.do?command=admin">관리자</a></li>
 					</c:when>
 					<c:otherwise>
-						<li><a href="world.do?command=cartList">마이페이지</a></li>
+						<li><a href="world.do?command=cartList&changMenu=1">마이페이지</a></li>
 						<li><a href="world.do?command=logout">logout</a></li>
 						<li><a href="world.do?command=editForm">정보수정</a></li>
 						<li>${loginUser.name}(${loginUser.id})</li>
@@ -71,8 +71,8 @@
 						<span>소통서비스</span>
 				    </button>
 				    <div class="dropdown-content">
-						<a href="world.do?command=notice">공지사항</a>
-						<a href="world.do?command=qna">Q&amp;A</a>
+						<a href="world.do?command=notice&changMenu=1">공지사항</a>
+						<a href="world.do?command=qna&changMenu=1">Q&amp;A</a>
 				    </div>
 				</div>
 			</div>

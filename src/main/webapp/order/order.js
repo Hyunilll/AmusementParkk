@@ -7,11 +7,26 @@ function go_cart(num){
 	if(document.formm.p1.value==0&&document.formm.p2.value==0){
 		alert("인원을 선택해주세요")
 		return;
-  }
-	else{
-		document.formm.action ="world.do?command=passTicketInsert&kind="+num;
-		document.formm.submit();
-	}
+  	}
+  
+  	if( num == 1){
+	  	var chkBox = document.getElementsByName("attraction") //name값 불러옴
+		var chkCnt = 0; // chkCnt 초기값 0 설정
+		
+		for ( var i = 0; i < chkBox.length; i++){
+			if (chkBox[i].checked){ // chkBox가 체크 됐을 경우
+				chkCnt++; // 1증가
+			}	
+		}
+		if (chkCnt < 3){ // 3개 
+			alert("3개를 선택해주세요.") // 경고문
+			return;
+		}
+  	}
+
+	document.formm.action ="world.do?command=passTicketInsert&kind="+num;
+	document.formm.submit();
+	
 }
 
 

@@ -55,7 +55,7 @@
 			</div>
 			<div id="reserve_buttons" class="order_box_button">
 	       	<!-- 	<input type="button" value="구매하기" onClick="location.href='world.do?command=cartList'">  -->
-	        	<input type="button" value="결제하기" class="purpleButton" onclick="go_cart()"> 
+	        	<input type="button" value="결제하기" class="purpleButton" onclick="go_cart('1')"> 
 	       	</div>
 		<!--  어트랙션 선택 -->
 		<div>
