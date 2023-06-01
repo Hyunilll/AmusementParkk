@@ -33,10 +33,10 @@
 			
 			<div class="category">
 				<ul class="category_top_menu">	
-					<li><a href="world.do?command=adminattractionForm">어트렉션 관리</a></li>
-					<li><a href="world.do?command=adminnotice">공지사항 관리</a></li>
-					<li><a href="world.do?command=adminmember">회원 관리</a></li>
-					<li><a href="world.do?command=adminqna">Q & A 관리</a></li>
+					<li><a href="world.do?command=adminattractionForm&changMenu=1">어트렉션 관리</a></li>
+					<li><a href="world.do?command=adminnotice&changMenu=1">공지사항 관리</a></li>
+					<li><a href="world.do?command=adminmember&changMenu=1">회원 관리</a></li>
+					<li><a href="world.do?command=adminqna&changMenu=1">Q & A 관리</a></li>
 				</ul>		
 			</div>
 		</div>

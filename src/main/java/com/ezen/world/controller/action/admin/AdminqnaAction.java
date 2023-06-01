@@ -29,6 +29,7 @@ public class AdminqnaAction implements Action {
 				session.removeAttribute("page");
 				session.removeAttribute("key");
 			}
+			
 			Paging paging = new Paging();
 			paging.setDisplayPage(10);
 			paging.setDisplayRow(10);

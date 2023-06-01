@@ -4,15 +4,15 @@
 <html>
 <head>
 <style>
-.selected-date {margin-top: 10px;text-align: center;}
-.calendar-popup {position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);z-index: 9999;background-color: #fff;box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);padding: 20px;display: none;width: 300px;max-height: 350px;overflow: auto;}
+.selected-date {text-align: center;}
+.calendar-popup {position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);z-index: 9999;background-color: #fff;box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);padding: 20px;display: none;width: 380px;max-height: 440px;overflow: hidden;}
 .calendar-container {position: relative;display: inline-block;}
 .calendar-popup .month {text-align: center;font-weight: bold;margin-bottom: 10px;}
 .calendar-popup .navigator {display: flex;justify-content: space-between;align-items: center;margin-bottom: 10px;}
 .calendar-popup .navigator button {background-color: transparent;border: none;outline: none;cursor: pointer;font-weight: bold;}
 .calendar-popup .navigator .next-btn::before {content: "\25B6";}
 .calendar-popup .navigator .prev-btn::before {content: "\25C0";} 
-.calendar-popup .days {display: grid;grid-template-columns: repeat(7, 1fr);gap: 5px;text-align: center;}
+.calendar-popup .days {display: grid;grid-template-columns: repeat(7, 1fr);gap: 5px;text-align: center;overflow-y: auto;}
 .calendar-popup .day {padding: 10px;cursor: pointer;}
 .calendar-popup .day:hover {background-color: #f2f2f2;}
 .calendar-popup .day.selected {background-color: #ccc;}
@@ -31,7 +31,6 @@
     var year = today.getFullYear();
     var month = today.getMonth() + 1;
 
-    // 날짜 형식 변환 함수
     function formatDate(year, month, day) {
       month = month.toString().padStart(2, "0");
       day = day.toString().padStart(2, "0");
@@ -50,7 +49,7 @@
       var prevButton = document.createElement("button");
       prevButton.classList.add("prev-btn");
       prevButton.addEventListener("click", function() {
-        calendarPopup.innerHTML = ""; // 기존 달력 요소 삭제
+        calendarPopup.innerHTML = ""; 
         displayCalendar(month === 1 ? year - 1 : year, month === 1 ? 12 : month - 1);
       });
       navigatorElement.appendChild(prevButton);
@@ -58,7 +57,7 @@
       var nextButton = document.createElement("button");
       nextButton.classList.add("next-btn");
       nextButton.addEventListener("click", function() {
-        calendarPopup.innerHTML = ""; // 기존 달력 요소 삭제
+        calendarPopup.innerHTML = ""; 
         displayCalendar(month === 12 ? year + 1 : year, month === 12 ? 1 : month + 1);
       });
       navigatorElement.appendChild(nextButton);
@@ -83,11 +82,10 @@
         daysElement.appendChild(weekday);
       }
 
-      // 첫 번째 요일까지 빈 칸 생성
       for (var i = 0; i < firstDayOfWeek; i++) {
         var emptyDay = document.createElement("div");
         emptyDay.classList.add("day");
-        emptyDay.classList.add("hidden");
+        emptyDay.classList.add("empty-day"); 
         daysElement.appendChild(emptyDay);
       }
 
@@ -117,7 +115,7 @@
           var selectedDateElement = document.getElementById("selectedDate");
           selectedDateElement.textContent =  selectedDate;
 
-          calendarPopup.style.display = "none"; // 달력 닫기
+          calendarPopup.style.display = "none"; 
         });
 
         daysElement.appendChild(day);
@@ -128,11 +126,10 @@
         }
       }
 
-      // 다음 달 첫 번째 요일까지 빈 칸 생성
       for (var i = dayOfWeek; i < 7; i++) {
         var emptyDay = document.createElement("div");
         emptyDay.classList.add("day");
-        emptyDay.classList.add("hidden");
+        emptyDay.classList.add("empty-day"); 
         daysElement.appendChild(emptyDay);
       }
 
@@ -144,12 +141,14 @@
 </script>
 </head>
 <body>
-  <div class="calendar-container">
-    <div id="calendarImage" onclick="showCalendar()">
-      <img src="images/calendar.png" alt="Calendar">
-    </div>
-    <div id="calendarPopup" class="calendar-popup"></div>
-  </div>
-  <div id="selectedDate" class="selected-date"></div>
+  <div class="order_box_date_text">방문일자/인원 선택</div>
+				<div class="order_box_date_select" onclick="showCalendar()">
+					<img src="images/ticket_images/calendar.png" style="width:40px; height:40px;">
+				</div>
+				<div id="calendarPopup" class="calendar-popup"></div>
+				<div class="order_box_date_date">
+					<div id="selectedDate" class="selected-date"></div>
+				</div>
+			</div>
 </body>
 </html>

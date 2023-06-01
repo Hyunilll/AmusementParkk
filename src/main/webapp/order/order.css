@@ -29,7 +29,9 @@
 .order_box_date {position:relative; width:100%; height:80px; border-bottom:1px solid lightgray;}
 .order_box_date_text{position:relative; width:300px; height:80px; float:left; margin:0 30px; padding-top:30px; font-size:30px; font-weight:bold;}
 .order_box_date_date{position:relative; width:200px; height:80px; float:right; padding-top:30px; font-size:30px; color:#6f23f9;}
+
 .order_box_date_select{position:relative; width:40px; height:80px; float:right; margin:0 30px; padding-top:30px; cursor:pointer;}
+
 
 .order_quantity{position:relative; width:910px; height:80px; border-bottom:1px solid lightgray;}
 .order_quantity_text{position:relative; width:130px; height:80px; float:left; margin-left:120px; padding:18px 0;}
@@ -50,15 +52,19 @@
 .check_atname {position:relative; width:118px; height:50px; float:left; display:flex; align-items:center;}
 .check_image {position:relative; width:45px; height:45px; float:right; border-radius:4px; object-fit: cover;}
 
-/* 달력 */
-.calendar {position:absolute; display:none; right:13%; top:15%; background:#fff; border:1px solid #ccc; padding:10px;}
-.calendar.active {display: block;}
-.calendar .month {text-align: center;font-weight: bold;margin-bottom: 10px;}
-.calendar .days {display: grid;grid-template-columns: repeat(7, 1fr);}
-.calendar .days .day {text-align: center;padding: 5px;border: 1px solid #ccc;cursor: pointer;}
-.calendar .days .day:hover {background-color: #f2f2f2;}
-.calendar .days .day.selected {background-color: #ffcc00;}
-.calendar .days .day.selected {background-color: #ffcc00;}
 
-.selected-date {text-align:right;}
 
+.selected-date {text-align: center;}
+.calendar-popup {position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);z-index: 9999;background-color: #fff;box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);padding: 20px;display: none;width: 380px;max-height: 440px;overflow: hidden;border-radius:40px;}
+.calendar-container {position: relative;display: inline-block;}
+.calendar-popup .month {text-align: center;font-weight: bold;margin-bottom: 10px;}
+.calendar-popup .navigator {display: flex;justify-content: space-between;align-items: center;margin-bottom: 10px;}
+.calendar-popup .navigator button {background-color: transparent;border: none;outline: none;cursor: pointer;font-weight: bold;}
+.calendar-popup .navigator .next-btn::before {content: "\25B6";}
+.calendar-popup .navigator .prev-btn::before {content: "\25C0";} 
+.calendar-popup .days {display: grid;grid-template-columns: repeat(7, 1fr);gap: 5px;text-align: center;overflow-y: auto;}
+.calendar-popup .day {padding: 10px;cursor: pointer;}
+.calendar-popup .day:hover {background-color: #B95AFF;}
+.calendar-popup .day.selected {background-color: #6f23f9;}
+.calendar-popup .hidden {display: none;}
+.calendar-popup .empty-day {visibility: hidden;}

@@ -40,12 +40,12 @@ import com.ezen.world.controller.action.member.JoinFormAction;
 import com.ezen.world.controller.action.member.LoginFormAction;
 import com.ezen.world.controller.action.member.LogoutAction;
 import com.ezen.world.controller.action.member.ResetPwdAction;
+import com.ezen.world.controller.action.member.ResetPwdFormAction;
 import com.ezen.world.controller.action.member.SelectIdAction;
 import com.ezen.world.controller.action.member.SelectPwdAction;
 import com.ezen.world.controller.action.member.loginAction;
 import com.ezen.world.controller.action.mypage.CartDeleteAction;
 import com.ezen.world.controller.action.mypage.CartListAction;
-import com.ezen.world.controller.action.mypage.MypageAction;
 import com.ezen.world.controller.action.notice.NoticeAction;
 import com.ezen.world.controller.action.notice.NoticeDetailAction;
 import com.ezen.world.controller.action.order.FastTicketAction;
@@ -78,7 +78,6 @@ public class ActionFactory {
 		else if( command.equals("idCheckForm") ) ac = new IdCheckFormAction();
 		else if( command.equals("findZipNum") ) ac = new FindZipNumAction();
 		else if( command.equals("join") ) ac = new JoinAction();
-		else if( command.equals("mypage") ) ac = new MypageAction(); //마이페이지 
 		
 		// 정보 수정 
 		else if( command.equals("editForm") ) ac = new EditFormAction(); // 수정창 이동
@@ -102,7 +101,7 @@ public class ActionFactory {
 		// 장바구니  
 		else if( command.equals("cartList") ) ac= new CartListAction(); // 자유이용권 장바구니에 정보 저장
 		else if( command.equals("cartDelete") ) ac= new CartDeleteAction();
-		
+	
 		
 		//이용가이드
 		else if( command.equals("guide") ) ac= new GuideAction(); // 이용가이드 이동 
@@ -157,7 +156,7 @@ public class ActionFactory {
 		else if( command.equals("selectId") ) ac= new SelectIdAction();
 		else if( command.equals("selectPwd") ) ac= new SelectPwdAction();
 		else if( command.equals("resetPwd") ) ac= new ResetPwdAction();
-
+		else if( command.equals("resetPwdForm") ) ac= new ResetPwdFormAction();
 		
 		return ac;
 	}
