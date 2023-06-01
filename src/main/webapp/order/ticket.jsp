@@ -8,58 +8,60 @@
 <style>
 	.container {position:relative; width:900px;} 
 </style>
- 
+
+<article>
 <form name="formm" method="post">
-<div id ="wrap">
 	<div class="order_box2">
+		<div id="calendar"  class="calendar">
+			<input type="hidden" id="calendar" name="visitdate">
+		</div>
 		<div class="order_box_select2">
 			<div class="order_box_title">자유이용권 예매</div>
 			<div class="order_box_date">
-				<div class="order_selectdate">인원 선택/방문일자</div>
-				<div class="order_box_date_date">
-					<div class="calendarImage" onclick="showCalendar()">
-						<img src="images/ticket_images/calendar.png" style="width:40px; height:40px;">
-					</div>
-					<div id="calendar"  class="calendar">
-						<input type="hidden" id="calendar" name="visitdate">
-					</div>	
+				<div class="order_box_date_text">방문일자/인원 선택</div>
+				<div class="order_box_date_select" onclick="showCalendar()">
+					<img src="images/ticket_images/calendar.png" style="width:40px; height:40px;">
 				</div>
-			</div>
-			<div class="order_box_date">
-				<div class="order_box_date_text">
+				<!-- 달력 선택 날짜 표기 -->
+				<div class="order_box_date_date">
 					<div id="selectedDate" class="selected-date"></div>
 				</div>
 			</div>
-			<!--  달력 선택 날짜 표기 -->
-			
-			
 			<!-- 수량 표시 -->
 			<div class="order_quantity">
 				<div class="order_quantity_text">
-				<h3>어른</h3>
-				<p>만19세이상</p>
+					<p style="font-weight:bold">어른</p>
+					<p style="font-size:14px; color:gray;">만19세이상</p>
 				</div>
 				<div class="order_quantity_box">	
-					<button onclick="increaseNumber(event, 'result')" style="width:30px;">+</button>
-					<input type="text" name="p1" id="result" value="0">
-					<button onclick="decreaseNumber(event, 'result')" style="width:30px;">-</button>
-				</div>	 
-				<div class="order_quantity_text">
-				<h3>청소년</h3>
-				<p>만13세~만18세</p>
+					<input type="text" name="p1" id="result" value="0" class="order_quantity_count">
 				</div>
-				<div class="order_quantity_box">
-					<button onclick="increaseNumber(event, 'result2')" style="width:30px;">+</button>
-					<input type="text" name="p2" id="result2" value="0" size="5">
-					<button onclick="decreaseNumber(event, 'result2')" style="width:30px;">-</button>
-				 </div>
-					
+				<div class="order_quantity_box_button">	
+					<button onclick="decreaseNumber(event, 'result')" class="order_quantity_count_button" style="border-right:1px solid black;">-</button>
+					<button onclick="increaseNumber(event, 'result')" class="order_quantity_count_button">+</button>
+				</div>
+				<div class="quantityArg"></div>
+				<div class="order_quantity_text">
+					<p style="font-weight:bold">청소년</p>
+					<p style="font-size:14px; color:gray;">만13세~만18세</p>
+				</div>
+				<div class="order_quantity_box">	
+					<input type="text" name="p2" id="result2" value="0" class="order_quantity_count">
+				</div>
+				<div class="order_quantity_box_button">	
+					<button onclick="decreaseNumber(event, 'result2')" class="order_quantity_count_button" style="border-right:1px solid black;">-</button>
+					<button onclick="increaseNumber(event, 'result2')" class="order_quantity_count_button">+</button>
+				</div>	
 			</div>
+			<div id="reserve_buttons" class="order_box_button">
+	       	<!-- 	<input type="button" value="구매하기" onClick="location.href='world.do?command=cartList'">  -->
+	        	<input type="button" value="결제하기" class="purpleButton" onclick="go_cart('0')"> 
+	       	</div>
 			<div id="board-list">
 		        <div class="container">
 		            <table class="board-table" style="font-size:20px">  
 		                <tr>
-		                    <th><a href="#!" onclick="toggleAnswer('answer1')">&nbsp;&nbsp;&nbsp;취소/환불</a></th>      
+		                    <th><a href="#!" onclick="toggleAnswer('answer1')">취소/환불</a></th>      
 		                </tr>   
 		                <tr id="answer1" style="display:none">
 		               		 
@@ -76,7 +78,7 @@
 								</th>
 		               	</tr>
 		               	 <tr>
-		                    <th><a href="#!" onclick="toggleAnswer('answer2')">&nbsp;&nbsp;&nbsp;이용안내 </a></th>             
+		                    <th><a href="#!" onclick="toggleAnswer('answer2')">이용안내</a></th>             
 		                </tr>
 		                <tr id="answer2" style="display:none">
 		               		 
@@ -92,14 +94,8 @@
 					</table>
 		       </div>
 	       </div>
-	       	<div id="reserve_buttons" style = "padding-top:40px;">
-	       	<!-- 	<input type="button" value="구매하기" onClick="location.href='world.do?command=cartList'">  -->
-	        	<input type="button" value="결제하기" class="submit" onclick="go_cart('0')"> 
-	       	</div>
-	                	
 		</div>
 	</div>
-	</div>
-</div>
 </form>
+</article>
 <%@ include file="../footer.jsp" %>>

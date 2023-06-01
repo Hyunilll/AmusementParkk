@@ -1,7 +1,6 @@
 function go_cart(num){
-		document.formm.action ="world.do?command=passTicketInsert&kind="+num;
-		document.formm.submit();
-	
+	document.formm.action ="world.do?command=passTicketInsert&kind="+num;
+	document.formm.submit();
 }
 
 
