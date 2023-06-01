@@ -112,10 +112,3 @@ public class QnaDao {
 }
 
 
-
-
-	
-	
-	
-	
-

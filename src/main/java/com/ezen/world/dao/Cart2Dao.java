@@ -4,10 +4,14 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Timestamp;
 import java.util.ArrayList;
+import java.util.Date;
 
 import com.ezen.world.dto.Cart2VO;
+import com.ezen.world.dto.QnaVO;
 import com.ezen.world.util.Dbman;
+import com.ezen.world.util.Paging;
 
 public class Cart2Dao {
 	private Cart2Dao() {}
@@ -86,7 +90,61 @@ public class Cart2Dao {
 		} catch (SQLException e) {e.printStackTrace();
 		} finally { Dbman.close(con, pstmt, rs); }
 	}
-		
-	}
 	
+	
+
+
+	public int getAllCountCart2() {
+		
+			int count= 0;
+			String sql = "select count(*) as cnt from Cart2";
+			con = Dbman.getConnection();
+			try {
+				pstmt = con.prepareStatement(sql);
+				rs = pstmt.executeQuery();
+				if( rs.next() ) count = rs.getInt("cnt");
+			} catch (SQLException e) { e.printStackTrace();
+			} finally { Dbman.close(con, pstmt, rs);   }
+			return count;
+		}
+
+
+public ArrayList<Cart2VO> selectCart2(Paging paging) {
+	ArrayList<Cart2VO> list = new ArrayList<Cart2VO>();
+	String sql = " select * from ( "
+			+ " select * from ( "
+			+ " select rownum as rn, q.* from ((select * from Cart2 order by cseq desc) q) "
+			+ " ) where rn>=? "
+			+ " ) where rn<=? ";
+	con = Dbman.getConnection();
+	try {
+		pstmt = con.prepareStatement(sql);
+		pstmt.setInt(1,  paging.getStartNum() );
+		pstmt.setInt(2,  paging.getEndNum() );
+		rs = pstmt.executeQuery();
+		while(rs.next()) {
+			Cart2VO qvo = new Cart2VO();
+	    	qvo.setCseq(rs.getInt("cseq"));
+	    	qvo.setId(rs.getString("id"));
+	    	qvo.setKind(rs.getInt("kind"));
+	    	qvo.setP1(rs.getInt("p1"));
+	    	qvo.setP2(rs.getInt("p2"));
+	    	qvo.setTatname1(rs.getString("tatname1"));
+	    	qvo.setTatname2(rs.getString("tatname2"));
+	    	qvo.setTatname3(rs.getString("tatname3"));
+	    	qvo.setIndate(rs.getTimestamp("indate"));
+	    	qvo.setVisitdate(rs.getDate("visitdate"));
+	    	qvo.setPrice1(rs.getInt("price1"));
+	    	qvo.setPrice2(rs.getInt("price2"));
+	    	qvo.setPrice3(rs.getInt("price3"));
+	    	qvo.setPrice4(rs.getInt("price4"));
+	    	list.add(qvo);
+	    }
+	} catch (SQLException e) {e.printStackTrace();
+	} finally { Dbman.close(con, pstmt, rs);  }
+	return list;
+}
+
+
+}
 

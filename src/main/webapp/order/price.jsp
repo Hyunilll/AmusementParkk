@@ -5,6 +5,8 @@
 <link href="order/order.css" rel="stylesheet">  
 <script src="order/order.js"></script>
 
+
+
 <div class="bigBox">
 	<p class="bigBox1">
 		<span> 티켓요금 </span>

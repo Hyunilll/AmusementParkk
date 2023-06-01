@@ -57,7 +57,7 @@
 					<input type="button"  value="목록보기" class="submit" onclick="location.href='world.do?command=adminqna'">
 				</c:when>
 				<c:otherwise>
-					<input type="button"  value="목록보기" class="submit" onclick="location.href='world.do?command=adminqna'">
+					<input type="button"  value="목록보기" class="submitt" onclick="location.href='world.do?command=adminqna'">
 				</c:otherwise>
 			</c:choose>
 			

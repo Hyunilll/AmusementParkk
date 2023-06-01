@@ -249,7 +249,9 @@ section.notice {padding:  0;}
 .submit{height: 30px;width: 100px;border:1px solid #6317ed; font-weight:bold;
 		position:relative; padding-bottom:10px; background:rgb(111, 35, 249);border-radius: 28px; box-shadow: 3px 3px 2px #ccc; font-size: 20px; background-repeat: repeat-x; 
 		background-position: center center;	color:#fff;margin: 0 0 0 20px;}
-
+.submitt{height: 30px;width: 100px;border:1px solid #6317ed; font-weight:bold;
+		position:relative; padding-bottom:10px; background:rgb(111, 35, 249);border-radius: 28px; box-shadow: 3px 3px 2px #ccc; font-size: 20px; background-repeat: repeat-x; 
+		background-position: center center;	color:#fff;margin: 10px 0 10px 88px;}
 /* 서브메뉴 */
 nav#sub_menu { float: left; margin-right: 10px;}
 nav#sub_menu ul li { list-style-type: none; margin-top: 10px; }

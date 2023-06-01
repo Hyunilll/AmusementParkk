@@ -63,12 +63,14 @@
             </table>
         </div>
     </div>
-    <a  href="#"onClick="go_cart_delete()"><h3>삭제하기</h3></a>
+    <div class="dede" >
+    <a href="#"onClick="go_cart_delete()"><h3>삭제하기</h3></a>
+    </div>
 </section>
 </form>
 
 <jsp:include page="../paging/page.jsp">
-	<jsp:param name="command" value="world.do?command=mypage" />
+	<jsp:param name="command" value="world.do?command=cartList" />
 </jsp:include>
 
 <br><br><br><br><br><br><br>
