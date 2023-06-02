@@ -122,17 +122,17 @@ public class MemberDao {
 		
 	}
 
-	public void deleteMember(String id) {
-		con = Dbman.getConnection();
-		String sql = "Update Lmember set useyn='N' where id = ?";
-				
-		try {
-			pstmt = con.prepareStatement(sql);
-			pstmt.setString(1, id);
-			pstmt.executeUpdate();
-		} catch (SQLException e) { e.printStackTrace();
-		} finally { Dbman.close(con, pstmt, rs);	
-		}
+	public int deleteMember(String id) {
+		int result = 0;
+		con= Dbman.getConnection();
+	      String sql = "delete from Lmember where id=? ";
+	      try {
+	         pstmt = con.prepareStatement(sql);
+	         pstmt.setString(1, id);
+	         result = pstmt.executeUpdate();
+	      } catch (SQLException e) {e.printStackTrace();
+	      } finally { Dbman.close(con,pstmt,rs); }
+	      return result;
 	}
 	
 	public MemberVo selectId(String name, String phone) {

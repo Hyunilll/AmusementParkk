@@ -191,8 +191,8 @@ background-image : url('../images/timeVisual_bg_on.jpg'); margin: 0 auto; border
 	border-radius:5px; font-size:16px;}
 .basic_box_text .dup{text-indent:10px;}
 .basic_box_text .dup:focus{background-color:white; border:2px solid black;}
-.join_buttons {position:relative; width:100%; height:100px; padding:10px 300px;}
-.join_buttons_text {position:relative; width:100%; height:100%; padding:8px 100px;}
+.join_buttons {position:relative; width:100%; height:100px; padding:10px 200px;}
+.join_buttons_text {position:relative; width:100%; height:100%; padding:8px 116px;}
 .join_submit, .join_cancel {width:150px; height:60px; border:1px solid #666; border-radius:40px; background-color:rgb(111, 35, 249);
 	font-size: 20px; color:white; margin:0 9px;}
 
