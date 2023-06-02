@@ -35,7 +35,7 @@ public class PassTicketInsertAction implements Action {
 			//cvo.setVisitdate(request.getParameter("visitdate"));
 		
 			
-			String dateStr = request.getParameter("visitdate"); // request 객체에서 날짜 정보를 받아옴
+			String dateStr = request.getParameter("visitdate2"); // request 객체에서 날짜 정보를 받아옴
 			SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd"); // 날짜 형식 지정
 			
 				 
