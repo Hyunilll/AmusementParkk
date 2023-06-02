@@ -177,7 +177,6 @@ public class MemberDao {
 
 
 	public void resetNewPwd(MemberVo mvo) {
-		
 		con = Dbman.getConnection();
 		String sql = "Update Lmember set pwd=? where id = ?";
 		try {
@@ -188,11 +187,22 @@ public class MemberDao {
 		} catch (SQLException e) { e.printStackTrace();
 		} finally { Dbman.close(con, pstmt, rs);	
 		}
-	
-		
 	}
 
-
+	public void resetNewPwd(String id, String pwd) {
+		con = Dbman.getConnection();
+	      String sql="UPDATE Lmember SET pwd = ? WHERE id = ?";
+	      try {
+	            pstmt = con.prepareStatement(sql);
+	            pstmt.setString(1, pwd);
+	            pstmt.setString(2, id);
+	            pstmt.executeUpdate();
+	      } catch (SQLException e) {
+	         e.printStackTrace();
+	      } finally {
+	         Dbman.close(con, pstmt, rs);
+	      }
+	}
 }
 	   
 
