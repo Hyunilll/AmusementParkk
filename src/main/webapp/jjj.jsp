@@ -18,6 +18,7 @@
 .calendar-popup .day.selected {background-color: #ccc;}
 .calendar-popup .hidden {display: none;}
 .calendar-popup .empty-day {visibility: hidden;}
+.calendar-popup .close-btn {position: absolute;top: 10px;right: 10px;cursor: pointer;width:40px;height:40px; text-align:center; font-size:25px;}
 </style>
 <script>
   var today = new Date();
@@ -35,6 +36,14 @@
     monthElement.classList.add("month");
     monthElement.textContent = year + "년 " + month + "월";
     calendarPopup.appendChild(monthElement);
+
+    var closeButton = document.createElement("div");
+    closeButton.classList.add("close-btn");
+    closeButton.textContent = "X";
+    closeButton.addEventListener("click", function() {
+      calendarPopup.style.display = "none";
+    });
+    calendarPopup.appendChild(closeButton);
 
     var navigatorElement = document.createElement("div");
     navigatorElement.classList.add("navigator");

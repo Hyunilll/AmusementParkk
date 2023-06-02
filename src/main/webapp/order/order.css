@@ -58,3 +58,4 @@
 .calendar-popup .day.selected {background-color: #6f23f9;}
 .calendar-popup .hidden {display: none;}
 .calendar-popup .empty-day {visibility: hidden;}
+.calendar-popup .close-btn {position: absolute;top: 10px;right: 10px;cursor: pointer;width:40px;height:40px; text-align:center; font-size:25px;}

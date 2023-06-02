@@ -16,13 +16,16 @@
       <input type="hidden" name="command" value="selectPwd" />
       <table id="find-id">
          <tr>
-         <th>아이디&nbsp;</th><td><input type="text" name="id" class="input-text" maxlength="20" /></td>
+            <th>아이디&nbsp;</th>
+            <td><input type="text" name="id" class="input-text" maxlength="20" value="${param.id}" /></td>
          </tr>
          <tr>
-         <th>이름&nbsp;</th><td><input type="text" name="name" class="input-text" maxlength="20" /></td>
+            <th>이름&nbsp;</th>
+            <td><input type="text" name="name" class="input-text" maxlength="20" /></td>
          </tr>
          <tr>
-         <th>전화번호&nbsp;</th><td><input type="text" name="phone" class="input-text" maxlength="20" /></td>
+            <th>전화번호&nbsp;</th>
+            <td><input type="text" name="phone" class="input-text" maxlength="20" /></td>
          </tr>
       </table>
       <br />
@@ -31,7 +34,10 @@
    <br />
    <c:if test="${not empty Lmember}">
       <h2>회원님의 비밀번호는 '${Lmember.pwd}' 입니다.</h2>
-      <input type="button" value="재설정" class="button" onclick="resetPwd();" />
+      <form method="post" name="resetForm" action="resetPwd.jsp">
+         <input type="hidden" name="id" value="${Lmember.id}" />
+         <input type="button" value="재설정" class="button" onclick="resetPwd();" />
+      </form>
    </c:if>
 </div>
 
