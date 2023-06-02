@@ -5,10 +5,6 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<style type="text/css">
-	body{text-align:center;}
-	#paging{font-size: 120%; font-weight:bold;}
-</style>
 </head>
 <body>
 <!-- 상품리스트, 주문리스트, 회원리스트, Qna리스트에 고통으로 include 될 페이지 영역입니다 -->

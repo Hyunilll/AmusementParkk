@@ -1,13 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="../header.jsp" %>
-
-<style>
-#buttons{text-align:center;}
-</style>  
-
 <article>
-<div class="qnaWrite">
+<div class="qna">
 	<div class="qnaimg" style="background-image:url('images/qnaaa.png');"></div>
 	<div class="qnaBox">
 		<h2> 1:1 고객 게시판 </h2>
@@ -29,9 +24,9 @@
 				</tr>
 			</table>
 		</form>
-		<div id="buttons">
-			<input type="submit" value="글쓰기" class="purpleBtn" style="border:none;" onclick=""> 
-			<input type="reset" value="취소" class="purpleBtn"  
+		<div class="buttons">
+			<input type="button" value="글쓰기" class="purpleBtn" style="border:none;" onclick=""> 
+			<input type="button" value="취소" class="purpleBtn"  
 				onclick="location.href='world.do?command=qnaList'" style="border:none;">
 		</div>
 	</div>

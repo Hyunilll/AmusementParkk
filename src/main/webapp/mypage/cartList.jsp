@@ -68,13 +68,16 @@
                 
                 </tbody>
             </table>
-        </div>
+            <div class="mypage-btn-dede-wrap">
+			    <div class="dede" style="float:right;">
+			    	<a href="#"onClick="go_cart_delete()"><h3>삭제하기</h3></a>
+			    </div>
+			    <div class="dede" style="float:right;">
+			    	<a href="#"onClick="go_order()"><h3>결제하기</h3></a>
+		    	</div>
+        	</div>
+    	</div>
     </div>
-    <div class="dede" >
-    <a href="#"onClick="go_cart_delete()"><h3>삭제하기</h3></a>
-    <a href="#"onClick="go_order()"><h3>결제하기</h3></a>
-    </div>
-    
 </section>
 </form>
 
