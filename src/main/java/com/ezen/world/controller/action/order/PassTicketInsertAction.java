@@ -41,8 +41,10 @@ public class PassTicketInsertAction implements Action {
 				 
 			try {
 				cvo.setVisitdate(dateFormat.parse(dateStr));
+				System.out.println("날짜 파싱 성공");
 			} catch (ParseException e) {
 				e.printStackTrace();
+				System.out.println("날짜 파싱 오류: " + e.getMessage());
 			}
 		
 			
