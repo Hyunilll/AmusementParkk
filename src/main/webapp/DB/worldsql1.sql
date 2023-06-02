@@ -93,6 +93,7 @@ CREATE TABLE Lmember
 	PRIMARY KEY (id)
 );
 
+select*from Lqna
 
 CREATE TABLE Lqna
 (
@@ -102,9 +103,10 @@ CREATE TABLE Lqna
 	indate date DEFAULT sysdate,
 	reply varchar2(1000),
 	rep char DEFAULT 'N' NOT NULL,
-	content varchar2(0),
+	content varchar2(1000),
 	PRIMARY KEY (lqseq)
 );
+
 
 
 CREATE TABLE Lworker
