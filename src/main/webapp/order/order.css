@@ -55,8 +55,8 @@
 
 
 .selected-date {text-align: center;}
-.calendar-popup {position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);z-index: 9999;background-color: #fff;box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);padding: 20px;display: none;width: 380px;max-height: 440px;overflow: hidden;border-radius:40px;}
-.calendar-container {position: relative;display: inline-block;}
+.calendar-popup {position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);z-index: 9999;background-color: #fff;box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);padding: 20px;display: block;width: 380px;max-height: 440px;overflow: hidden;border-radius:40px;}
+.calendar-container {position: relative;display: inline-block; border:1px solid red;}
 .calendar-popup .month {text-align: center;font-weight: bold;margin-bottom: 10px;}
 .calendar-popup .navigator {display: flex;justify-content: space-between;align-items: center;margin-bottom: 10px;}
 .calendar-popup .navigator button {background-color: transparent;border: none;outline: none;cursor: pointer;font-weight: bold;}
