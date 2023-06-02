@@ -1,10 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
 <%@ include file="../header.jsp" %>
-<style>
-.ar{position: absolute; left:300px; }
-</style>
 <script src="member/member.js"></script>
 <div id=logina>
 
@@ -12,7 +8,7 @@
    <h2>로그인</h2>
    <hr>
    </div>
-   <h2>회원아이디와 비밀번호로 로그인 하세요.</h2>
+   <h2 style="color:gray">회원아이디와 비밀번호로 로그인 하세요.</h2>
    <br><br>
    <form method="post" name="loginFrm">
    <!-- <input type="hidden" name="command" value="login">  action="world.do"-->
