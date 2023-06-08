@@ -27,6 +27,7 @@
 			<div class="join_buttons_text">
 		    	<input type="button" value="회원가입" class="join_submit" onclick="go_save()"> 
 		    	<input type="reset" value="취소" class="join_cancel">
+		    	<input type="button" value="돌아가기" class="join_submit" onclick="location.href='world.do?command=index'">
 		    </div>
 		</div> <!-- go_save에서 액션과 벨리데이션 함께 진행 -->
 	</form>
