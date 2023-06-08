@@ -22,7 +22,7 @@
 			<div><p>탑승인원(숫자)</p><input type="text" name="pnum" value="${AttractionVO.pnum }"><br></div>
 			<div><p>제한사항1(키)</p><input type="text" name="limitkey" value="${AttractionVO.limitkey }"><br></div>
 			<div><p>제한사항2(나이)</p><input type="text" name="limitage" value="${AttractionVO.limitage }"><br></div>
-			<div><p>베스트어트랙션(Y/N)</p><input type="text" name="bestat" value="${AttractionVO.bestat }"><br></div>
+			<div><p>베스트(Y/N)</p><input type="text" name="bestat" value="${AttractionVO.bestat }"><br></div>
 			<div><p>운휴정보(Y/N)</p><input type="text" name="aresult" value="${AttractionVO.aresult }"><br></div>
 			
 			<!-- 
