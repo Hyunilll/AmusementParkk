@@ -1,41 +1,10 @@
-function go_cart(num){
 	
-	if(document.getElementById("selectedDate").value==""){
-		alert("방문 일자를 선택해주세요");
-		return;
-	}
-	if(document.formm.p1.value==0&&document.formm.p2.value==0){
-		alert("인원을 선택해주세요");
-		return;
-  	}
-  	/*
-  	if(num==1){
-		 	var chkBox = document.getElementsByName("attraction") //name값 불러옴
-			var chkCnt = 0; // chkCnt 초기값 0 설정
-	
-		for ( var i = 0; i < chkBox.length; i++){
-			if (chkBox[i].checked){ // chkBox가 체크 됐을 경우
-			chkCnt++; // 1증가
-			}	
-		}
-		if (chkCnt < 2){
-			alert("놀이기구 3개를 선택해주세요");
-			return;
-		}
-	  }
-	  */
-	else{
-		document.formm.action ="world.do?command=passTicketInsert&kind="+num;
-		document.formm.submit();
-	}
-}
 
 
+	
 function count_check(obj) {
-	
-	var chkBox = document.getElementsByName("attraction") //name값 불러옴
 	var chkCnt = 0; // chkCnt 초기값 0 설정
-	
+	var chkBox = document.getElementsByName("attraction") //name값 불러옴	
 	for ( var i = 0; i < chkBox.length; i++){
 		if (chkBox[i].checked){ // chkBox가 체크 됐을 경우
 			chkCnt++; // 1증가
@@ -46,9 +15,45 @@ function count_check(obj) {
 		obj.checked = false; // 경고 후 체크 되지 않게 설정.
 		return false;
 	}
-
-     
+	return chkCnt;
 }
+
+function go_cart(num){
+	
+	var chkCnt = count_check();
+  	if(num==1){
+		if (chkCnt < 3){
+			alert("놀이기구 3개를 선택해주세요");
+			return ;
+		}
+		if(document.getElementById("selectedDate").value==""){
+			alert("방문 일자를 선택해주세요");
+			return;
+		}
+		if(document.formm.p1.value==0&&document.formm.p2.value==0){
+			alert("인원을 선택해주세요");
+			return;
+  		}  	
+		else{
+			document.formm.action ="world.do?command=passTicketInsert&kind="+num;
+			document.formm.submit();
+	}	
+		
+	}
+	else if(document.getElementById("selectedDate").value==""){
+		alert("방문 일자를 선택해주세요");
+		return;
+	}
+	else if(document.formm.p1.value==0&&document.formm.p2.value==0){
+		alert("인원을 선택해주세요");
+		return;
+  	}  	
+	else{
+		document.formm.action ="world.do?command=passTicketInsert&kind="+num;
+		document.formm.submit();
+	}	
+}
+
 
 
 
