@@ -10,8 +10,9 @@
 </head>
 <body>
 <div class="mini">
-<h2 style="font-size:70px;font-weight:bold;text-align: center;border-top:100px; margin:100px 0 0 0;">이달의 혜택</h2>
-</div>
+<h2 style="font-size:50px;font-weight:bold;text-align: center;border-top:100px; margin:80px 0 0 0;">이달의 혜택</h2>
+</div><hr style="width:1100px;margin:0 auto; margin-top:50px;background:lightgray;
+ height:1px;border:0;">
 
 <div class="ccontainer">
    

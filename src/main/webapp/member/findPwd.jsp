@@ -6,38 +6,48 @@
 <meta charset="UTF-8">
 <title>비밀번호 찾기</title>
 <script src="member/member.js"></script>
+<link href="css/world.css" rel="stylesheet">
 </head>
 <body>
-
+<div class="findfind">
 <div class="id_found">
-   <h2>비밀번호 찾기</h2>
-   <h5>신원확인 후 재설정이 가능합니다</h5>
+   <h2 class="abcde">비밀번호 찾기</h2>
+   <h5 style="text-align:center;margin-right:7px;">신원확인 후 재설정이 가능합니다</h5>
    <form method="post" name="formm" action="world.do">
       <input type="hidden" name="command" value="selectPwd" />
-      <table id="find-id">
+      <table class="find-id">
          <tr>
-            <th>아이디&nbsp;</th>
-            <td><input type="text" name="id" class="input-text" maxlength="20" value="${param.id}" /></td>
+
+         <th>아이디&nbsp;&nbsp;&nbsp;&nbsp;</th><td><input type="text" name="id" class="input-text" maxlength="30" /></td>
+
          </tr>
+          </table>
+          <table class="find-id">
          <tr>
-            <th>이름&nbsp;</th>
-            <td><input type="text" name="name" class="input-text" maxlength="20" /></td>
+
+         <th>&nbsp;이름&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th><td><input type="text" name="name" class="input-text" maxlength="30" /></td>
+
          </tr>
+           </table>
+            <table class="find-id">
          <tr>
-            <th>전화번호&nbsp;</th>
-            <td><input type="text" name="phone" class="input-text" maxlength="20" /></td>
+
+         <th>전화번호&nbsp;&nbsp;</th><td><input type="text" name="phone" class="input-text" maxlength="30" /></td>
+
          </tr>
       </table>
       <br />
-      <input type="button" value="찾기" class="button" onclick="find_Pwd();" />
+        <div class="founf">
+      <input type="button" value="찾기" class="button" onclick="find_Pwd();" /></div>
    </form>
+    </div>
    <br />
    <c:if test="${not empty Lmember}">
       <h2>회원님의 비밀번호는 '${Lmember.pwd}' 입니다.</h2>
-      <form method="post" name="resetForm" action="resetPwd.jsp">
-         <input type="hidden" name="id" value="${Lmember.id}" />
-         <input type="button" value="재설정" class="button" onclick="resetPwd();" />
-      </form>
+
+       <div class="founff">
+      <input type="button" value="재설정" class="button" onclick="resetPwd();" /></div>
+
    </c:if>
 </div>
 

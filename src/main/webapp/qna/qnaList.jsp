@@ -2,6 +2,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ include file="../header.jsp" %>
+<link href="css/worldcss.css" rel="stylesheet">
 <style>
    
 #buttons{text-align:center;}
@@ -18,7 +19,7 @@
         </div>
     </div>
 
-    <div class="board-search">
+    <div class="board-searchh">
         <div class="container">
             <div class="search-window">
              
@@ -26,7 +27,7 @@
                         <label for="search" class="blind">QnA 내용 검색</label>
                         <input id="search" type="search" name="key" placeholder="검색어를 입력해주세요." value="${key}">
                         <button type="submit" class="btn btn-dark" onClick="go_search('qnaList')">검색</button>
-                   <!--      <button type="submit" class="btn btn-darkk" value="전체보기" onClick="go_total('qnaList')">전체보기</button>  --> 
+                     <button type="submit" class="btn btn-darkkk" value="전체보기" onClick="go_total('qnaList')">전체보기</button> 
                     </div>
   
             </div>
