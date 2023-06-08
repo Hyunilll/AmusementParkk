@@ -31,6 +31,7 @@ import com.ezen.world.controller.action.event.Event01Action;
 import com.ezen.world.controller.action.guide.GuideAction;
 import com.ezen.world.controller.action.guide.HowComeAction;
 import com.ezen.world.controller.action.member.ContractAction;
+import com.ezen.world.controller.action.member.DeleteMemberAction;
 import com.ezen.world.controller.action.member.EditAction;
 import com.ezen.world.controller.action.member.EditFormAction;
 import com.ezen.world.controller.action.member.FindZipNumAction;
@@ -82,7 +83,7 @@ public class ActionFactory {
 		// 정보 수정 
 		else if( command.equals("editForm") ) ac = new EditFormAction(); // 수정창 이동
 		else if( command.equals("edit") ) ac = new EditAction(); // 수정
-		
+		else if( command.equals("deleteMember") ) ac = new DeleteMemberAction();
 		
 		// 어트랙션
 		else if( command.equals("attractionForm") ) ac= new AttractionFormAction(); // 어트렉션 이동

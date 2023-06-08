@@ -17,17 +17,23 @@
       <input type="hidden" name="command" value="selectPwd" />
       <table class="find-id">
          <tr>
+
          <th>아이디&nbsp;&nbsp;&nbsp;&nbsp;</th><td><input type="text" name="id" class="input-text" maxlength="30" /></td>
+
          </tr>
           </table>
           <table class="find-id">
          <tr>
+
          <th>&nbsp;이름&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</th><td><input type="text" name="name" class="input-text" maxlength="30" /></td>
+
          </tr>
            </table>
             <table class="find-id">
          <tr>
+
          <th>전화번호&nbsp;&nbsp;</th><td><input type="text" name="phone" class="input-text" maxlength="30" /></td>
+
          </tr>
       </table>
       <br />
@@ -38,8 +44,10 @@
    <br />
    <c:if test="${not empty Lmember}">
       <h2>회원님의 비밀번호는 '${Lmember.pwd}' 입니다.</h2>
+
        <div class="founff">
       <input type="button" value="재설정" class="button" onclick="resetPwd();" /></div>
+
    </c:if>
 </div>
 

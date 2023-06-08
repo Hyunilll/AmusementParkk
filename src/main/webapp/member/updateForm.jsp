@@ -26,6 +26,7 @@
 			<div class="join_buttons_text">
 			    <input type="button" value="정보수정" class="join_submit" onclick="go_update();"> 
 			    <input type="reset" value="취소" class="join_cancel">
+			    <input type="button" value="회원탈퇴" class="join_cancel" onclick="go_delete();">
 			</div>
 		</div>
 	</form>

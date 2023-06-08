@@ -23,8 +23,9 @@
 					<img src="images/ticket_images/calendar.png" style="width:40px; height:40px;">
 				</div>
 				<!-- 달력 선택 날짜 표기 -->
+				<div id="calendarPopup" class="calendar-popup"></div>
 				<div class="order_box_date_date">
-					<input type="text"  id="selectedDate" name="visitdate" value="">
+					<input type="text"  id="selectedDate" name="visitdate2" >
 				</div>
 			</div>
 			<!-- 수량 표시 -->
@@ -68,7 +69,7 @@
 			</div>
 			<div id="reserve_buttons" class="order_box_button">
 	       	<!-- 	<input type="button" value="구매하기" onClick="location.href='world.do?command=cartList'">  -->
-	        	<input type="button" value="결제하기" class="purpleButton" onclick="go_cart('1')"> 
+	        	<input type="button" value="장바구니" class="purpleButton" onclick="go_cart('1')"> 
 	       	</div>
 			<!-- 안내 -->
 			<div id="board-list">

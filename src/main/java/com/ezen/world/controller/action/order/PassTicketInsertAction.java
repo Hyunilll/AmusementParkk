@@ -35,14 +35,16 @@ public class PassTicketInsertAction implements Action {
 			//cvo.setVisitdate(request.getParameter("visitdate"));
 		
 			
-			String dateStr = request.getParameter("visitdate"); // request 객체에서 날짜 정보를 받아옴
+			String dateStr = request.getParameter("visitdate2"); // request 객체에서 날짜 정보를 받아옴
 			SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd"); // 날짜 형식 지정
 			
 				 
 			try {
 				cvo.setVisitdate(dateFormat.parse(dateStr));
+				System.out.println("날짜 파싱 성공");
 			} catch (ParseException e) {
 				e.printStackTrace();
+				System.out.println("날짜 파싱 오류: " + e.getMessage());
 			}
 		
 			

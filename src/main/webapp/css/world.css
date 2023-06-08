@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+#paging{font-size: 120%; font-weight:bold;}
 .clear { clear: both;  }
 #wrap { width: 100%; height:100%;margin: 0 auto; background: white; min-height: 780px; }
 
@@ -128,12 +129,12 @@ img, fieldset {
 
 
 /* login */
-#logina{position: relative; width:1180px; display: grid; min-height: 10vh; height:800px; margin: 0 auto; text-align: center;}
+#logina{position: relative; width:1180px; display: grid; min-height: 10vh; height:830px; margin: 0 auto; text-align: center;}
 #logina #login {position: relative; width:100%; height:250px; margin: 0 auto; line-height: 160px; text-align: center; font-size:200%}
 #logina #input{ position: relative;width:600px; height:70px; color:gray; border:1px solid silver; 
       margin: 0 auto; background: white; line-height: 70px; text-align:center; font-size: 100%; }
 #logina input[type=text], input[type=password]{ font-size:150%; border:0; outline: none; }
-#logina h2{font-size:150%; color: gray; padding-top:30px;padding-bottom:8px; margin:0 auto;}
+#logina h2{font-size:150%; padding-top:30px;padding-bottom:8px; margin:0 auto;}
 #logina .menu1{ position: relative; margin: 0 auto; margin-top: 10px; width:600px; height:20px; text-align: right; }
 #logina .menu1 ul{ list-style: none; margin:0; padding:0; display:inline-block; }
 #logina .menu1 ul li{ float:left; padding:0 5px;  font-size:100%;  }
@@ -190,8 +191,8 @@ background-image : url('../images/timeVisual_bg_on.jpg'); margin: 0 auto; border
 	border-radius:5px; font-size:16px;}
 .basic_box_text .dup{text-indent:10px;}
 .basic_box_text .dup:focus{background-color:white; border:2px solid black;}
-.join_buttons {position:relative; width:100%; height:100px; padding:10px 300px;}
-.join_buttons_text {position:relative; width:100%; height:100%; padding:8px 100px;}
+.join_buttons {position:relative; width:100%; height:100px; padding:10px 200px;}
+.join_buttons_text {position:relative; width:100%; height:100%; padding:8px 116px;}
 .join_submit, .join_cancel {width:150px; height:60px; border:1px solid #666; border-radius:40px; background-color:rgb(111, 35, 249);
 	font-size: 20px; color:white; margin:0 9px;}
 
@@ -270,8 +271,7 @@ nav#sub_menu a:hover { border-bottom: 1px solid black; }
 nav#sub_menu h1 { padding: 5px; border-bottom: double;}
 nav#sub_menu ul { margin-left: -20px;}
 
-/* 공지사항*/
-
+/* 공지사항 */
 table {border-collapse: collapse;border-spacing: 0;}
 section.notice {padding:  0;}
 .page-title { margin-top:100px; margin-bottom: 60px;}
@@ -365,34 +365,28 @@ section.notice {padding:  0;}
 #qna_table{font-size: 13px;width: 100%;border-top: 1px solid #ccc;border-bottom: 1px solid #ccc;}
 
 
-/*qnaView*/
-.fix01 h2 {font-family: Verdana; font-size: 30px; text-align:center; color: #373737; padding-top: 15px;padding-bottom: 15px;	
-					border-bottom: 1px dashed gray; }
-.fix01 {float:left;width: 680px;padding-right: 10px;font-family: Verdana; font-size: 1em;	
-		line-height: 1.5em; border:1px dashed #ccc;margin:100px 0 280px 600px; }
-.fix02 {margin: 10px 0 0 36px;width: 680px;}
-.fix02 #buttonss {margin: 30px 80px 30px 120px; }
-.fix02 .submit, .fix02 .cancel {height: 30px;width: 150px;border:1px solid #6317ed; font-weight:bold;
-		position:relative; padding-bottom:10px; background:rgb(111, 35, 249);border-radius: 28px; box-shadow: 3px 3px 2px #ccc; font-size: 20px; background-repeat: repeat-x; 
-		background-position: center center;	color:#fff;margin: 0 0 0 20px;  }
-.fix03 th{  padding: 20px;border: 1px dashed #ccc;}
-.fix03 td{  padding: 20px;border: 1px dashed #ccc;}
-.fix03 tr{border: 1px dashed gray;}
-.fix03 label { width: 140px; float: left; margin: 5px 0; }
-.clearr {clear: both; }
-.qnaimg{position:relative; width:1200px;  height:333px; display: inline-block;text-align: center;
-		margin: 100px 0 0 380px;}
-
+/* qnaView,Write */
+.qna{position:relaive; width:100%; height:1100px; margin:0 auto;}
+.qnaimg{position:relative; width:1200px; height:333px; text-align:center; margin:100px auto;}
+.qnaBox{position:relative; width:680px; height:500px; margin:0 auto; border:1px dashed gray; font-family: Verdana;}
+.qnaBox h2 {font-size:30px; text-align:center; padding:15px; border-bottom:1px dashed gray;}
+.qnaBox h3 {text-align:center; padding:20px;}
+.fix02 {margin:10px auto; width:680px; height:250px;}
+.fix03 {border:1px dashed gray; margin:0 auto;}
+.fix03 th{  padding: 20px;border: 1px dashed gray;}
+.fix03 td{  padding: 20px;border: 1px dashed gray;}
+.qnaBox .buttons{text-align:center;}
 
 /*mypage*/
 
+.mypage-btn-dede-wrap {position:relative;}
 .dede:hover, .dede:focus {background: #373737; border-color: #373737; color: #fff;}
-.dede{background-color: #555; color: #fff;display: inline-block;padding: 0 10px;font-size: 12px; font-weight: 400;text-align: center;
+.dede{background-color: #555; color: #fff;display: inline-block;padding: 0 10px;font-size: 12px; font-weight:400; text-align:center;
   white-space: nowrap;vertical-align: middle;-ms-touch-action: manipulation;touch-action: manipulation;cursor: pointer;
   -webkit-user-select: none;-moz-user-select: none;-ms-user-select: none;user-select: none;border: 1px solid transparent;
   text-transform: uppercase;-webkit-border-radius: 0;-moz-border-radius: 0;border-radius: 0;
   -webkit-transition: all 0.3s;-moz-transition: all 0.3s;-ms-transition: all 0.3s; -o-transition: all 0.3s;
-  transition: all 0.3s; margin:20px 0 0 730px; }
+  transition: all 0.3s; margin:20px 10px;}
   
   
   /*findid*/
