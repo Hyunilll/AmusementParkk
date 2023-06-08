@@ -10,7 +10,7 @@
         </div>
     </div>
 
-    <div class="board-search">
+    <div class="board-searchh">
         <div class="container">
             <div class="search-window">
           
@@ -18,7 +18,7 @@
                         <label for="search" class="blind"> 공지사항검색</label>
                         <input id="search" type="search" name="key" placeholder="검색어를 입력해주세요." value="${key}">
                         <button type="submit" class="btn btn-dark" value="검색" onClick="go_search('notice')">검색</button>
-                <!--   		<button type="submit" class="btn btn-darkk" value="전체보기" onClick="go_total('notice')">전체보기</button>  -->
+                 		<button type="submit" class="btn btn-darkkk" value="전체보기" onClick="go_total('notice')">전체보기</button>  
                     </div>
                 
             </div>
