@@ -94,12 +94,12 @@ function increase(event, result) {
 
   if (currentValue === 1) {
 	  alert("패스 티켓은 1인당 1개만 구매 가능합니다.")
-    return false; // Return false if the current value is already 1
+    return false; 
   }
   
   var otherResult = result === 'result' ? 'result2' : 'result';
   var otherResultInput = document.getElementById(otherResult);
-  otherResultInput.value = 0; // Set the other result input value to 0
+  otherResultInput.value = 0;
 
   var newValue = currentValue + 1;
   resultInput.value = newValue;
@@ -111,12 +111,12 @@ function decrease(event, result) {
   var currentValue = parseInt(resultInput.value);
 
   if (currentValue === 0) {
-    return false; // Return false if the current value is already 0
+    return false; 
   }
 
   var otherResult = result === 'result' ? 'result2' : 'result';
   var otherResultInput = document.getElementById(otherResult);
-  otherResultInput.value = 0; // Set the other result input value to 0
+  otherResultInput.value = 0; 
 
   var newValue = currentValue - 1;
   resultInput.value = newValue;
