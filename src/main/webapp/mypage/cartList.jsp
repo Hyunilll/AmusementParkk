@@ -80,7 +80,6 @@
     </div>
 </section>
 </form>
-
 <jsp:include page="../paging/page.jsp">
 	<jsp:param name="command" value="world.do?command=cartList" />
 </jsp:include>
