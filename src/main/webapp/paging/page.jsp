@@ -6,7 +6,7 @@
 <meta charset="UTF-8">
 <title>Insert title here</title>
 <style type="text/css">
-	body{text-align:center;}
+	#body{text-align:center;}
 	#paging{font-size: 120%; font-weight:bold;}
 </style>
 </head>

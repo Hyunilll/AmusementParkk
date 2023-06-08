@@ -163,7 +163,7 @@ function checkPwd() {
 
 function findId() {
    let url = "world.do?command=selectId";
-   let opt = "toolbar=no, menubar=no, resizable=no, scrollbars=no, width=550, height=300, top=300, left=300";
+   let opt = "toolbar=no, menubar=no, resizable=no, scrollbars=no, width=550, height=400, top=300, left=300";
    window.open(url, "아이디(ID) 찾기", opt);
 }
 
