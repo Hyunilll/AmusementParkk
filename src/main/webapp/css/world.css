@@ -372,6 +372,7 @@ section.notice {padding:  0;}
 .qnaBox h2 {font-size:30px; text-align:center; padding:15px; border-bottom:1px dashed gray;}
 .qnaBox h3 {text-align:center; padding:20px;}
 .fix02 {margin:10px auto; width:680px; height:250px;}
+.fix02 #buttons {margin: 0 auto; padding: 0 150px;}
 .fix03 {border:1px dashed gray; margin:0 auto;}
 .fix03 th{  padding: 20px;border: 1px dashed gray;}
 .fix03 td{  padding: 20px;border: 1px dashed gray;}

@@ -27,7 +27,7 @@
 		<div id="sub_menu">
 			<div class="logo">
 				<a href="world.do?command=adminMain">
-					<img src="images/mainlogo.png" width="90" height="65">
+					<img src="images/mainlogo.jpg"/>
 				</a>
 			</div>
 			

@@ -35,7 +35,7 @@
 		<div id="sub_menu">
 			<div class="logo">
 				<a href="world.do?command=index">
-					<img src="images/mainlogo.png"/>
+					<img src="images/mainlogo.jpg"/>
 				</a>
 			</div>
 			<div class="category">
